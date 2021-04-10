@@ -12,22 +12,18 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
+
     <header class="header">
 
         <nav class="nav">
 
-            <!-- START NAV LOGO -->
-            <div class="nav__logo">
-                <a href="../index.html"><img src="../media/logo.jpg" alt="LOGO"></a>
+            <!-- START NAV BRAND-->
+            <div class="nav__brand">
+                <a class="nav__logo" href="../index.html"><img src="../media/logo.jpg" alt="LOGO"></a>
+                <h1 class="nav__title">JACK & JEK</h1>
             </div>
-            <!-- END NAV LOGO -->
-
-            <!-- START NAV TITULO -->
-            <div class="nav__title">
-                <h1 class="">JACK & JEK</h1>
-            </div>
-            <!-- END NAV TITULO -->
+            <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
             <div class="nav__menu">
@@ -47,64 +43,90 @@
     </header>
 
 
-    <main class="main">
+    <main class="mainMenu">
 
         <!-- START BURGERS ARTICLE -->
         <article class="burgers">
-            <h2>Burgers!</h2>
 
-            <div class="burgers__carrousel">
-                <button id="swipe-left">
-                    <</button> <div class="burgers__carrousel__card">
-                        <figure>
-                            <img src="../media/jack-crispy.jpg" alt="Jack Crispy">
-                            <figcaption>
-                                <p>2 medallones 120g, 4 fetas de cheddar, cebolla crispy y salsa jack.</p>
-                            </figcaption>
-                        </figure>
-            </div>
+            <h2 class="burgersTitle">Burgers!</h2>
 
-            <div class="burgers__carrousel__card">
+            <div class="burgers__carrousel__card jackCrispy">
                 <figure>
-                    <img src="../media/jack-cuarto.jpg" alt="Jack Cuarto">
+                    <img src="../media/jack-crispy.jpg" alt="Jack Crispy">
                     <figcaption>
-                        <p>2 medallones 120g, 4 fetas de cheddar, cebolla, mostaza y ketchup.</p>
+                        <h4>Jack Crispy</h4>
+                        <p>2 medallones 120g, 4 fetas de cheddar, cebolla crispy y salsa jack.</p>
                     </figcaption>
                 </figure>
             </div>
 
-            <div class="burgers__carrousel__card">
+            <div class="burgers__carrousel__card jackCuarto">
                 <figure>
-                    <img src="../media/jack-cheese2.jpg" alt="Jack Cheese">
+                    <img src="../media/jack-cuarto.jpg" alt="Jack Cuarto">
                     <figcaption>
+                        <h4>Jack Cuarto</h4>
+                        <p>2 medallones 120g, 4 fetas de cheddar, cebolla, mostaza y ketchup.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <div class="burgers__carrousel__card jackCheese">
+                <figure>
+                    <img src="../media/jack-cheese.jpg" alt="Jack Cheese">
+                    <figcaption>
+                        <h4>Jack Cheese</h4>
+                        <p>2 medallones 120g, 4 fetas de cheddar y salsa jack.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            
+            <div class="burgers__carrousel__card jackBacon">
+                <figure>
+                    <img src="../media/jack-bacon.jpg" alt="Jack Bacon">
+                    <figcaption>
+                        <h4>Jack Bacon</h4>
                         <p>2 medallones 120g, 4 fetas de cheddar, 2 bacon y salsa jack.</p>
                     </figcaption>
                 </figure>
             </div>
 
-            <button id="swipe-right">></button>
+            <div class="burgers__carrousel__card jackSmoke">
+                <figure>
+                    <img src="../media/jack-smoke.jpg" alt="Jack Smoke">
+                    <figcaption>
+                        <h4>Jack Smoke</h4>
+                        <p>2 medallones 80g, 2 fetas de cheddar, 2 bacon, pimiento y salsa jack.</p>
+                    </figcaption>
+                </figure>
             </div>
 
+            <div class="burgers__carrousel__card jackGuacamole">
+                <figure>
+                    <img src="../media/jack-guacamole.jpg" alt="Jack Guacamole">
+                    <figcaption>
+                        <h4>Jack Guacamole</h4>
+                        <p>2 medallones 80g, 2 fetas de cheddar y guacamole.</p>
+                    </figcaption>
+                </figure>
             </div>
+
         </article>
         <!-- END BURGERS ARTICLE -->
 
         <!-- START CHIPS ARTICLE -->
         <article class="chips">
-            <h2>Papas!</h2>
+            <h2 class="chipsTitle">Papas!</h2>
 
-            <div class="chips__carrousel">
-                <button id="swipe-left">
-                    <</button> <div class="chips__carrousel__card">
-                        <figure>
-                            <img src="../media/small-potatoes.jpg" alt="Papas Chicas">
-                            <figcaption>
-                                <p>Papas chicas.</p>
-                            </figcaption>
-                        </figure>
+            <div class="chips__carrousel__card chipImage1">
+                <figure>
+                    <img src="../media/small-potatoes.jpg" alt="Papas Chicas">
+                    <figcaption>
+                        <p>Papas chicas.</p>
+                    </figcaption>
+                </figure>
             </div>
 
-            <div class="chips__carrousel__card">
+            <div class="chips__carrousel__card chipImage2">
                 <figure>
                     <img src="../media/medium-potatoes.jpg" alt="Papas Medianas">
                     <figcaption>
@@ -113,7 +135,7 @@
                 </figure>
             </div>
 
-            <div class="chips__carrousel__card">
+            <div class="chips__carrousel__card chipImage3">
                 <figure>
                     <img src="../media/big-potatoes.jpg" alt="Papas Grandes">
                     <figcaption>
@@ -122,8 +144,6 @@
                 </figure>
             </div>
 
-            <button id="swipe-right">></button>
-            </div>
 
             </div>
 
@@ -145,32 +165,29 @@
             </ul>
         </div>
         <!-- END FOOTER MAP -->
-        
+
         <!-- START FOOTER SOCIAL -->
         <div class="footer__social">
             <h3>Redes</h3>
             <ul>
-                <li><a href="https://www.instagram.com/jackandjek.food/" target="_blank">
-                    <img class="icon"
-                    src="../media/instagram-icon.png">
-                </a>
-                <a href="https://www.instagram.com/jackandjek.food/" target="_blank">Instagram</a></li>
-                
+                <li><a href="https://www.instagram.com/jackandjek/" target="_blank">
+                        <img class="icon" src="../media/instagram-icon.png">
+                    </a>
+                    <a href="https://www.instagram.com/jackandjek/" target="_blank">Instagram</a></li>
+
                 <li><a href="#" target="_blank">
-                    <img class="icon"
-                    src="../media/facebook-icon.png">
-                </a>
-                <a href="#" target="_blank">Facebook</a></li>
-                
+                        <img class="icon" src="../media/facebook-icon.png">
+                    </a>
+                    <a href="#" target="_blank">Facebook</a></li>
+
                 <li><a href="#" target="_blank">
-                    <img class="icon"
-                    src="../media/whatsapp-icon.png"></img>
-                </a>
-                <a href="#">WhatsApp</a></li>
+                        <img class="icon" src="../media/whatsapp-icon.png"></img>
+                    </a>
+                    <a href="#">WhatsApp</a></li>
             </ul>
         </div>
         <!-- END FOOTER SOCIAL -->
-        
+
         <!-- START FOOTER LOCATIONS -->
         <div class="footer__locations">
             <h3>Sucursales</h3>
@@ -181,7 +198,7 @@
             </ul>
         </div>
         <!-- END FOOTER LOCATIONS -->
-        
+
         <!-- START FOOTER SCHEDULE -->
         <div class="footer__schedule">
             <h3>Horarios</h3>
@@ -193,7 +210,7 @@
             </dl>
         </div>
         <!-- END FOOTER SCHEDULE -->
-        
+
         <!-- START FOOTER JOBS -->
         <div class="footer__jobs">
             <h3><a href="empleos.html">Empleos</a></h3>

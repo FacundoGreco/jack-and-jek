@@ -2,11 +2,22 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto Slab', serif;
 }
 
 html,
 body {
-    height: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+.body {
+    display: grid;
+    grid-template-areas:
+        "main"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto 196px;
 }
 
 li {
@@ -17,14 +28,10 @@ li {
     width: 30px;
 }
 
-form label,
-form input,
-form textarea {
-    width: 100%;
+button:hover {
+    cursor: pointer;
 }
-
 /* END GENERAL */
-
 
 
 
@@ -41,6 +48,10 @@ form textarea {
 }
 
 .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     color: white;
     font-size: 30px;
 }
@@ -51,19 +62,27 @@ form textarea {
 }
 
 .nav__logo {
-    float: left;
+    height: 70px;
+}
+
+.nav__logo:hover {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    box-shadow: 0 0 13px black;
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
 }
 
 .nav__title {
-    margin: 10px 0 0 40px;
-    float: left;
+    margin-left: 40px;
     font-family: 'Lato', sans-serif;
 }
 
 .nav__menu {
-    margin: 20px 40px 0 0;
-    float: right;
-    font-family: 'Roboto Slab', serif;
+    margin-right: 40px;
     font-size: 30px;
 }
 
@@ -83,41 +102,40 @@ a.active {
 
 
 /* START MAIN */
-.main,
+.mainIndex,
+.mainMenu,
 .mainContact,
 .mainJobs,
 .mainOrders {
+    grid-area: main;
     width: 100%;
     z-index: 1;
     margin-top: 90px;
     text-align: center;
-    font-family: 'Lato', sans-serif;
 }
 
 .mainContact,
-.mainJobs,
 .mainOrders {
     display: flex;
 }
 
 /* START GENERAL FORMS */
-.jobsForm,
-.ordersForm {
-    width: 100%;
-    margin: 2% 30%;
-    text-align: left;
-    background-color: rgb(255, 203, 92);
-}
-
-.jobsForm__fieldset,
+.postulationForm__fieldset,
 .ordersForm__fieldset,
 .contactForm__fieldset,
 .newsletterForm__fieldset {
     padding: 20px;
 }
 
+form label,
+form input,
+form textarea {
+    width: 100%;
+}
+
 .labelInput,
-.labelCheckbox {
+.labelCheckbox,
+.labelOrder {
     margin: 10px 0;
     font-size: 18px;
     height: 60px;
@@ -161,7 +179,6 @@ a.active {
     width: 150px;
     height: 28px;
     font-size: 17px;
-    font-family: 'Lato', sans-serif;
 
 }
 
@@ -177,7 +194,6 @@ a.active {
     height: 40px;
     margin: 0 20px;
     font-size: 16px;
-    font-family: 'Lato', sans-serif;
 }
 
 .labelArea {
@@ -191,13 +207,18 @@ a.active {
     margin-top: 5px;
 }
 
+form h2 {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+    border-bottom: solid black;
+}
+
 /* END GENERAL FORMS */
 
 
 /* START GENERAL CARROUSEL */
-.heroSection__carrousel,
-.burgers__card__carrousel,
-.chips__card__carrousel,
+.heroSection__carrousel__images,
 .burgers__carrousel,
 .chips__carrousel {
     display: flex;
@@ -205,43 +226,41 @@ a.active {
     z-index: 1;
 }
 
-.heroSection__carrousel button,
-.chips__card__carrousel button,
-.burgers__card__carrousel button,
-.burgers__carrousel button,
-.chips__carrousel button {
+.swipe-left,
+.swipe-right {
     position: absolute;
+    width: 50px;
+    height: 50px;
     top: 50%;
-    width: auto;
-    height: auto;
     z-index: 2;
-    font-size: 70px;
     color: white;
     background-color: transparent;
     border-color: transparent;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
 
-.heroSection__carrousel #swipe-left,
-.chips__card__carrousel #swipe-left,
-.burgers__card__carrousel #swipe-left,
-.burgers__carrousel #swipe-left,
-.chips__carrousel #swipe-left {
+.swipe-left:hover,
+.swipe-right:hover {
+    width: 70px;
+    height: 70px;
+    transition-duration: 0.3s;
+
+}
+
+.swipe-left {
     left: 0%;
-    transform: translate(+50%, -50%);
+    transform: translate(0%, -50%);
 
 }
 
-.heroSection__carrousel #swipe-right,
-.chips__card__carrousel #swipe-right,
-.burgers__card__carrousel #swipe-right,
-.burgers__carrousel #swipe-right,
-.chips__carrousel #swipe-right {
+.swipe-right {
     right: 0%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
 }
 
-.burgers__card figcaption,
-.chips__card figcaption,
+.burger figcaption,
+.chip figcaption,
 .burgers__carrousel__card figure figcaption,
 .chips__carrousel__card figure figcaption {
     height: 12%;
@@ -253,8 +272,6 @@ a.active {
     z-index: 2;
 }
 
-.burgers__card figcaption p,
-.chips__card figcaption p,
 .burgers__carrousel__card figure figcaption p,
 .chips__carrousel__card figure figcaption p {
     position: relative;
@@ -266,10 +283,21 @@ a.active {
 
 
 /* START INDEX PAGE */
+.mainIndex {
+    display: grid;
+    grid-template-areas:
+        "hero"
+        "products";
+}
 
 /* START HERO SECTION */
 .heroSection {
+    grid-area: hero;
     position: relative;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+
 }
 
 .heroSection__button {
@@ -278,6 +306,12 @@ a.active {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.heroSection__button:hover {
+    top: 10%;
+    transition-duration: 0.3s;
 }
 
 .heroSection__button button {
@@ -287,12 +321,18 @@ a.active {
     font-size: 22px;
     color: black;
     background-color: orange;
-    cursor: pointer;
     border: solid black;
     border-radius: 5px;
+    transition-duration: 0.3s;
 }
 
-.heroSection__carrousel img {
+.heroSection__button button:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    box-shadow: 0 0 20px white;
+}
+
+.heroSection__carrousel__images img {
     height: 670px;
     width: 100%;
 }
@@ -300,25 +340,25 @@ a.active {
 /* END HERO SECTION */
 
 /* START PRODUCTS SECTION */
+.productsSection {
+    grid-area: products;
+    display: flex;
+    padding: 40px 0;
+}
+
 .productsSection article {
+    display: flex;
+    justify-content: center;
     width: 50%;
-    margin: 2% 0%;
-}
-
-.productsSection__burgers {
-    float: left;
-}
-
-.productsSection__chips {
-    float: right;
 }
 
 .burgers__card,
 .chips__card {
-    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+    width: 510px;
     height: 500px;
     border: solid black;
-    font-family: 'Lato', sans-serif;
 }
 
 .burgers__card h2,
@@ -334,14 +374,44 @@ a.active {
 .burgers__card__carrousel,
 .chips__card__carrousel {
     position: relative;
-    height: 79.7%;
+    height: 91.9%;
+    overflow: hidden;
 }
 
-.burgers__card__carrousel figure img,
-.chips__card__carrousel figure img {
+.burgers__card__images,
+.chips__card__images {
+    display: flex;
+}
+
+.burger,
+.chip {
+    min-width: 510px;
+    width: 510px;
+}
+
+.burger img,
+.chip img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 42vh;
+}
+
+.burger figcaption,
+.chip figcaption {
+    height: 6.6vh;
+}
+
+.burger figcaption h4,
+.chip figcaption h4,
+.burgers__carrousel__card figcaption h4 {
+    position: relative;
+    top: 10%;
+}
+
+.burger figcaption p,
+.chip figcaption p {
+    position: relative;
+    top: 20%;
 }
 
 /* END PRODUCTS CARROUSEL */
@@ -353,31 +423,100 @@ a.active {
 
 
 /* START MENU PAGE */
-.burgers,
-.chips {
+.mainMenu {
+    display: grid;
+    grid-template-areas:
+        "burgers"
+        "chips";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.burgers {
+    grid-area: burgers;
+    display: grid;
+    grid-template-areas:
+        "burgersTitle burgersTitle burgersTitle"
+        "jackCrispy jackCuarto jackCheese"
+        "jackBacon jackSmoke jackGuacamole";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     margin-bottom: 30px;
+}
+
+.burgersTitle {
+    grid-area: burgersTitle;
+}
+
+.jackCrispy {
+    grid-area: jackCrispy;
+}
+
+.jackCuarto {
+    grid-area: jackCuarto;
+}
+
+.jackCheese {
+    grid-area: jackCheese;
+}
+
+.jackBacon {
+    grid-area: jackBacon;
+}
+
+.jackSmoke {
+    grid-area: jackSmoke;
+}
+
+.jackGuacamole {
+    grid-area: jackGuacamole;
+}
+
+.chips {
+    grid-area: chips;
+    display: grid;
+    grid-template-areas:
+        "chipsTitle chipsTitle chipsTitle"
+        "chipImage1 chipImage2 chipImage3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-bottom: 30px;
+}
+
+.chipsTitle {
+    grid-area: chipsTitle;
+}
+
+.chipImage1 {
+    grid-area: chipImage1;
+}
+
+.chipImage2 {
+    grid-area: chipImage2;
+}
+
+.chipImage3 {
+    grid-area: chipImage3;
 }
 
 .burgers h2,
 .chips h2 {
     color: white;
     background-color: black;
-    font-family: 'Roboto Slab', serif;
     font-size: 28px;
 }
 
-.burgers__carrousel,
+/* .burgers__carrousel,
 .chips__carrousel {
     position: relative;
     height: 460px;
     width: 100%;
-}
+} */
 
 .burgers__carrousel__card,
 .chips__carrousel__card {
-    width: 33%;
+    width: 99.05%;
     border: solid black;
-    font-family: 'Lato', sans-serif;
 }
 
 .burgers__carrousel__card figure,
@@ -392,12 +531,49 @@ a.active {
     height: 87.8%;
 }
 
-
 /* END MENU PAGE */
 
 
 
 /* START ORDERS PAGE */
+.mainOrders {
+    display: flex;
+    align-items: center;
+}
+
+/* START ORDERS SECTION */
+.ordersSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: 2% 0;
+}
+
+.ordersForm {
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    background-color: rgb(255, 203, 92);
+    height: min-content;
+}
+
+.orderArea {
+    border-bottom: solid black;
+}
+
+.labelOrder label {
+    display: block;
+    font-size: 18px;
+}
+
+.labelOrder select {
+    margin-top: 5px;
+    width: 120px;
+    height: 30px;
+}
+
 .dateAndHour input {
     width: fit-content;
     height: 28px;
@@ -408,6 +584,45 @@ a.active {
     width: 80px;
     height: 28px;
 }
+
+/* END ORDERS SECTION */
+
+/* START MAP SECTION */
+.mapSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.mapContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 65%;
+    padding: 20px;
+    background-color: rgb(255, 203, 92);
+    border: solid black;
+    border-radius: 2%;
+}
+
+.mapContainer h2 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 3%;
+    padding-bottom: 5px;
+    border-bottom: solid black;
+}
+
+.mapContainer iframe {
+    width: 85%;
+    height: 85%;
+}
+
+/* END MAP SECTION */
 
 /* END ORDERS PAGE */
 
@@ -437,10 +652,184 @@ a.active {
 }
 
 .newsletterForm h2 {
-    font-size: 25px;
+    font-size: 21px;
+    margin-bottom: 20px;
 }
 
 /* END CONTACT PAGE */
+
+
+
+/* START JOBS PAGE */
+.mainJobs {
+    display: grid;
+    grid-template-areas:
+        "aboutUs"
+        "jobs"
+        "postulation";
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 450px auto;
+    row-gap: 20px;
+}
+
+/* START ABOUT US SECTION */
+.aboutUsSection {
+    grid-area: aboutUs;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid black 5px;
+    background: linear-gradient(to right, white 30%, black 35%);
+}
+
+.aboutUs__title {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.aboutUs__title h2 {
+    padding: 5px 10px;
+    font-size: 80px;
+    box-shadow: 10px 10px 40px grey;
+    background-color: transparent;
+    border: solid black 4px;
+}
+
+.aboutUs__title h2.about {
+    transform: translate(-50%, 4px);
+    color: green;
+}
+
+.aboutUs__title h2.us {
+    transform: translate(+10%);
+}
+
+.aboutUs__story {
+    height: 83%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+
+    padding: 20px;
+    border-left: solid white;
+    font-size: 26px;
+    color: white;
+}
+
+/* END ABOUT US SECTION */
+
+/* START JOBS SECTION */
+.jobsSection {
+    grid-area: jobs;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-right: solid black 20px;
+    border-left: solid black 20px;
+    border-bottom: solid black 40px;
+}
+
+.jobsSection h2 {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 28px;
+    color: white;
+    background-color: black;
+}
+
+.jobs__areas {
+    height: 87%;
+    width: 97%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jobs__areas__jobLeft,
+.jobs__areas__jobRight {
+    height: 70%;
+    width: 17%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    box-shadow: 15px 15px 15px grey;
+    color: white;
+    padding: 15px 16px;
+}
+
+.jobs__areas__jobLeft {
+    background-color: rgb(0, 109, 0);
+}
+
+.jobs__areas__jobRight {
+    background-color: black;
+}
+
+.jobs__areas div h3 {
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid white;
+    margin-bottom: 10px;
+}
+
+.jobDescription {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.jobDescription__intro {
+    text-align: center;
+}
+
+.jobDescription__data {
+    text-align: start;
+}
+
+.jobDescription__button button{
+    width: 110px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.jobDescription__button button:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px white;
+}
+
+
+
+/* END JOBS SECTION */
+
+/* START POSTULATION SECTION */
+.postulationSection {
+    grid-area: postulation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.postulationForm {
+    /* width: 100%; */
+    /* margin: 2% 30%; */
+    text-align: left;
+    background-color: rgb(255, 203, 92);
+}
+
+/* END POSTULATION SECTION */
+
+
+/* END JOBS PAGE */
 
 /* END MAIN */
 
@@ -449,18 +838,23 @@ a.active {
 
 /* START FOOTER */
 .footer {
+    grid-area: footer;
     height: 156px;
     z-index: 1;
     width: 100%;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: stretch;
     background-color: rgb(38, 38, 38);
     padding: 20px 0px;
 }
 
 .footer div {
     color: white;
-    margin: auto;
-    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .footer div h3 {
