@@ -531,6 +531,11 @@ form h2 {
     height: 87.8%;
 }
 
+.chips__carrousel__card figure figcaption h4 {
+    position: relative;
+    top: 30%;
+}
+
 /* END MENU PAGE */
 
 
