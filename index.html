@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack & Jek</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav">
+
+            <!-- START NAV LOGO -->
+            <div class="nav__logo">
+                <a href="index.html"><img src="media/logo.jpg" alt="LOGO"></a>
+            </div>
+            <!-- END NAV LOGO -->
+
+            <!-- START NAV TITULO -->
+            <div class="nav__title">
+                <h1 class="">JACK & JEK</h1>
+            </div>
+            <!-- END NAV TITULO -->
+
+            <!-- START NAV MENU -->
+            <div class="nav__menu">
+                <ul>
+                    <!-- NAVIGATION -->
+                    <li><a class="active" href="index.html">Inicio</a></li>
+                    <li><a href="pages/menu.html">Menú</a></li>
+                    <li><a href="pages/pedidos.html">Pedidos</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                    <li><a href="pages/empleos.html">Empleos</a></li>
+                </ul>
+            </div>
+            <!-- END NAV MENU -->
+
+        </nav>
+
+    </header>
+
+
+    <main class="main">
+
+        <!-- START HERO SECTION -->
+        <section class="heroSection">
+
+            <div class="heroSection__button">
+                <a href="pages/pedidos.html"><button>¡PEDIR AHORA!</button></a>
+            </div>
+
+            <div class="heroSection__carrousel">
+                <button id="swipe-left">
+                    <</button> <img src="media/jack-cuarto.jpg" alt="Jack Cuarto">
+                        <img src="media/jack-cheese.jpg" alt="Jack Cheese">
+                        <button id="swipe-right">></button>
+            </div>
+        </section>
+        <!-- END HERO SECTION -->
+
+        <!-- START PRODUCTS SECTION -->
+        <section class="productsSection">
+            <!-- START HAMBURGERS ARTICLE -->
+            <article class="productsSection__burgers">
+                <div class="burgers__card">
+                    <h2>Nuestras Burgers!</h2>
+                    <div class="burgers__card__carrousel">
+                        <button id="swipe-left">
+                            <</button> <figure><img src="media/jack-crispy.jpg" alt="Jack Crispy"></figure>
+                                <button id="swipe-right">></button>
+                    </div>
+                    <figcaption>
+                        <p>2 medallones 120g, 4 fetas cheddar, cebolla salteada, salsa jack.</p>
+                    </figcaption>
+                </div>
+            </article>
+            <!-- END HAMBURGERS ARTICLE -->
+
+            <!-- START CHIPS ARTICLE -->
+            <article class="productsSection__chips">
+                <div class="chips__card">
+                    <h2>Nuestras Papas!</h2>
+                    <div class="chips__card__carrousel">
+                        <button id="swipe-left">
+                            <</button> <figure><img src="media/small-potatoes.jpg" alt="Jack Crispy"></figure>
+                                <button id="swipe-right">></button>
+                    </div>
+
+                    <figcaption>
+                        <p>Papas chicas.</p>
+                    </figcaption>
+                </div>
+            </article>
+            <!-- END CHIPS ARTICLE -->
+        </section>
+        <!-- END PRODUCTS SECTION -->
+
+    </main>
+
+
+    <footer class="footer">
+
+        <!-- START FOOTER MAP -->
+        <div class="footer__map">
+            <h3>Mapa del Sitio</h3>
+            <ul>
+                <li>Términos y Condiciones</li>
+                <li>Políticas de Privacidad</li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- END FOOTER MAP -->
+        
+        <!-- START FOOTER SOCIAL -->
+        <div class="footer__social">
+            <h3>Redes</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/jackandjek.food/" target="_blank">
+                    <img class="icon"
+                    src="media/instagram-icon.png">
+                </a>
+                <a href="https://www.instagram.com/jackandjek.food/" target="_blank">Instagram</a></li>
+                
+                <li><a href="#" target="_blank">
+                    <img class="icon"
+                    src="media/facebook-icon.png">
+                </a>
+                <a href="#" target="_blank">Facebook</a></li>
+                
+                <li><a href="#" target="_blank">
+                    <img class="icon"
+                    src="media/whatsapp-icon.png"></img>
+                </a>
+                <a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+        <!-- END FOOTER SOCIAL -->
+        
+        <!-- START FOOTER LOCATIONS -->
+        <div class="footer__locations">
+            <h3>Sucursales</h3>
+            <ul>
+                <li>Centeno 1156</li>
+                <li>Moreno 4500</li>
+                <li>San Martín 5200</li>
+            </ul>
+        </div>
+        <!-- END FOOTER LOCATIONS -->
+        
+        <!-- START FOOTER SCHEDULE -->
+        <div class="footer__schedule">
+            <h3>Horarios</h3>
+            <dl>
+                <dt>Martes a Domingo</dt>
+                <dd>19:30 - 23:00</dd>
+                <dt>Sábado y Domingo</dt>
+                <dd>11:30 - 13:30</dd>
+            </dl>
+        </div>
+        <!-- END FOOTER SCHEDULE -->
+        
+        <!-- START FOOTER JOBS -->
+        <div class="footer__jobs">
+            <h3><a href="pages/empleos.html">Empleos</a></h3>
+            <ul>
+                <li>Repartos</li>
+                <li>Cocina</li>
+                <li>Mantenimiento</li>
+                <li>Programación</li>
+            </ul>
+        </div>
+        <!-- END FOOTER JOBS -->
+    </footer>
+</body>
+
+</html>

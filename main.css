@@ -1,0 +1,493 @@
+/* START GENERAL */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    width: 30px;
+}
+
+form label,
+form input,
+form textarea {
+    width: 100%;
+}
+
+/* END GENERAL */
+
+
+
+
+/* START HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: green;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
+
+.nav {
+    color: white;
+    font-size: 30px;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 20px 0 0 20px;
+}
+
+.nav__logo {
+    float: left;
+}
+
+.nav__title {
+    margin: 10px 0 0 40px;
+    float: left;
+    font-family: 'Lato', sans-serif;
+}
+
+.nav__menu {
+    margin: 20px 40px 0 0;
+    float: right;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+}
+
+.nav__menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav__menu a:hover,
+a.active {
+    text-decoration: underline;
+}
+
+/* END HEADER */
+
+
+
+
+/* START MAIN */
+.main,
+.mainContact,
+.mainJobs,
+.mainOrders {
+    width: 100%;
+    z-index: 1;
+    margin-top: 90px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.mainContact,
+.mainJobs,
+.mainOrders {
+    display: flex;
+}
+
+/* START GENERAL FORMS */
+.jobsForm,
+.ordersForm {
+    width: 100%;
+    margin: 2% 30%;
+    text-align: left;
+    background-color: rgb(255, 203, 92);
+}
+
+.jobsForm__fieldset,
+.ordersForm__fieldset,
+.contactForm__fieldset,
+.newsletterForm__fieldset {
+    padding: 20px;
+}
+
+.labelInput,
+.labelCheckbox {
+    margin: 10px 0;
+    font-size: 18px;
+    height: 60px;
+}
+
+.labelSelect,
+.labelCv {
+    margin: 12px 0;
+}
+
+.labelInput label {
+    display: block;
+}
+
+.labelInput input {
+    margin-top: 5px;
+    height: 28px;
+    display: block;
+}
+
+.labelCheckbox label,
+.labelRadio label {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.labelCheckbox input,
+.labelRadio input {
+    width: 20px;
+    margin-top: 10px;
+    height: 14px;
+}
+
+.labelSelect label,
+.labelCv label {
+    font-size: 20px;
+}
+
+.labelSelect select {
+    float: right;
+    width: 150px;
+    height: 28px;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.formButtons {
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+
+}
+
+.formButtons button {
+    width: 90px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.labelArea {
+    margin: 10px 0;
+    height: 180px;
+    font-size: 20px;
+}
+
+.labelArea textarea {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* END GENERAL FORMS */
+
+
+/* START GENERAL CARROUSEL */
+.heroSection__carrousel,
+.burgers__card__carrousel,
+.chips__card__carrousel,
+.burgers__carrousel,
+.chips__carrousel {
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+
+.heroSection__carrousel button,
+.chips__card__carrousel button,
+.burgers__card__carrousel button,
+.burgers__carrousel button,
+.chips__carrousel button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.heroSection__carrousel #swipe-left,
+.chips__card__carrousel #swipe-left,
+.burgers__card__carrousel #swipe-left,
+.burgers__carrousel #swipe-left,
+.chips__carrousel #swipe-left {
+    left: 0%;
+    transform: translate(+50%, -50%);
+
+}
+
+.heroSection__carrousel #swipe-right,
+.chips__card__carrousel #swipe-right,
+.burgers__card__carrousel #swipe-right,
+.burgers__carrousel #swipe-right,
+.chips__carrousel #swipe-right {
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.burgers__card figcaption,
+.chips__card figcaption,
+.burgers__carrousel__card figure figcaption,
+.chips__carrousel__card figure figcaption {
+    height: 12%;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+    border: solid black;
+    border-width: 2px 0 0 0;
+    z-index: 2;
+}
+
+.burgers__card figcaption p,
+.chips__card figcaption p,
+.burgers__carrousel__card figure figcaption p,
+.chips__carrousel__card figure figcaption p {
+    position: relative;
+    top: 38%;
+}
+
+/* END GENERAL CARROUSEL */
+
+
+
+/* START INDEX PAGE */
+
+/* START HERO SECTION */
+.heroSection {
+    position: relative;
+}
+
+.heroSection__button {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.heroSection__button button {
+    width: 200px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: black;
+    background-color: orange;
+    cursor: pointer;
+    border: solid black;
+    border-radius: 5px;
+}
+
+.heroSection__carrousel img {
+    height: 670px;
+    width: 100%;
+}
+
+/* END HERO SECTION */
+
+/* START PRODUCTS SECTION */
+.productsSection article {
+    width: 50%;
+    margin: 2% 0%;
+}
+
+.productsSection__burgers {
+    float: left;
+}
+
+.productsSection__chips {
+    float: right;
+}
+
+.burgers__card,
+.chips__card {
+    margin: 0 20%;
+    height: 500px;
+    border: solid black;
+    font-family: 'Lato', sans-serif;
+}
+
+.burgers__card h2,
+.chips__card h2 {
+    height: 8.1%;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    z-index: 2;
+}
+
+/* START PRODUCTS CARROUSEL */
+.burgers__card__carrousel,
+.chips__card__carrousel {
+    position: relative;
+    height: 79.7%;
+}
+
+.burgers__card__carrousel figure img,
+.chips__card__carrousel figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* END PRODUCTS CARROUSEL */
+
+/* END PRODUCTS SECTION */
+
+/* END INDEX PAGE */
+
+
+
+/* START MENU PAGE */
+.burgers,
+.chips {
+    margin-bottom: 30px;
+}
+
+.burgers h2,
+.chips h2 {
+    color: white;
+    background-color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+}
+
+.burgers__carrousel,
+.chips__carrousel {
+    position: relative;
+    height: 460px;
+    width: 100%;
+}
+
+.burgers__carrousel__card,
+.chips__carrousel__card {
+    width: 33%;
+    border: solid black;
+    font-family: 'Lato', sans-serif;
+}
+
+.burgers__carrousel__card figure,
+.chips__carrousel__card figure {
+    height: 100%;
+}
+
+.burgers__carrousel__card figure img,
+.chips__carrousel__card figure img {
+    display: block;
+    width: 100%;
+    height: 87.8%;
+}
+
+
+/* END MENU PAGE */
+
+
+
+/* START ORDERS PAGE */
+.dateAndHour input {
+    width: fit-content;
+    height: 28px;
+    margin: 5px 20px 0 0;
+}
+
+.dateAndHour select {
+    width: 80px;
+    height: 28px;
+}
+
+/* END ORDERS PAGE */
+
+
+
+/* START CONTACT PAGE */
+.contactSection {
+    width: 60%;
+    margin: 20px 0 30px 0;
+}
+
+.newsletterSection {
+    width: 40%;
+    margin: 20px 0 30px 0;
+}
+
+.contactForm {
+    margin: 2% 10% 2% 20%;
+    text-align: left;
+    background-color: rgb(255, 203, 92);
+}
+
+.newsletterForm {
+    margin: 5% 8% 5% 2%;
+    text-align: left;
+    background-color: rgb(255, 203, 92);
+}
+
+.newsletterForm h2 {
+    font-size: 25px;
+}
+
+/* END CONTACT PAGE */
+
+/* END MAIN */
+
+
+
+
+/* START FOOTER */
+.footer {
+    height: 156px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    background-color: rgb(38, 38, 38);
+    padding: 20px 0px;
+}
+
+.footer div {
+    color: white;
+    margin: auto;
+    height: 130px;
+}
+
+.footer div h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.footer div li {
+    margin-bottom: 4px;
+}
+
+.footer div a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__schedule dt {
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer__schedule dd {
+    text-align: center;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* END FOOTER */

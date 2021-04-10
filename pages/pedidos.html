@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack & Jek</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav">
+
+            <!-- START NAV LOGO -->
+            <div class="nav__logo">
+                <a href="../index.html"><img src="../media/logo.jpg" alt="LOGO"></a>
+            </div>
+            <!-- END NAV LOGO -->
+
+            <!-- START NAV TITULO -->
+            <div class="nav__title">
+                <h1 class="">JACK & JEK</h1>
+            </div>
+            <!-- END NAV TITULO -->
+
+            <!-- START NAV MENU -->
+            <div class="nav__menu">
+                <ul>
+                    <!-- NAVIGATION -->
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a class="active" href="pedidos.html">Pedidos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="empleos.html">Empleos</a></li>
+                </ul>
+            </div>
+            <!-- END NAV MENU -->
+
+        </nav>
+
+    </header>
+
+
+    <main class="mainOrders">
+
+        <form class="ordersForm" action="pedidos.html">
+            <fieldset class="ordersForm__fieldset">
+                <legend>Pedidos</legend>
+                <h2>Trabajá con nosotros!</h2>
+
+                <!-- START FIRST NAME -->
+                <div class="labelInput">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Pepe">
+                </div>
+                <!-- END FIRST NAME -->
+
+                <!-- START SURNAME -->
+                <div class="labelInput">
+                    <label for="surname">Apellido</label>
+                    <input type="text" id="surname" name="surname" placeholder="Argento">
+                </div>
+                <!-- END SURNAME -->
+
+                <!-- START EMAIL -->
+                <div class="labelInput">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="text" id="email" name="email" placeholder="pepe_argento@correo.com">
+                </div>
+                <!-- END EMAIL -->
+
+                <!-- START PHONE NUMBER -->
+                <div class="labelInput">
+                    <label for="phone">Teléfono</label>
+                    <input type="number" id="phone" name="phone" placeholder="3416555555">
+                </div>
+                <!-- END PHONE NUMBER -->
+
+                <!-- START DELIVERY OR TAKE AWAY -->
+                <div class="labelRadio">
+                    <h3>¿Envío o Take Away?</h3>
+
+                    <input type="radio" id="delivery" name="delyOrTakeAway" value="delivery">
+                    <label for="delivery">Envío</label>
+                    <input type="radio" id="takeAway" name="delyOrTakeAway" value="takeAway">
+                    <label for="takeAway">Take Away</label>
+                </div>
+                <!-- END DELIVERY OR TAKE AWAY -->
+
+                <!-- START ADRESS -->
+                <div class="labelInput">
+                    <label for="adress">Dirección y número</label>
+                    <input type="text" id="adress" name="adress" placeholder="Calle 9999">
+                </div>
+                <!-- END ADRESS -->
+
+                <!-- START JOB AREA -->
+                <div class="dateAndHour">
+                    <h3>Fecha y Hora</h3>
+
+                    <input type="date" name="date" id="date">
+                    <select name="hour" id="hour">
+                        <option value="2000">20:00</option>
+                        <option value="2030">20:30</option>
+                        <option value="2100">21:00</option>
+                        <option value="2130">21:30</option>
+                        <option value="2200">22:00</option>
+                        <option value="2230">22:30</option>
+                        <option value="2300">23:00</option>
+                    </select>
+                </div>
+                <!-- END JOB AREA -->
+
+
+                <!-- START BUTTONS -->
+                <div class="formButtons">
+                    <button type="reset">LIMPIAR</button>
+                    <button type="submit">ENVIAR</button>
+                </div>
+                <!-- END BUTTONS -->
+
+            </fieldset>
+        </form>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <!-- START FOOTER MAP -->
+        <div class="footer__map">
+            <h3>Mapa del Sitio</h3>
+            <ul>
+                <li>Términos y Condiciones</li>
+                <li>Políticas de Privacidad</li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <!-- END FOOTER MAP -->
+        
+        <!-- START FOOTER SOCIAL -->
+        <div class="footer__social">
+            <h3>Redes</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/jackandjek.food/" target="_blank">
+                    <img class="icon"
+                    src="../media/instagram-icon.png">
+                </a>
+                <a href="https://www.instagram.com/jackandjek.food/" target="_blank">Instagram</a></li>
+                
+                <li><a href="#" target="_blank">
+                    <img class="icon"
+                    src="../media/facebook-icon.png">
+                </a>
+                <a href="#" target="_blank">Facebook</a></li>
+                
+                <li><a href="#" target="_blank">
+                    <img class="icon"
+                    src="../media/whatsapp-icon.png"></img>
+                </a>
+                <a href="#">WhatsApp</a></li>
+            </ul>
+        </div>
+        <!-- END FOOTER SOCIAL -->
+        
+        <!-- START FOOTER LOCATIONS -->
+        <div class="footer__locations">
+            <h3>Sucursales</h3>
+            <ul>
+                <li>Centeno 1156</li>
+                <li>Moreno 4500</li>
+                <li>San Martín 5200</li>
+            </ul>
+        </div>
+        <!-- END FOOTER LOCATIONS -->
+        
+        <!-- START FOOTER SCHEDULE -->
+        <div class="footer__schedule">
+            <h3>Horarios</h3>
+            <dl>
+                <dt>Martes a Domingo</dt>
+                <dd>19:30 - 23:00</dd>
+                <dt>Sábado y Domingo</dt>
+                <dd>11:30 - 13:30</dd>
+            </dl>
+        </div>
+        <!-- END FOOTER SCHEDULE -->
+        
+        <!-- START FOOTER JOBS -->
+        <div class="footer__jobs">
+            <h3><a href="empleos.html">Empleos</a></h3>
+            <ul>
+                <li>Repartos</li>
+                <li>Cocina</li>
+                <li>Mantenimiento</li>
+                <li>Programación</li>
+            </ul>
+        </div>
+        <!-- END FOOTER JOBS -->
+    </footer>
+</body>
+
+</html>
