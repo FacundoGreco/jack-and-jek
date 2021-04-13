@@ -120,11 +120,27 @@ a.active {
 }
 
 /* START GENERAL FORMS */
+.postulationForm,
+.ordersForm,
+.contactForm,
+.newsletterForm {
+    border: solid black;
+    border-radius: 2%;
+}
+
 .postulationForm__fieldset,
 .ordersForm__fieldset,
 .contactForm__fieldset,
 .newsletterForm__fieldset {
-    padding: 20px;
+    padding: 5px 30px 20px 30px;
+    border: none;
+}
+
+.postulationForm legend,
+.ordersForm legend,
+.contactForm legend,
+.newsletterForm legend {
+    text-align: center;
 }
 
 form label,
@@ -198,11 +214,11 @@ form textarea {
 
 .labelArea {
     margin: 10px 0;
-    height: 180px;
     font-size: 20px;
 }
 
 .labelArea textarea {
+    height: 150px;
     font-size: 18px;
     margin-top: 5px;
 }
@@ -587,7 +603,7 @@ form h2 {
 
 .dateAndHour select {
     width: 80px;
-    height: 28px;
+    height: 32px;
 }
 
 /* END ORDERS SECTION */
@@ -617,7 +633,7 @@ form h2 {
 .mapContainer h2 {
     width: 100%;
     font-size: 25px;
-    margin-top: 3%;
+    margin-top: 1%;
     padding-bottom: 5px;
     border-bottom: solid black;
 }
