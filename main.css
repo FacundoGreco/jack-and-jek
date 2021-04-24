@@ -11,6 +11,7 @@ body {
     max-width: auto;
     min-height: 100vh;
     height: auto;
+    overflow-x: hidden;
 }
 
 /* .body {
@@ -302,12 +303,12 @@ form h2 {
 
 
 /* START INDEX PAGE */
-.mainIndex {
-    /* display: grid;
+/* .mainIndex {
+    display: grid;
     grid-template-areas:
         "hero"
-        "products"; */
-}
+        "products";
+} */
 
 /* START HERO SECTION */
 .heroSection {
@@ -365,11 +366,11 @@ form h2 {
     padding: 40px 0;
 }
 
-.productsSection article {
-    /* display: flex;
+/* .productsSection article {
+    display: flex;
     justify-content: center;
-    width: 50%; */
-}
+    width: 50%;
+} */
 
 .burgers__card,
 .chips__card {
@@ -397,11 +398,11 @@ form h2 {
     overflow: hidden;
 }
 
-.burgers__card__images,
+/* .burgers__card__images,
 .chips__card__images {
     height: 100%;
     display: flex;
-}
+} */
 
 .burger,
 .chip {
