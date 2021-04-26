@@ -106,15 +106,11 @@ a.active {
 
 
 /* START MAIN */
-.mainIndex,
-.mainMenu,
-.mainContact,
-.mainJobs,
-.mainOrders {
+main {
     /* grid-area: main; */
     width: 100%;
     z-index: 1;
-    /* margin-top: 90px; */
+    margin-top: 98px;
     text-align: center;
 }
 
@@ -919,6 +915,10 @@ form h2 {
 
     .header{
         position: unset;
+    }
+
+    main {
+        margin-top: 0;
     }
 
     .nav__menu{

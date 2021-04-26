@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack & Jek</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
@@ -14,20 +15,20 @@
 
 <body class="body">
 
-    <header class="header">
+    <header class="header fixed-top">
 
-        <nav class="nav">
+        <nav class="nav container-fluid row">
 
             <!-- START NAV BRAND-->
-            <div class="nav__brand">
+            <div class="nav__brand col-xs-12 mb-2 col-lg-4">
                 <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
                 <h1 class="nav__title">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
-            <div class="nav__menu">
-                <ul>
+            <div class="nav__menu col-sm-12 m-auto col-lg-8">
+                <ul class="my-auto mx-lg-4 mx-xl-5">
                     <!-- NAVIGATION -->
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="menu.html">Menú</a></li>
@@ -43,7 +44,7 @@
     </header>
 
 
-    <main class="mainOrders">
+    <main class="mainOrders container-fluid">
 
         <section class="ordersSection">
             <form class="ordersForm" action="pedidos.html">
@@ -170,10 +171,10 @@
     </main>
 
 
-    <footer class="footer">
+    <footer class="footer container-fluid row">
 
         <!-- START FOOTER MAP -->
-        <div class="footer__map">
+        <div class="footer__map col-4 col-md-3">
             <h3>Mapa del Sitio</h3>
             <ul>
                 <li>Términos y Condiciones</li>
@@ -184,7 +185,7 @@
         <!-- END FOOTER MAP -->
 
         <!-- START FOOTER SOCIAL -->
-        <div class="footer__social">
+        <div class="footer__social col-4 col-md-2">
             <h3>Redes</h3>
             <ul>
                 <li><a href="https://www.instagram.com/jackandjek" target="_blank">
@@ -206,7 +207,7 @@
         <!-- END FOOTER SOCIAL -->
 
         <!-- START FOOTER LOCATIONS -->
-        <div class="footer__locations">
+        <div class="footer__locations col-4 col-md-2">
             <h3>Sucursales</h3>
             <ul>
                 <li>Centeno 1156</li>
@@ -217,7 +218,7 @@
         <!-- END FOOTER LOCATIONS -->
 
         <!-- START FOOTER SCHEDULE -->
-        <div class="footer__schedule">
+        <div class="footer__schedule col-6 col-md-3">
             <h3>Horarios</h3>
             <dl>
                 <dt>Martes a Domingo</dt>
@@ -229,7 +230,7 @@
         <!-- END FOOTER SCHEDULE -->
 
         <!-- START FOOTER JOBS -->
-        <div class="footer__jobs">
+        <div class="footer__jobs col-6 col-md-2">
             <h3><a href="empleos.html">Empleos</a></h3>
             <ul>
                 <li>Repartos</li>
@@ -240,6 +241,10 @@
         </div>
         <!-- END FOOTER JOBS -->
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
