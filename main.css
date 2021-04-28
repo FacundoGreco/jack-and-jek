@@ -14,15 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* .body {
-    display: grid;
-    grid-template-areas:
-        "main"
-        "footer";
-    grid-template-columns: auto;
-    grid-template-rows: auto 196px;
-} */
-
 li {
     list-style: none;
 }
@@ -40,21 +31,12 @@ button:hover {
 
 /* START HEADER */
 .header {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     z-index: 3;
     background-color: green;
-    /* width: 100%; */
-    /* height: 90px; */
     padding: 10px;
 }
 
 .nav {
-    /* display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center; */
     color: white;
     font-size: 30px;
 }
@@ -234,9 +216,7 @@ form h2 {
 
 
 /* START GENERAL Carousel */
-.heroSection__carousel__images,
-.burgers__carousel,
-.chips__carousel {
+.heroSection__carousel__images {
     display: flex;
     width: 100%;
     z-index: 1;
@@ -274,12 +254,13 @@ form h2 {
     right: 0%;
     transform: translate(0%, -50%);
 }
+/* END GENERAL Carousel */
 
-.burger .card-body,
-.chip .card-body,
-.burgers__carousel__card figure figcaption,
-.chips__carousel__card figure figcaption {
-    height: 58px;
+
+
+/* START GENERAL CARD */
+.card-body {
+    height: 60px;
     color: white;
     background-color: green;
     font-size: 16px;
@@ -288,27 +269,23 @@ form h2 {
     z-index: 2;
 }
 
-.burgers__carousel__card figure figcaption p,
-.chips__carousel__card figure figcaption p {
+.card-title {
     position: relative;
-    top: 38%;
+    top: 4px;
 }
 
-/* END GENERAL Carousel */
+.card-text {
+    position: relative;
+    top: 6px;
+}
+/* END GENERAL CARD */
 
 
 
 /* START INDEX PAGE */
-/* .mainIndex {
-    display: grid;
-    grid-template-areas:
-        "hero"
-        "products";
-} */
 
 /* START HERO SECTION */
 .heroSection {
-    /* grid-area: hero; */
     position: relative;
     border-style: solid;
     border-color: black;
@@ -357,21 +334,11 @@ form h2 {
 
 /* START PRODUCTS SECTION */
 .productsSection {
-    /* grid-area: products; */
-    /* display: flex; */
     padding: 40px 0;
 }
 
-/* .productsSection article {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-} */
-
 .burgers__card,
 .chips__card {
-    display: flex;
-    flex-direction: column;
     width: 510px;
     height: 510px;
     border: solid black;
@@ -394,12 +361,6 @@ form h2 {
     overflow: hidden;
 }
 
-/* .burgers__card__images,
-.chips__card__images {
-    height: 100%;
-    display: flex;
-} */
-
 .burger,
 .chip {
     position: relative;
@@ -414,23 +375,6 @@ form h2 {
     height: 410px;
 }
 
-/* .burger figcaption,
-.chip figcaption {
-    height: 6.6vh;
-} */
-
-.burger .card-body h4,
-.chip .card-body h4,
-.burgers__carousel__card figcaption h4 {
-    position: relative;
-    top: 4px;
-}
-
-.burger .card-body p {
-    position: relative;
-    top: 6px;
-}
-
 /* END PRODUCTS Carousel */
 
 /* END PRODUCTS SECTION */
@@ -440,117 +384,29 @@ form h2 {
 
 
 /* START MENU PAGE */
-.mainMenu {
-    display: grid;
-    grid-template-areas:
-        "burgers"
-        "chips";
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-}
-
-.burgers {
-    grid-area: burgers;
-    display: grid;
-    grid-template-areas:
-        "burgersTitle burgersTitle burgersTitle"
-        "jackCrispy jackCuarto jackCheese"
-        "jackBacon jackSmoke jackGuacamole";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+.burgers, .chips {
+    position: relative;
     margin-bottom: 30px;
-}
-
-.burgersTitle {
-    grid-area: burgersTitle;
-}
-
-.jackCrispy {
-    grid-area: jackCrispy;
-}
-
-.jackCuarto {
-    grid-area: jackCuarto;
-}
-
-.jackCheese {
-    grid-area: jackCheese;
-}
-
-.jackBacon {
-    grid-area: jackBacon;
-}
-
-.jackSmoke {
-    grid-area: jackSmoke;
-}
-
-.jackGuacamole {
-    grid-area: jackGuacamole;
-}
-
-.chips {
-    grid-area: chips;
-    display: grid;
-    grid-template-areas:
-        "chipsTitle chipsTitle chipsTitle"
-        "chipImage1 chipImage2 chipImage3";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    margin-bottom: 30px;
-}
-
-.chipsTitle {
-    grid-area: chipsTitle;
-}
-
-.chipImage1 {
-    grid-area: chipImage1;
-}
-
-.chipImage2 {
-    grid-area: chipImage2;
-}
-
-.chipImage3 {
-    grid-area: chipImage3;
 }
 
 .burgers h2,
 .chips h2 {
     color: white;
     background-color: black;
-    font-size: 28px;
+    font-size: 30px;
+    padding: 5px 0;
 }
 
-/* .burgers__carousel,
-.chips__carousel {
-    position: relative;
-    height: 460px;
-    width: 100%;
-} */
-
-.burgers__carousel__card,
-.chips__carousel__card {
-    width: 99.05%;
+.burger__card,
+.chip__card {
+    box-sizing: border-box;
     border: solid black;
+    height: 600px;
 }
 
-.burgers__carousel__card figure,
-.chips__carousel__card figure {
-    height: 100%;
-}
-
-.burgers__carousel__card figure img,
-.chips__carousel__card figure img {
-    display: block;
-    width: 100%;
-    height: 87.8%;
-}
-
-.chips__carousel__card figure figcaption h4 {
-    position: relative;
-    top: 30%;
+.burger__card img,
+.chip__card img {
+    height: 532px;
 }
 
 /* END MENU PAGE */
@@ -860,14 +716,7 @@ form h2 {
 
 /* START FOOTER */
 .footer {
-    /* grid-area: footer; */
-    /* height: 156px; */
     z-index: 1;
-    /* width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: stretch; */
     background-color: rgb(38, 38, 38);
     padding: 20px 15px;
 }
