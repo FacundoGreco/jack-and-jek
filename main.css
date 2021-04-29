@@ -125,91 +125,27 @@ main {
     text-align: center;
 }
 
-form label,
-form input,
-form textarea {
-    width: 100%;
-}
-
-.labelInput,
-.labelCheckbox,
-.labelOrder {
-    margin: 10px 0;
-    font-size: 18px;
-    height: 60px;
-}
-
-.labelSelect,
-.labelCv {
-    margin: 12px 0;
-}
-
-.labelInput label {
-    display: block;
-}
-
-.labelInput input {
-    margin-top: 5px;
-    height: 28px;
-    display: block;
-}
-
-.labelCheckbox label,
-.labelRadio label {
-    font-size: 15px;
-    margin-right: 10px;
-}
-
-.labelCheckbox input,
-.labelRadio input {
-    width: 20px;
-    margin-top: 10px;
-    height: 14px;
-}
-
-.labelSelect label,
-.labelCv label {
-    font-size: 20px;
-}
-
-.labelSelect select {
-    float: right;
-    width: 150px;
-    height: 28px;
-    font-size: 17px;
-
-}
-
 .formButtons {
-    text-align: center;
-    margin-top: 15px;
-    width: 100%;
-
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .formButtons button {
-    width: 90px;
-    height: 40px;
-    margin: 0 20px;
-    font-size: 16px;
-}
-
-.labelArea {
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-.labelArea textarea {
-    height: 150px;
-    font-size: 18px;
-    margin-top: 5px;
+    margin: 0 35px;
 }
 
 form h2 {
     text-align: center;
     font-size: 25px;
     padding-bottom: 5px;
+    margin-bottom: 5px;
     border-bottom: solid black;
+} 
+
+form h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
 /* END GENERAL FORMS */
@@ -384,6 +320,7 @@ form h2 {
 
 
 /* START MENU PAGE */
+
 .burgers, .chips {
     position: relative;
     margin-bottom: 30px;
@@ -415,63 +352,32 @@ form h2 {
 
 /* START ORDERS PAGE */
 .mainOrders {
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 /* START ORDERS SECTION */
 .ordersSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    margin: 2% 0;
+    margin: 40px 0;
 }
 
 .ordersForm {
-    width: 60%;
+    width: 75%;
     height: 100%;
     text-align: left;
     background-color: rgb(255, 203, 92);
-    height: min-content;
+    /* height: min-content; */
 }
 
 .orderArea {
     border-bottom: solid black;
-}
-
-.labelOrder label {
-    display: block;
-    font-size: 18px;
-}
-
-.labelOrder select {
-    margin-top: 5px;
-    width: 120px;
-    height: 30px;
-}
-
-.dateAndHour input {
-    width: fit-content;
-    height: 28px;
-    margin: 5px 20px 0 0;
-}
-
-.dateAndHour select {
-    width: 80px;
-    height: 32px;
+    margin-bottom: 10px;
 }
 
 /* END ORDERS SECTION */
 
 /* START MAP SECTION */
 .mapSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+    margin: 40px 0;
 }
 
 .mapContainer {
@@ -479,12 +385,11 @@ form h2 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 70%;
-    width: 65%;
-    padding: 20px;
+    height: 610px;
+    width: 60%;
+    padding: 20px 10px;
     background-color: rgb(255, 203, 92);
     border: solid black;
-    border-radius: 2%;
 }
 
 .mapContainer h2 {
@@ -496,7 +401,7 @@ form h2 {
 }
 
 .mapContainer iframe {
-    width: 85%;
+    width: 90%;
     height: 85%;
 }
 
