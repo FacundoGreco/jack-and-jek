@@ -1,0 +1,483 @@
+/* START GENERAL */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Slab', serif; }
+
+html,
+body {
+  min-width: 100vh;
+  max-width: auto;
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden; }
+
+li {
+  list-style: none; }
+
+.icon {
+  width: 30px; }
+
+button:hover {
+  cursor: pointer; }
+
+/* END GENERAL */
+/* START HEADER */
+.header {
+  z-index: 3;
+  background-color: green;
+  padding: 10px; }
+
+.nav {
+  color: white;
+  font-size: 30px; }
+  .nav ul li {
+    display: inline;
+    margin: 20px 0 0 20px; }
+
+.nav__logo {
+  height: 70px; }
+  .nav__logo:hover {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    box-shadow: 0 0 13px black; }
+
+.nav__brand {
+  display: flex;
+  align-items: center; }
+
+.nav__title {
+  margin-left: 40px;
+  font-family: 'Lato', sans-serif; }
+
+.nav__menu {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 26px; }
+  .nav__menu a {
+    color: white;
+    text-decoration: none; }
+
+.nav__menu a:hover,
+a.active {
+  text-decoration: underline; }
+
+/* END HEADER */
+/* START MAIN */
+main {
+  width: 100%;
+  z-index: 1;
+  margin-top: 98px;
+  text-align: center; }
+
+.mainContact,
+.mainOrders {
+  display: flex; }
+
+/* START GENERAL FORMS */
+form {
+  border: solid black;
+  border-radius: 2%; }
+  form h2 {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: solid black; }
+  form h3 {
+    font-size: 22px;
+    margin-bottom: 5px; }
+  form fieldset {
+    padding: 5px 30px 20px 30px;
+    border: none; }
+    form fieldset legend {
+      text-align: center; }
+  form .formButtons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; }
+    form .formButtons button {
+      margin: 0 35px; }
+
+/* END GENERAL FORMS */
+/* START GENERAL CARD */
+.card-body {
+  height: 60px;
+  color: white;
+  background-color: green;
+  font-size: 16px;
+  border: solid black;
+  border-width: 2px 0 0 0;
+  z-index: 2; }
+
+.card-title {
+  position: relative;
+  top: 4px; }
+
+.card-text {
+  position: relative;
+  top: 6px; }
+
+/* END GENERAL CARD */
+/* START INDEX PAGE */
+/* START HERO SECTION */
+.heroSection {
+  position: relative;
+  border-style: solid;
+  border-color: black;
+  overflow: hidden; }
+
+.heroSection__button {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition-duration: 0.3s; }
+  .heroSection__button:hover {
+    top: 10%;
+    transition-duration: 0.3s; }
+  .heroSection__button button {
+    width: 200px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: black;
+    background-color: orange;
+    border: solid black;
+    border-radius: 5px;
+    transition-duration: 0.3s; }
+    .heroSection__button button:hover {
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+      box-shadow: 0 0 20px white; }
+
+.heroSection__carousel__images {
+  display: flex;
+  width: 100%;
+  z-index: 1; }
+  .heroSection__carousel__images img {
+    height: 670px;
+    width: 100%; }
+
+.swipe-left,
+.swipe-right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  z-index: 2;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition-duration: 0.3s; }
+
+.swipe-left:hover,
+.swipe-right:hover {
+  width: 70px;
+  height: 70px;
+  transition-duration: 0.3s; }
+
+.swipe-left {
+  left: 0%;
+  transform: translate(0%, -50%); }
+
+.swipe-right {
+  right: 0%;
+  transform: translate(0%, -50%); }
+
+/* END HERO SECTION */
+/* START PRODUCTS SECTION */
+.productsSection {
+  padding: 40px 0; }
+
+.burgers__card,
+.chips__card {
+  width: 510px;
+  height: 510px;
+  border: solid black; }
+  .burgers__card h2,
+  .chips__card h2 {
+    height: 40px;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    z-index: 2; }
+
+/* START PRODUCTS Carousel */
+.burgers__card__carousel,
+.chips__card__carousel {
+  position: relative;
+  height: 470px;
+  overflow: hidden; }
+
+.burger,
+.chip {
+  position: relative;
+  min-width: 510px;
+  width: 510px; }
+  .burger img,
+  .chip img {
+    display: block;
+    width: 100%;
+    height: 410px; }
+
+/* END PRODUCTS Carousel */
+/* END PRODUCTS SECTION */
+/* END INDEX PAGE */
+/* START MENU PAGE */
+.burgers,
+.chips {
+  position: relative;
+  margin-bottom: 30px; }
+  .burgers h2,
+  .chips h2 {
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    padding: 5px 0; }
+
+.burger__card,
+.chip__card {
+  box-sizing: border-box;
+  border: solid black;
+  height: 600px; }
+  .burger__card img,
+  .chip__card img {
+    height: 532px; }
+
+/* END MENU PAGE */
+/* START ORDERS PAGE */
+.mainOrders {
+  position: relative; }
+
+/* START ORDERS SECTION */
+.ordersSection {
+  margin: 40px 0; }
+
+.ordersForm {
+  width: 75%;
+  height: 100%;
+  text-align: left;
+  background-color: #ffcb5c; }
+  .ordersForm .orderArea {
+    border-bottom: solid black;
+    margin-bottom: 10px; }
+
+/* END ORDERS SECTION */
+/* START MAP SECTION */
+.mapSection {
+  margin: 40px 0; }
+
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 610px;
+  width: 60%;
+  padding: 20px 10px;
+  background-color: #ffcb5c;
+  border: solid black; }
+  .mapContainer h2 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 1%;
+    padding-bottom: 5px;
+    border-bottom: solid black; }
+  .mapContainer iframe {
+    width: 90%;
+    height: 85%; }
+
+/* END MAP SECTION */
+/* END ORDERS PAGE */
+/* START CONTACT PAGE */
+.contactSection {
+  width: 60%;
+  margin: 20px 0 30px 0; }
+
+.contactForm {
+  margin: 2% 10% 2% 20%;
+  text-align: left;
+  background-color: #ffcb5c; }
+
+.newsletterSection {
+  width: 40%;
+  margin: 20px 0 30px 0; }
+
+.newsletterForm {
+  margin: 5% 8% 5% 2%;
+  text-align: left;
+  background-color: #ffcb5c; }
+  .newsletterForm h2 {
+    font-size: 21px;
+    margin-bottom: 20px; }
+
+/* END CONTACT PAGE */
+/* START JOBS PAGE */
+.mainJobs {
+  display: grid;
+  grid-template-areas: "aboutUs" "jobs" "postulation";
+  grid-template-columns: 1fr;
+  grid-template-rows: 450px 450px auto;
+  row-gap: 20px; }
+
+/* START ABOUT US SECTION */
+.aboutUsSection {
+  grid-area: aboutUs;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid black 5px;
+  background: linear-gradient(to right, white 30%, black 35%); }
+
+.aboutUs__title {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2%; }
+  .aboutUs__title h2 {
+    padding: 5px 10px;
+    font-size: 80px;
+    box-shadow: 10px 10px 40px grey;
+    background-color: transparent;
+    border: solid black 4px; }
+  .aboutUs__title h2.about {
+    transform: translate(-50%, 4px);
+    color: green; }
+  .aboutUs__title h2.us {
+    transform: translate(10%); }
+
+.aboutUs__story {
+  height: 83%;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-between;
+  padding: 20px;
+  border-left: solid white;
+  font-size: 26px;
+  color: white; }
+
+/* END ABOUT US SECTION */
+/* START JOBS SECTION */
+.jobsSection {
+  grid-area: jobs;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-right: solid black 20px;
+  border-left: solid black 20px;
+  border-bottom: solid black 40px; }
+  .jobsSection h2 {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 28px;
+    color: white;
+    background-color: black; }
+
+.jobs__areas {
+  height: 87%;
+  width: 97%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center; }
+  .jobs__areas div h3 {
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid white;
+    margin-bottom: 10px; }
+
+.jobs__areas__jobLeft {
+  background-color: #006d00; }
+
+.jobs__areas__jobRight {
+  background-color: black; }
+
+.jobs__areas__jobLeft,
+.jobs__areas__jobRight {
+  height: 70%;
+  width: 17%;
+  display: flex;
+  flex-flow: column nowrap;
+  box-shadow: 15px 15px 15px grey;
+  color: white;
+  padding: 15px 16px; }
+
+.jobDescription {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; }
+  .jobDescription .jobDescription__intro {
+    text-align: center; }
+  .jobDescription .jobDescription__data {
+    text-align: start; }
+  .jobDescription .jobDescription__button button {
+    width: 110px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 18px; }
+    .jobDescription .jobDescription__button button:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.1);
+      box-shadow: 0 0 8px white; }
+
+/* END JOBS SECTION */
+/* START POSTULATION SECTION */
+.postulationSection {
+  grid-area: postulation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; }
+
+.postulationForm {
+  text-align: left;
+  background-color: #ffcb5c; }
+
+/* END POSTULATION SECTION */
+/* END JOBS PAGE */
+/* END MAIN */
+/* START FOOTER */
+.footer {
+  z-index: 1;
+  background-color: #262626;
+  padding: 20px 15px; }
+  .footer div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .footer div h3 {
+      margin-bottom: 15px;
+      font-size: 25px; }
+    .footer div li {
+      margin-bottom: 4px; }
+    .footer div a {
+      text-decoration: none;
+      color: white; }
+      .footer div a:hover {
+        text-decoration: underline; }
+
+.footer__schedule dt {
+  font-size: 18px;
+  font-weight: unset;
+  text-align: center; }
+
+.footer__schedule dd {
+  text-align: center; }
+
+/* END FOOTER */
+@media only screen and (max-width: 992px) {
+  .header {
+    position: unset; }
+  main {
+    margin-top: 0; }
+  .nav__menu {
+    justify-content: center; } }

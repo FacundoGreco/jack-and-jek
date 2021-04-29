@@ -25,6 +25,7 @@ li {
 button:hover {
     cursor: pointer;
 }
+
 /* END GENERAL */
 
 
@@ -39,21 +40,22 @@ button:hover {
 .nav {
     color: white;
     font-size: 30px;
+
+    ul li {
+        display: inline;
+        margin: 20px 0 0 20px;
+    }
 }
 
-.nav ul li {
-    display: inline;
-    margin: 20px 0 0 20px;
-}
 
 .nav__logo {
     height: 70px;
-}
 
-.nav__logo:hover {
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-    box-shadow: 0 0 13px black;
+    &:hover {
+        transform: scale(0.9);
+        transition-duration: 0.3s;
+        box-shadow: 0 0 13px black;
+    }
 }
 
 .nav__brand {
@@ -70,17 +72,18 @@ button:hover {
     display: flex;
     justify-content: flex-end;
     font-size: 26px;
-}
 
-.nav__menu a {
-    color: white;
-    text-decoration: none;
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .nav__menu a:hover,
 a.active {
     text-decoration: underline;
 }
+
 
 /* END HEADER */
 
@@ -89,7 +92,6 @@ a.active {
 
 /* START MAIN */
 main {
-    /* grid-area: main; */
     width: 100%;
     z-index: 1;
     margin-top: 98px;
@@ -102,60 +104,122 @@ main {
 }
 
 /* START GENERAL FORMS */
-.postulationForm,
-.ordersForm,
-.contactForm,
-.newsletterForm {
+form {
     border: solid black;
     border-radius: 2%;
-}
 
-.postulationForm__fieldset,
-.ordersForm__fieldset,
-.contactForm__fieldset,
-.newsletterForm__fieldset {
-    padding: 5px 30px 20px 30px;
-    border: none;
-}
+    h2 {
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: solid black;
+    }
 
-.postulationForm legend,
-.ordersForm legend,
-.contactForm legend,
-.newsletterForm legend {
-    text-align: center;
-}
+    h3 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
 
-.formButtons {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-}
+    fieldset {
+        padding: 5px 30px 20px 30px;
+        border: none;
 
-.formButtons button {
-    margin: 0 35px;
-}
+        legend {
+            text-align: center;
+        }
+    }
 
-form h2 {
-    text-align: center;
-    font-size: 25px;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: solid black;
-} 
+    .formButtons {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
 
-form h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
+        button {
+            margin: 0 35px;
+        }
+    }
 }
 
 /* END GENERAL FORMS */
 
 
-/* START GENERAL Carousel */
+/* START GENERAL CARD */
+.card-body {
+    height: 60px;
+    color: white;
+    background-color: green;
+    font-size: 16px;
+    border: solid black;
+    border-width: 2px 0 0 0;
+    z-index: 2;
+}
+
+.card-title {
+    position: relative;
+    top: 4px;
+}
+
+.card-text {
+    position: relative;
+    top: 6px;
+}
+
+/* END GENERAL CARD */
+
+
+
+/* START INDEX PAGE */
+
+/* START HERO SECTION */
+.heroSection {
+    position: relative;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+}
+
+.heroSection__button {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition-duration: 0.3s;
+
+    &:hover {
+        top: 10%;
+        transition-duration: 0.3s;
+    }
+
+    button {
+        width: 200px;
+        height: 50px;
+        font-family: 'Lato', sans-serif;
+        font-size: 22px;
+        color: black;
+        background-color: orange;
+        border: solid black;
+        border-radius: 5px;
+        transition-duration: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            transition-duration: 0.3s;
+            box-shadow: 0 0 20px white;
+        }
+    }
+}
+
 .heroSection__carousel__images {
     display: flex;
     width: 100%;
     z-index: 1;
+
+    img {
+        height: 670px;
+        width: 100%;
+    }
 }
 
 .swipe-left,
@@ -190,81 +254,6 @@ form h3 {
     right: 0%;
     transform: translate(0%, -50%);
 }
-/* END GENERAL Carousel */
-
-
-
-/* START GENERAL CARD */
-.card-body {
-    height: 60px;
-    color: white;
-    background-color: green;
-    font-size: 16px;
-    border: solid black;
-    border-width: 2px 0 0 0;
-    z-index: 2;
-}
-
-.card-title {
-    position: relative;
-    top: 4px;
-}
-
-.card-text {
-    position: relative;
-    top: 6px;
-}
-/* END GENERAL CARD */
-
-
-
-/* START INDEX PAGE */
-
-/* START HERO SECTION */
-.heroSection {
-    position: relative;
-    border-style: solid;
-    border-color: black;
-    overflow: hidden;
-
-}
-
-.heroSection__button {
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    transition-duration: 0.3s;
-}
-
-.heroSection__button:hover {
-    top: 10%;
-    transition-duration: 0.3s;
-}
-
-.heroSection__button button {
-    width: 200px;
-    height: 50px;
-    font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    color: black;
-    background-color: orange;
-    border: solid black;
-    border-radius: 5px;
-    transition-duration: 0.3s;
-}
-
-.heroSection__button button:hover {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
-    box-shadow: 0 0 20px white;
-}
-
-.heroSection__carousel__images img {
-    height: 670px;
-    width: 100%;
-}
 
 /* END HERO SECTION */
 
@@ -278,15 +267,14 @@ form h3 {
     width: 510px;
     height: 510px;
     border: solid black;
-}
 
-.burgers__card h2,
-.chips__card h2 {
-    height: 40px;
-    color: white;
-    background-color: black;
-    font-size: 28px;
-    z-index: 2;
+    h2 {
+        height: 40px;
+        color: white;
+        background-color: black;
+        font-size: 28px;
+        z-index: 2;
+    }
 }
 
 /* START PRODUCTS Carousel */
@@ -302,13 +290,12 @@ form h3 {
     position: relative;
     min-width: 510px;
     width: 510px;
-}
 
-.burger img,
-.chip img {
-    display: block;
-    width: 100%;
-    height: 410px;
+    img {
+        display: block;
+        width: 100%;
+        height: 410px;
+    }
 }
 
 /* END PRODUCTS Carousel */
@@ -321,17 +308,17 @@ form h3 {
 
 /* START MENU PAGE */
 
-.burgers, .chips {
+.burgers,
+.chips {
     position: relative;
     margin-bottom: 30px;
-}
 
-.burgers h2,
-.chips h2 {
-    color: white;
-    background-color: black;
-    font-size: 30px;
-    padding: 5px 0;
+    h2 {
+        color: white;
+        background-color: black;
+        font-size: 30px;
+        padding: 5px 0;
+    }
 }
 
 .burger__card,
@@ -339,11 +326,10 @@ form h3 {
     box-sizing: border-box;
     border: solid black;
     height: 600px;
-}
 
-.burger__card img,
-.chip__card img {
-    height: 532px;
+    img {
+        height: 532px;
+    }
 }
 
 /* END MENU PAGE */
@@ -365,12 +351,11 @@ form h3 {
     height: 100%;
     text-align: left;
     background-color: rgb(255, 203, 92);
-    /* height: min-content; */
-}
 
-.orderArea {
-    border-bottom: solid black;
-    margin-bottom: 10px;
+    .orderArea {
+        border-bottom: solid black;
+        margin-bottom: 10px;
+    }
 }
 
 /* END ORDERS SECTION */
@@ -390,19 +375,19 @@ form h3 {
     padding: 20px 10px;
     background-color: rgb(255, 203, 92);
     border: solid black;
-}
 
-.mapContainer h2 {
-    width: 100%;
-    font-size: 25px;
-    margin-top: 1%;
-    padding-bottom: 5px;
-    border-bottom: solid black;
-}
+    h2 {
+        width: 100%;
+        font-size: 25px;
+        margin-top: 1%;
+        padding-bottom: 5px;
+        border-bottom: solid black;
+    }
 
-.mapContainer iframe {
-    width: 90%;
-    height: 85%;
+    iframe {
+        width: 90%;
+        height: 85%;
+    }
 }
 
 /* END MAP SECTION */
@@ -417,26 +402,26 @@ form h3 {
     margin: 20px 0 30px 0;
 }
 
-.newsletterSection {
-    width: 40%;
-    margin: 20px 0 30px 0;
-}
-
 .contactForm {
     margin: 2% 10% 2% 20%;
     text-align: left;
     background-color: rgb(255, 203, 92);
 }
 
+.newsletterSection {
+    width: 40%;
+    margin: 20px 0 30px 0;
+}
+
 .newsletterForm {
     margin: 5% 8% 5% 2%;
     text-align: left;
     background-color: rgb(255, 203, 92);
-}
 
-.newsletterForm h2 {
-    font-size: 21px;
-    margin-bottom: 20px;
+    h2 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
 }
 
 /* END CONTACT PAGE */
@@ -471,23 +456,23 @@ form h3 {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2%;
-}
 
-.aboutUs__title h2 {
-    padding: 5px 10px;
-    font-size: 80px;
-    box-shadow: 10px 10px 40px grey;
-    background-color: transparent;
-    border: solid black 4px;
-}
+    h2 {
+        padding: 5px 10px;
+        font-size: 80px;
+        box-shadow: 10px 10px 40px grey;
+        background-color: transparent;
+        border: solid black 4px;
+    }
 
-.aboutUs__title h2.about {
-    transform: translate(-50%, 4px);
-    color: green;
-}
+    h2.about {
+        transform: translate(-50%, 4px);
+        color: green;
+    }
 
-.aboutUs__title h2.us {
-    transform: translate(+10%);
+    h2.us {
+        transform: translate(+10%);
+    }
 }
 
 .aboutUs__story {
@@ -515,14 +500,14 @@ form h3 {
     border-right: solid black 20px;
     border-left: solid black 20px;
     border-bottom: solid black 40px;
-}
 
-.jobsSection h2 {
-    width: 100%;
-    padding: 5px 0;
-    font-size: 28px;
-    color: white;
-    background-color: black;
+    h2 {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 28px;
+        color: white;
+        background-color: black;
+    }
 }
 
 .jobs__areas {
@@ -532,6 +517,21 @@ form h3 {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+
+    div h3 {
+        font-size: 24px;
+        padding-bottom: 5px;
+        border-bottom: solid white;
+        margin-bottom: 10px;
+    }
+}
+
+.jobs__areas__jobLeft {
+    background-color: rgb(0, 109, 0);
+}
+
+.jobs__areas__jobRight {
+    background-color: black;
 }
 
 .jobs__areas__jobLeft,
@@ -546,50 +546,33 @@ form h3 {
     padding: 15px 16px;
 }
 
-.jobs__areas__jobLeft {
-    background-color: rgb(0, 109, 0);
-}
-
-.jobs__areas__jobRight {
-    background-color: black;
-}
-
-.jobs__areas div h3 {
-    font-size: 24px;
-    padding-bottom: 5px;
-    border-bottom: solid white;
-    margin-bottom: 10px;
-}
-
 .jobDescription {
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+
+    .jobDescription__intro {
+        text-align: center;
+    }
+
+    .jobDescription__data {
+        text-align: start;
+    }
+
+    .jobDescription__button button {
+        width: 110px;
+        height: 40px;
+        margin: 0 20px;
+        font-size: 18px;
+
+        &:hover {
+            transition-duration: 0.3s;
+            transform: scale(1.1);
+            box-shadow: 0 0 8px white;
+        }
+    }
 }
-
-.jobDescription__intro {
-    text-align: center;
-}
-
-.jobDescription__data {
-    text-align: start;
-}
-
-.jobDescription__button button{
-    width: 110px;
-    height: 40px;
-    margin: 0 20px;
-    font-size: 18px;
-}
-
-.jobDescription__button button:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.1);
-    box-shadow: 0 0 8px white;
-}
-
-
 
 /* END JOBS SECTION */
 
@@ -603,14 +586,11 @@ form h3 {
 }
 
 .postulationForm {
-    /* width: 100%; */
-    /* margin: 2% 30%; */
     text-align: left;
     background-color: rgb(255, 203, 92);
 }
 
 /* END POSTULATION SECTION */
-
 
 /* END JOBS PAGE */
 
@@ -624,50 +604,53 @@ form h3 {
     z-index: 1;
     background-color: rgb(38, 38, 38);
     padding: 20px 15px;
+
+    div {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        h3 {
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
-.footer div {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
+.footer__schedule {
 
-.footer div h3 {
-    margin-bottom: 15px;
-    font-size: 25px;
-}
+    dt {
+        font-size: 18px;
+        font-weight: unset;
+        text-align: center;
+    }
 
-.footer div li {
-    margin-bottom: 4px;
-}
-
-.footer div a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer__schedule dt {
-    font-size: 18px;
-    font-weight: unset;
-    text-align: center;
-}
-
-.footer__schedule dd {
-    text-align: center;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+    dd {
+        text-align: center;
+    }
 }
 
 /* END FOOTER */
 
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) {
 
-    .header{
+    .header {
         position: unset;
     }
 
@@ -675,7 +658,7 @@ form h3 {
         margin-top: 0;
     }
 
-    .nav__menu{
+    .nav__menu {
         justify-content: center;
     }
 }
