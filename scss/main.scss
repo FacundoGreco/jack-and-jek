@@ -116,11 +116,6 @@ main {
     text-align: center;
 }
 
-.mainContact,
-.mainOrders {
-    display: flex;
-}
-
 /* START GENERAL FORMS */
 form {
     border: solid black;
@@ -358,9 +353,6 @@ form {
 
 
 /* START ORDERS PAGE */
-.mainOrders {
-    position: relative;
-}
 
 /* START ORDERS SECTION */
 .ordersSection {
@@ -420,23 +412,25 @@ form {
 
 /* START CONTACT PAGE */
 .contactSection {
-    width: 60%;
-    margin: 20px 0 30px 0;
+    // width: 60%;
+    margin: 30px 0;
 }
 
 .contactForm {
-    margin: 2% 10% 2% 20%;
+    width: 70%;
+    // margin: 2% 10% 2% 20%;
     text-align: left;
     background-color: rgb(255, 203, 92);
 }
 
 .newsletterSection {
-    width: 40%;
-    margin: 20px 0 30px 0;
+    // width: 40%;
+    margin: 30px 0;
 }
 
 .newsletterForm {
-    margin: 5% 8% 5% 2%;
+    width: 90%;
+    margin: 50px 0 0 0;
     text-align: left;
     background-color: rgb(255, 203, 92);
 
