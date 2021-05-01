@@ -555,10 +555,14 @@ form {
                     text-align: start;
                 }
 
+                .jobDescription__button {
+                    margin: 0 auto;
+                    width: min-content;
+                }
+
                 .jobDescription__button button {
                     width: 110px;
                     height: 40px;
-                    margin: 0 20px;
                     font-size: 18px;
 
                     &:hover {
