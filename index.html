@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack & Jek</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="scripts/carrousel.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
         rel="stylesheet">
@@ -17,26 +17,26 @@
 
 <body class="body">
 
-    <header class="header">
+    <header class="header fixed-top">
 
-        <nav class="nav">
+        <nav class="nav container-fluid row">
 
             <!-- START NAV BRAND-->
-            <div class="nav__brand">
-                <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
-                <h1 class="nav__title">JACK & JEK</h1>
+            <div class="nav__brand col-xs-12 mb-2 col-lg-4">
+                <a class="nav__logo" href="index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
+                <h1 class="nav__title ">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
-            <div class="nav__menu">
-                <ul>
+            <div class="nav__menu col-sm-12 m-auto col-lg-8">
+                <ul class="my-auto mx-lg-4 mx-xl-5">
                     <!-- NAVIGATION -->
                     <li><a class="active" href="index.html">Inicio</a></li>
                     <li><a href="pages/menu.html">Menú</a></li>
-                    <li><a href="pages/pedidos.html">Pedidos</a></li>
-                    <li><a href="pages/contacto.html">Contacto</a></li>
-                    <li><a href="pages/empleos.html">Empleos</a></li>
+                    <li><a href="pages/orders.html">Pedidos</a></li>
+                    <li><a href="pages/contact.html">Contacto</a></li>
+                    <li><a href="pages/jobs.html">Empleos</a></li>
                 </ul>
             </div>
             <!-- END NAV MENU -->
@@ -46,19 +46,19 @@
     </header>
 
 
-    <main class="mainIndex">
+    <main class="mainIndex container-fluid">
 
         <!-- START HERO SECTION -->
         <section class="heroSection">
 
             <div class="heroSection__button">
-                <a href="pages/pedidos.html"><button>¡PEDIR AHORA!</button></a>
+                <a href="pages/orders.html"><button>¡PEDIR AHORA!</button></a>
             </div>
 
-            <div class="heroSection__carrousel">
+            <div class="heroSection__carousel">
                 <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png"
-                    onclick="carrouselSwipe('left', 'heroCarrousel', 'img')">
-                <div id="heroCarrousel" class="heroSection__carrousel__images">
+                    onclick="carouselSwipe('left')">
+                <div id="heroCarousel" class="heroSection__carousel__images">
                     <img src="https://i.ibb.co/ZzMmz8M/jack-smoke.jpg" alt="Jack Smoke">
                     <img src="https://i.ibb.co/852YMjZ/jack-cuarto.jpg" alt="Jack Cuarto">
                     <img src="https://i.ibb.co/Th4rz5q/jack-guacamole.jpg" alt="Jack Guacamole">
@@ -68,111 +68,142 @@
                     <img src="https://i.ibb.co/DpkGnPs/jack-cheese2.jpg" alt="Jack Cheese">
                 </div>
                 <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png"
-                    onclick="carrouselSwipe('right', 'heroCarrousel', 'img')">
+                    onclick="carouselSwipe('right')">
             </div>
         </section>
         <!-- END HERO SECTION -->
 
         <!-- START PRODUCTS SECTION -->
-        <section class="productsSection">
+        <section class="productsSection container-fluid row">
             <!-- START HAMBURGERS ARTICLE -->
-            <article class="burgersArticle">
-                <div class="burgers__card">
+            <article class="burgersArticle col-sm-12 mb-5 col-xl-6 mb-xl-0">
+                <div class="burgers__card m-auto">
                     <h2>Nuestras Burgers!</h2>
-                    <div class="burgers__card__carrousel">
-                        <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png"
-                            onclick="carrouselSwipe('left', 'burgersCarrousel', 'div img')">
-                        <div id="burgersCarrousel" class="burgers__card__images">
+                    <div id="burgersCarousel" class="burgers__card__carousel carousel slide" data-ride="carousel">
+                        <!-- <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png"
+                            onclick="carouselSwipe('left', 'burgersCarousel', 'div img')"> -->
+                        <a class="carousel-control-prev" href="#burgersCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/L8L3QZh/jack-crispy.jpg" alt="Jack Crispy">
-                                <figcaption>
-                                    <h4>Jack Crispy</h4>
-                                    <p>2 medallones 120g, 4 fetas cheddar, cebolla salteada, salsa jack.</p>
-                                </figcaption>
+                        <div class="carousel-inner">
+
+                            <div class="burger carousel-item active card">
+                                <img class="card-img-top" src="https://i.ibb.co/L8L3QZh/jack-crispy.jpg"
+                                    alt="Jack Crispy">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Crispy</h4>
+                                    <p class="card-text">2 medallones 120g, 4 fetas cheddar, cebolla salteada, salsa
+                                        jack.</p>
+                                </div>
                             </div>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/FHWY2K8/jack-bacon.jpg" alt="Jack Bacon">
-                                <figcaption>
-                                    <h4>Jack Bacon</h4>
-                                    <p>2 medallones 120g, 4 fetas de cheddar, 2 bacon y salsa jack.</p>
-                                </figcaption>
+                            <div class="burger carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/FHWY2K8/jack-bacon.jpg"
+                                    alt="Jack Bacon">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Bacon</h4>
+                                    <p class="card-text">2 medallones 120g, 4 fetas de cheddar, 2 bacon y salsa jack.
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/Jq2Z5P1/jack-cheese.jpg" alt="Jack Cheese">
-                                <figcaption>
-                                    <h4>Jack Cheese</h4>
-                                    <p>2 medallones 120g, 4 fetas cheddar, salsa jack.</p>
-                                </figcaption>
+                            <div class="burger carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/Jq2Z5P1/jack-cheese.jpg"
+                                    alt="Jack Cheese">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Cheese</h4>
+                                    <p class="card-text">2 medallones 120g, 4 fetas cheddar, salsa jack.</p>
+                                </div>
                             </div>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/852YMjZ/jack-cuarto.jpg" alt="Jack Cuarto">
-                                <figcaption>
-                                    <h4>Jack Cuarto</h4>
-                                    <p>2 medallones 120g, 4 fetas de cheddar, cebolla, mostaza y ketchup.</p>
-                                </figcaption>
+                            <div class="burger carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/852YMjZ/jack-cuarto.jpg"
+                                    alt="Jack Cuarto">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Cuarto</h4>
+                                    <p class="card-text">2 medallones 120g, 4 fetas de cheddar, cebolla, mostaza y
+                                        ketchup.</p>
+                                </div>
                             </div>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/ZzMmz8M/jack-smoke.jpg" alt="Jack Smoke">
-                                <figcaption>
-                                    <h4>Jack Smoke</h4>
-                                    <p>2 medallones 80g, 2 fetas de cheddar, 2 bacon, pimiento y salsa jack.</p>
-                                </figcaption>
+                            <div class="burger carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/ZzMmz8M/jack-smoke.jpg"
+                                    alt="Jack Smoke">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Smoke</h4>
+                                    <p class="card-text">2 medallones 80g, 2 fetas de cheddar, 2 bacon, pimiento y salsa
+                                        jack.</p>
+                                </div>
                             </div>
 
-                            <div class="burger">
-                                <img src="https://i.ibb.co/Th4rz5q/jack-guacamole.jpg" alt="Jack Guacamole">
-                                <figcaption>
-                                    <h4>Jack Guacamole</h4>
-                                    <p>2 medallones 80g, 2 fetas de cheddar y guacamole.</p>
-                                </figcaption>
+                            <div class="burger carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/Th4rz5q/jack-guacamole.jpg"
+                                    alt="Jack Guacamole">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jack Guacamole</h4>
+                                    <p class="card-text">2 medallones 80g, 2 fetas de cheddar y guacamole.</p>
+                                </div>
                             </div>
 
                         </div>
-                        <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png"
-                            onclick="carrouselSwipe('right', 'burgersCarrousel', 'div img')">
+                        <!-- <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png"
+                            onclick="carouselSwipe('right', 'burgersCarousel', 'div img')"> -->
+                        <a class="carousel-control-next" href="#burgersCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
             </article>
             <!-- END HAMBURGERS ARTICLE -->
 
             <!-- START CHIPS ARTICLE -->
-            <article class="chipsArticle">
-                <div class="chips__card">
+            <article class="chipsArticle col-sm-12 col-xl-6">
+                <div class="chips__card m-auto">
                     <h2>Nuestras Papas!</h2>
-                    <div class="chips__card__carrousel">
-                        <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png"
-                            onclick="carrouselSwipe('left', 'chipsCarrousel', 'div img')">
-                        <div id="chipsCarrousel" class="chips__card__images">
+                    <div id="chipsCarousel" class="chips__card__carousel carousel slide" data-ride="carousel">
+                        <!-- <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png"
+                            onclick="carouselSwipe('left', 'chipsCarousel', 'div img')"> -->
+                        <a class="carousel-control-prev" href="#chipsCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
 
-                            <div class="chip">
-                                <img src="https://i.ibb.co/W5v7fJn/small-potatoes.jpg" alt="Papas Chicas">
-                                <figcaption>
-                                    <h4>Papas Chicas.</h4>
-                                </figcaption>
+                        <div class="carousel-inner">
+
+                            <div class="chip carousel-item active">
+                                <img class="card-img-top" src="https://i.ibb.co/W5v7fJn/small-potatoes.jpg"
+                                    alt="Papas Chicas">
+                                <div class="card-body">
+                                    <h4 class="card-title">Papas Chicas.</h4>
+                                </div>
                             </div>
 
-                            <div class="chip">
-                                <img src="https://i.ibb.co/rt9X693/medium-potatoes.jpg" alt="Papas Medianas">
-                                <figcaption>
-                                    <h4>Papas Medianas.</h4>
-                                </figcaption>
+                            <div class="chip carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/rt9X693/medium-potatoes.jpg"
+                                    alt="Papas Medianas">
+                                <div class="card-body">
+                                    <h4 class="card-title">Papas Medianas.</h4>
+                                </div>
                             </div>
 
-                            <div class="chip">
-                                <img src="https://i.ibb.co/mzvZhCd/big-potatoes.jpg" alt="Papas Grandes">
-                                <figcaption>
-                                    <h4>Papas Grandes.</h4>
-                                </figcaption>
+                            <div class="chip carousel-item">
+                                <img class="card-img-top" src="https://i.ibb.co/mzvZhCd/big-potatoes.jpg"
+                                    alt="Papas Grandes">
+                                <div class="card-body">
+                                    <h4 class="card-title">Papas Grandes.</h4>
+                                </div>
                             </div>
 
                         </div>
-                        <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png"
-                            onclick="carrouselSwipe('right', 'chipsCarrousel', 'div img')">
+                        <!-- <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png"
+                            onclick="carouselSwipe('right', 'chipsCarousel', 'div img')"> -->
+                        <a class="carousel-control-next" href="#chipsCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
 
                 </div>
@@ -184,21 +215,21 @@
     </main>
 
 
-    <footer class="footer">
+    <footer class="footer container-fluid row">
 
         <!-- START FOOTER MAP -->
-        <div class="footer__map">
+        <div class="footer__map col-4 col-md-3">
             <h3>Mapa del Sitio</h3>
             <ul>
                 <li>Términos y Condiciones</li>
                 <li>Políticas de Privacidad</li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="pages/contact.html">Contacto</a></li>
             </ul>
         </div>
         <!-- END FOOTER MAP -->
 
         <!-- START FOOTER SOCIAL -->
-        <div class="footer__social">
+        <div class="footer__social col-4 col-md-2">
             <h3>Redes</h3>
             <ul>
                 <li><a href="https://www.instagram.com/jackandjek/" target="_blank">
@@ -220,7 +251,7 @@
         <!-- END FOOTER SOCIAL -->
 
         <!-- START FOOTER LOCATIONS -->
-        <div class="footer__locations">
+        <div class="footer__locations col-4 col-md-2">
             <h3>Sucursales</h3>
             <ul>
                 <li>Centeno 1156</li>
@@ -231,7 +262,7 @@
         <!-- END FOOTER LOCATIONS -->
 
         <!-- START FOOTER SCHEDULE -->
-        <div class="footer__schedule">
+        <div class="footer__schedule col-6 col-md-3">
             <h3>Horarios</h3>
             <dl>
                 <dt>Martes a Domingo</dt>
@@ -243,8 +274,8 @@
         <!-- END FOOTER SCHEDULE -->
 
         <!-- START FOOTER JOBS -->
-        <div class="footer__jobs">
-            <h3><a href="pages/empleos.html">Empleos</a></h3>
+        <div class="footer__jobs col-6 col-md-2">
+            <h3><a href="pages/jobs.html">Empleos</a></h3>
             <ul>
                 <li>Repartos</li>
                 <li>Cocina</li>
@@ -254,6 +285,11 @@
         </div>
         <!-- END FOOTER JOBS -->
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="scripts/heroCarousel.js"></script>
 </body>
 
 </html>

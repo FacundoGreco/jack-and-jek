@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack & Jek</title>
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
         rel="stylesheet">
@@ -14,26 +15,26 @@
 
 <body class="body">
 
-    <header class="header">
+    <header class="header fixed-top">
 
-        <nav class="nav">
+        <nav class="nav container-fluid row">
 
             <!-- START NAV BRAND-->
-            <div class="nav__brand">
+            <div class="nav__brand col-xs-12 mb-2 col-lg-4">
                 <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
                 <h1 class="nav__title">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
-            <div class="nav__menu">
-                <ul>
+            <div class="nav__menu col-sm-12 m-auto col-lg-8">
+                <ul class="my-auto mx-lg-4 mx-xl-5">
                     <!-- NAVIGATION -->
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="menu.html">Menú</a></li>
-                    <li><a class="active" href="pedidos.html">Pedidos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="empleos.html">Empleos</a></li>
+                    <li><a class="active" href="orders.html">Pedidos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="jobs.html">Empleos</a></li>
                 </ul>
             </div>
             <!-- END NAV MENU -->
@@ -43,10 +44,10 @@
     </header>
 
 
-    <main class="mainOrders">
+    <main class="mainOrders container-fluid row">
 
-        <section class="ordersSection">
-            <form class="ordersForm" action="pedidos.html">
+        <section class="ordersSection container-fluid col-12 col-xl-6">
+            <form class="ordersForm m-auto" action="orders.html">
                 <fieldset class="ordersForm__fieldset">
                     <legend>Pedidos</legend>
                     <h2>Hacé tu pedido!</h2>
@@ -55,9 +56,9 @@
                     <div class="orderArea">
 
                         <!-- START BURGER ORDER -->
-                        <div class="labelOrder">
+                        <div class="form-group">
                             <label for="burger">Burger</label>
-                            <select name="burger" id="burger">
+                            <select class="form-control" name="burger" id="burger">
                                 <option value="bacon">Jack Bacon</option>
                                 <option value="onion">Jack Crispy</option>
                                 <option value="quarter">Jack Cuarto</option>
@@ -66,7 +67,7 @@
                                 <option value="guacamole">Jack Guacamole</option>
                             </select>
 
-                            <select name="burgerSlices" id="burgerSlices">
+                            <select class="form-control mt-1" name="burgerSlices" id="burgerSlices">
                                 <option value="simple">Simple</option>
                                 <option value="double">Doble</option>
                                 <option value="triple">Triple</option>
@@ -75,9 +76,9 @@
                         <!-- END BURGER ORDER -->
 
                         <!-- START CHIPS ORDER -->
-                        <div class="labelOrder">
+                        <div class="form-group">
                             <label for="chip">Papas</label>
-                            <select name="chip" id="chip">
+                            <select class="form-control" name="chip" id="chip">
                                 <option value="noChips">Sin Papas</option>
                                 <option value="small">Papas Chicas</option>
                                 <option value="medium">Papas Medianas</option>
@@ -87,9 +88,9 @@
                         <!-- END CHIPS ORDER -->
 
                         <!-- START CLARIFICATIONS -->
-                        <div class="labelInput">
+                        <div class="form-group">
                             <label for="clarifications">Aclaraciones</label>
-                            <input type="text" id="clarifications" name="clarifications">
+                            <input class="form-control" type="text" id="clarifications" name="clarifications">
                         </div>
                         <!-- END CLARIFICATIONS -->
 
@@ -98,43 +99,48 @@
 
 
                     <!-- START FIRST NAME -->
-                    <div class="labelInput">
+                    <div class="form-group">
                         <label for="firstName">Nombre</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Pepe">
+                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Pepe">
                     </div>
                     <!-- END FIRST NAME -->
 
                     <!-- START PHONE NUMBER -->
-                    <div class="labelInput">
+                    <div class="form-group">
                         <label for="phone">Teléfono</label>
-                        <input type="number" id="phone" name="phone" placeholder="3416555555">
+                        <input class="form-control" type="number" id="phone" name="phone" placeholder="3416555555">
                     </div>
                     <!-- END PHONE NUMBER -->
 
                     <!-- START DELIVERY OR TAKE AWAY -->
-                    <div class="labelRadio">
-                        <h3>¿Envío o Take Away?</h3>
+                    <label>¿Envío o Take Away?</label>
 
-                        <input type="radio" id="delivery" name="delyOrTakeAway" value="delivery">
-                        <label for="delivery">Envío</label>
-                        <input type="radio" id="takeAway" name="delyOrTakeAway" value="takeAway">
-                        <label for="takeAway">Take Away</label>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
+                            value="delivery">
+                        <label class="custom-control-label" for="delivery">Envío</label>
+                    </div>
+
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
+                            value="takeAway">
+                        <label class="custom-control-label" for="takeAway">Take Away</label>
                     </div>
                     <!-- END DELIVERY OR TAKE AWAY -->
 
                     <!-- START ADRESS -->
-                    <div class="labelInput">
-                        <label for="adress">Dirección y número</label>
-                        <input type="text" id="adress" name="adress" placeholder="Calle 9999">
+                    <div class="form-group mt-2">
+                        <label for="adress">Dirección</label>
+                        <input class="form-control" type="text" id="adress" name="adress" placeholder="Calle 9999">
                     </div>
                     <!-- END ADRESS -->
 
                     <!-- START DATE AND HOUR AREA -->
-                    <div class="dateAndHour">
-                        <h3>Fecha y Hora</h3>
+                    <div class="form-group">
 
-                        <input type="date" name="date" id="date">
-                        <select name="hour" id="hour">
+                        <label class="d-block">Fecha y Hora</label>
+                        <input class="form-control w-50 custom-control-inline" type="date" name="date" id="date">
+                        <select class="form-control w-25 custom-control-inline" name="hour" id="hour">
                             <option value="2000">20:00</option>
                             <option value="2030">20:30</option>
                             <option value="2100">21:00</option>
@@ -148,8 +154,8 @@
 
                     <!-- START BUTTONS -->
                     <div class="formButtons">
-                        <button type="reset">LIMPIAR</button>
-                        <button type="submit">ENVIAR</button>
+                        <button class="btn btn-dark" type="reset">LIMPIAR</button>
+                        <button class="btn btn-dark" type="submit">ENVIAR</button>
                     </div>
                     <!-- END BUTTONS -->
 
@@ -157,8 +163,8 @@
             </form>
         </section>
 
-        <section class="mapSection">
-            <div class="mapContainer">
+        <section class="mapSection container-fluid col-12 col-xl-6">
+            <div class="mapContainer m-auto">
                 <h2>Pasá a buscar tu comida!</h2>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.731112950105!2d-60.650859884267796!3d-32.98449518113633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abbf03e164d7%3A0x2e0cd8ef77b4e496!2sCenteno%201156%2C%20S2001BFJ%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1616960890065!5m2!1ses!2sar"
@@ -170,21 +176,21 @@
     </main>
 
 
-    <footer class="footer">
+    <footer class="footer container-fluid row">
 
         <!-- START FOOTER MAP -->
-        <div class="footer__map">
+        <div class="footer__map col-4 col-md-3">
             <h3>Mapa del Sitio</h3>
             <ul>
                 <li>Términos y Condiciones</li>
                 <li>Políticas de Privacidad</li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
         </div>
         <!-- END FOOTER MAP -->
 
         <!-- START FOOTER SOCIAL -->
-        <div class="footer__social">
+        <div class="footer__social col-4 col-md-2">
             <h3>Redes</h3>
             <ul>
                 <li><a href="https://www.instagram.com/jackandjek" target="_blank">
@@ -206,7 +212,7 @@
         <!-- END FOOTER SOCIAL -->
 
         <!-- START FOOTER LOCATIONS -->
-        <div class="footer__locations">
+        <div class="footer__locations col-4 col-md-2">
             <h3>Sucursales</h3>
             <ul>
                 <li>Centeno 1156</li>
@@ -217,7 +223,7 @@
         <!-- END FOOTER LOCATIONS -->
 
         <!-- START FOOTER SCHEDULE -->
-        <div class="footer__schedule">
+        <div class="footer__schedule col-6 col-md-3">
             <h3>Horarios</h3>
             <dl>
                 <dt>Martes a Domingo</dt>
@@ -229,8 +235,8 @@
         <!-- END FOOTER SCHEDULE -->
 
         <!-- START FOOTER JOBS -->
-        <div class="footer__jobs">
-            <h3><a href="empleos.html">Empleos</a></h3>
+        <div class="footer__jobs col-6 col-md-2">
+            <h3><a href="jobs.html">Empleos</a></h3>
             <ul>
                 <li>Repartos</li>
                 <li>Cocina</li>
@@ -240,6 +246,10 @@
         </div>
         <!-- END FOOTER JOBS -->
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
