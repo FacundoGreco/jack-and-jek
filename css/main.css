@@ -67,7 +67,8 @@ main {
 /* START GENERAL FORMS */
 form {
   border: solid black;
-  border-radius: 2%; }
+  border-radius: 2%;
+  text-align: left; }
   form h2 {
     text-align: center;
     font-size: 25px;
@@ -246,7 +247,6 @@ form {
 .ordersForm {
   width: 75%;
   height: 100%;
-  text-align: left;
   background-color: #ffcb5c; }
   .ordersForm .orderArea {
     border-bottom: solid black;
@@ -285,7 +285,6 @@ form {
 
 .contactForm {
   width: 70%;
-  text-align: left;
   background-color: #ffcb5c; }
 
 .newsletterSection {
@@ -294,7 +293,6 @@ form {
 .newsletterForm {
   width: 90%;
   margin: 50px 0 0 0;
-  text-align: left;
   background-color: #ffcb5c; }
   .newsletterForm h2 {
     font-size: 21px;
@@ -302,26 +300,19 @@ form {
 
 /* END CONTACT PAGE */
 /* START JOBS PAGE */
-.mainJobs {
-  display: grid;
-  grid-template-areas: "aboutUs" "jobs" "postulation";
-  grid-template-columns: 1fr;
-  grid-template-rows: 450px 450px auto;
-  row-gap: 20px; }
-
 /* START ABOUT US SECTION */
 .aboutUsSection {
   display: flex;
   align-items: center;
-  grid-area: aboutUs;
   justify-content: space-around;
   border-bottom: solid black 5px;
-  background: linear-gradient(to right, white 30%, black 35%); }
+  background: linear-gradient(to right, white 35%, black 40%);
+  margin-bottom: 30px; }
 
 .aboutUs__title {
   display: flex;
   align-items: center;
-  width: 28%;
+  width: 40%;
   flex-direction: column;
   padding-bottom: 2%; }
   .aboutUs__title h2 {
@@ -338,7 +329,7 @@ form {
 
 .aboutUs__story {
   height: 83%;
-  width: 58%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -351,10 +342,6 @@ form {
 /* END ABOUT US SECTION */
 /* START JOBS SECTION */
 .jobsSection {
-  display: flex;
-  align-items: center;
-  grid-area: jobs;
-  flex-flow: column nowrap;
   border-right: solid black 20px;
   border-left: solid black 20px;
   border-bottom: solid black 40px; }
@@ -364,66 +351,56 @@ form {
     width: 100%;
     padding: 5px 0;
     font-size: 28px; }
-
-.jobs__areas {
-  display: flex;
-  align-items: center;
-  height: 87%;
-  width: 97%;
-  flex-flow: row nowrap;
-  justify-content: space-around; }
-  .jobs__areas div h3 {
+  .jobsSection .jobs__areas div h3 {
     font-size: 24px;
     padding-bottom: 5px;
     border-bottom: solid white;
     margin-bottom: 10px; }
-
-.jobs__areas__jobLeft {
-  background-color: #006d00; }
-
-.jobs__areas__jobRight {
-  background-color: black; }
-
-.jobs__areas__jobLeft,
-.jobs__areas__jobRight {
-  height: 70%;
-  width: 17%;
-  display: flex;
-  flex-flow: column nowrap;
-  box-shadow: 15px 15px 15px grey;
-  color: white;
-  padding: 15px 16px; }
-
-.jobDescription {
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between; }
-  .jobDescription .jobDescription__intro {
-    text-align: center; }
-  .jobDescription .jobDescription__data {
-    text-align: start; }
-  .jobDescription .jobDescription__button button {
-    width: 110px;
-    height: 40px;
-    margin: 0 20px;
-    font-size: 18px; }
-    .jobDescription .jobDescription__button button:hover {
-      transition-duration: 0.3s;
-      transform: scale(1.1);
-      box-shadow: 0 0 8px white; }
+  .jobsSection .jobs__areas .jobs__areas__jobLeft {
+    background-color: #006d00; }
+  .jobsSection .jobs__areas .jobs__areas__jobRight {
+    background-color: black; }
+  .jobsSection .jobs__areas .jobs__areas__jobLeft,
+  .jobsSection .jobs__areas .jobs__areas__jobRight {
+    height: 280px;
+    max-height: 280px;
+    width: 260px;
+    max-width: 260px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 15px 15px 15px grey;
+    color: white;
+    padding: 15px 16px; }
+    .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription,
+    .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription {
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between; }
+      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__intro,
+      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__intro {
+        text-align: center; }
+      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__data,
+      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__data {
+        text-align: start; }
+      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
+      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
+        width: 110px;
+        height: 40px;
+        margin: 0 20px;
+        font-size: 18px; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
+          transition-duration: 0.3s;
+          transform: scale(1.1);
+          box-shadow: 0 0 8px white; }
 
 /* END JOBS SECTION */
 /* START POSTULATION SECTION */
-.postulationSection {
-  display: flex;
-  align-items: center;
-  grid-area: postulation;
-  justify-content: center;
-  padding: 20px 0; }
-
 .postulationForm {
-  text-align: left;
+  margin: 30px;
+  width: 60%;
   background-color: #ffcb5c; }
 
 /* END POSTULATION SECTION */
@@ -460,10 +437,25 @@ form {
   text-align: center; }
 
 /* END FOOTER */
+@media only screen and (max-width: 1200px) {
+  .aboutUsSection {
+    background: linear-gradient(to bottom, white 40%, black 45%); }
+    .aboutUsSection .aboutUs__title {
+      margin: 40px 0 40px; }
+    .aboutUsSection .aboutUs__story {
+      padding: unset;
+      border-left: none;
+      width: auto;
+      margin: 10px 40px;
+      min-height: 350px;
+      height: auto; } }
+
 @media only screen and (max-width: 992px) {
   .header {
     position: unset; }
   main {
     margin-top: 0; }
   .nav__menu {
-    justify-content: center; } }
+    justify-content: center !important; }
+  .aboutUs__story {
+    font-size: larger; } }

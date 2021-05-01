@@ -2,15 +2,18 @@
     background-color: green;
     color: white;
 }
+
 @mixin secondaryStyle {
     background-color: rgb(38, 38, 38);
     color: white;
 }
+
 @mixin darkStyle {
     background-color: black;
     color: white;
 }
-@mixin flex-center (){
+
+@mixin flex-center () {
     display: flex;
     align-items: center;
 }
@@ -54,47 +57,47 @@ button:hover {
     // background-color: green;
     // color: white;
     padding: 10px;
-    
+
     .nav {
         font-size: 30px;
-    
+
         ul li {
             display: inline;
             margin: 20px 0 0 20px;
         }
-        
+
         .nav__logo {
             height: 70px;
-        
+
             &:hover {
                 transform: scale(0.9);
                 transition-duration: 0.3s;
                 box-shadow: 0 0 13px black;
             }
         }
-        
+
         .nav__brand {
             @include flex-center();
             // display: flex;
             // align-items: center;
         }
-        
+
         .nav__title {
             margin-left: 40px;
             font-family: 'Lato', sans-serif;
         }
-        
+
         .nav__menu {
             display: flex;
             justify-content: flex-end;
             font-size: 26px;
-        
+
             a {
                 color: white;
                 text-decoration: none;
             }
         }
-        
+
         .nav__menu a:hover,
         a.active {
             text-decoration: underline;
@@ -120,6 +123,7 @@ main {
 form {
     border: solid black;
     border-radius: 2%;
+    text-align: left;
 
     h2 {
         text-align: center;
@@ -362,7 +366,6 @@ form {
 .ordersForm {
     width: 75%;
     height: 100%;
-    text-align: left;
     background-color: rgb(255, 203, 92);
 
     .orderArea {
@@ -412,26 +415,21 @@ form {
 
 /* START CONTACT PAGE */
 .contactSection {
-    // width: 60%;
     margin: 30px 0;
 }
 
 .contactForm {
     width: 70%;
-    // margin: 2% 10% 2% 20%;
-    text-align: left;
     background-color: rgb(255, 203, 92);
 }
 
 .newsletterSection {
-    // width: 40%;
     margin: 30px 0;
 }
 
 .newsletterForm {
     width: 90%;
     margin: 50px 0 0 0;
-    text-align: left;
     background-color: rgb(255, 203, 92);
 
     h2 {
@@ -445,31 +443,19 @@ form {
 
 
 /* START JOBS PAGE */
-.mainJobs {
-    display: grid;
-    grid-template-areas:
-        "aboutUs"
-        "jobs"
-        "postulation";
-    grid-template-columns: 1fr;
-    grid-template-rows: 450px 450px auto;
-    row-gap: 20px;
-}
 
 /* START ABOUT US SECTION */
 .aboutUsSection {
     @include flex-center();
-    grid-area: aboutUs;
-    // display: flex;
     justify-content: space-around;
-    // align-items: center;
     border-bottom: solid black 5px;
-    background: linear-gradient(to right, white 30%, black 35%);
+    background: linear-gradient(to right, white 35%, black 40%);
+    margin-bottom: 30px;
 }
 
 .aboutUs__title {
     @include flex-center();
-    width: 28%;
+    width: 40%;
     // display: flex;
     flex-direction: column;
     // align-items: center;
@@ -495,7 +481,7 @@ form {
 
 .aboutUs__story {
     height: 83%;
-    width: 58%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -511,11 +497,6 @@ form {
 
 /* START JOBS SECTION */
 .jobsSection {
-    @include flex-center();
-    grid-area: jobs;
-    // display: flex;
-    flex-flow: column nowrap;
-    // align-items: center;
     border-right: solid black 20px;
     border-left: solid black 20px;
     border-bottom: solid black 40px;
@@ -528,87 +509,79 @@ form {
         // color: white;
         // background-color: black;
     }
-}
 
-.jobs__areas {
-    @include flex-center();
-    height: 87%;
-    width: 97%;
-    // display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    // align-items: center;
+    .jobs__areas {
 
-    div h3 {
-        font-size: 24px;
-        padding-bottom: 5px;
-        border-bottom: solid white;
-        margin-bottom: 10px;
-    }
-}
+        div h3 {
+            font-size: 24px;
+            padding-bottom: 5px;
+            border-bottom: solid white;
+            margin-bottom: 10px;
+        }
 
-.jobs__areas__jobLeft {
-    background-color: rgb(0, 109, 0);
-}
+        .jobs__areas__jobLeft {
+            background-color: rgb(0, 109, 0);
+        }
 
-.jobs__areas__jobRight {
-    background-color: black;
-}
+        .jobs__areas__jobRight {
+            background-color: black;
+        }
 
-.jobs__areas__jobLeft,
-.jobs__areas__jobRight {
-    height: 70%;
-    width: 17%;
-    display: flex;
-    flex-flow: column nowrap;
+        .jobs__areas__jobLeft,
+        .jobs__areas__jobRight {
+            height: 280px;
+            max-height: 280px;
+            width: 260px;
+            max-width: 260px;
+            margin: 20px auto;
+            display: flex;
+            flex-flow: column nowrap;
 
-    box-shadow: 15px 15px 15px grey;
-    color: white;
-    padding: 15px 16px;
-}
+            box-shadow: 15px 15px 15px grey;
+            color: white;
+            padding: 15px 16px;
 
-.jobDescription {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+            .jobDescription {
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
 
-    .jobDescription__intro {
-        text-align: center;
-    }
+                .jobDescription__intro {
+                    text-align: center;
+                }
 
-    .jobDescription__data {
-        text-align: start;
-    }
+                .jobDescription__data {
+                    text-align: start;
+                }
 
-    .jobDescription__button button {
-        width: 110px;
-        height: 40px;
-        margin: 0 20px;
-        font-size: 18px;
+                .jobDescription__button button {
+                    width: 110px;
+                    height: 40px;
+                    margin: 0 20px;
+                    font-size: 18px;
 
-        &:hover {
-            transition-duration: 0.3s;
-            transform: scale(1.1);
-            box-shadow: 0 0 8px white;
+                    &:hover {
+                        transition-duration: 0.3s;
+                        transform: scale(1.1);
+                        box-shadow: 0 0 8px white;
+                    }
+                }
+            }
         }
     }
+
+
 }
+
 
 /* END JOBS SECTION */
 
 /* START POSTULATION SECTION */
-.postulationSection {
-    @include flex-center();
-    grid-area: postulation;
-    // display: flex;
-    justify-content: center;
-    // align-items: center;
-    padding: 20px 0;
-}
 
 .postulationForm {
-    text-align: left;
+    margin: 30px;
+    width: 60%;
     background-color: rgb(255, 203, 92);
 }
 
@@ -672,6 +645,28 @@ form {
 /* END FOOTER */
 
 
+@media only screen and (max-width: 1200px) {
+
+    .aboutUsSection {
+
+        background: linear-gradient(to bottom, white 40%, black 45%);
+
+        .aboutUs__title {
+            margin: 40px 0 40px;
+        }
+
+        .aboutUs__story {
+            padding: unset;
+            border-left: none;
+            width: auto;
+            margin: 10px 40px;
+            min-height: 350px;
+            height: auto;
+        }
+    }
+
+}
+
 @media only screen and (max-width: 992px) {
 
     .header {
@@ -683,6 +678,10 @@ form {
     }
 
     .nav__menu {
-        justify-content: center;
+        justify-content: center !important;
+    }
+
+    .aboutUs__story {
+        font-size: larger;
     }
 }
