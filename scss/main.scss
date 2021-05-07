@@ -371,6 +371,9 @@ form {
     .orderArea {
         border-bottom: solid black;
         margin-bottom: 10px;
+        height: 348px;
+        max-height: 348px;
+        overflow-y: auto;
     }
 }
 

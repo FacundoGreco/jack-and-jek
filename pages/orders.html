@@ -56,45 +56,51 @@
                     <!-- START ORDER AREA -->
                     <div class="orderArea">
 
-                        <!-- START BURGER ORDER -->
-                        <div class="form-group">
-                            <label for="burger">Burger</label>
-                            <select class="form-control" name="burger" id="burger">
-                                <option value="bacon">Jack Bacon</option>
-                                <option value="onion">Jack Crispy</option>
-                                <option value="quarter">Jack Cuarto</option>
-                                <option value="cheese">Jack Cheese</option>
-                                <option value="smoke">Jack Smoke</option>
-                                <option value="guacamole">Jack Guacamole</option>
-                            </select>
+                        <!-- START COMBO -->
+                        <div id="combo">
+                            <!-- START BURGER ORDER -->
+                            <div class="form-group">
+                                <label for="burger">Burger</label>
+                                <select class="form-control" name="burger" id="burger">
+                                    <option value="bacon">Jack Bacon</option>
+                                    <option value="onion">Jack Crispy</option>
+                                    <option value="quarter">Jack Cuarto</option>
+                                    <option value="cheese">Jack Cheese</option>
+                                    <option value="smoke">Jack Smoke</option>
+                                    <option value="guacamole">Jack Guacamole</option>
+                                </select>
 
-                            <select class="form-control mt-1" name="burgerSlices" id="burgerSlices">
-                                <option value="simple">Simple</option>
-                                <option value="double">Doble</option>
-                                <option value="triple">Triple</option>
-                            </select>
+                                <select class="form-control mt-1" name="burgerSlices" id="burgerSlices">
+                                    <option value="simple">Simple</option>
+                                    <option value="double">Doble</option>
+                                    <option value="triple">Triple</option>
+                                </select>
+                            </div>
+                            <!-- END BURGER ORDER -->
+
+                            <!-- START CHIPS ORDER -->
+                            <div class="form-group">
+                                <label for="chip">Papas</label>
+                                <select class="form-control" name="chip" id="chip">
+                                    <option value="noChips">Sin Papas</option>
+                                    <option value="small">Papas Chicas</option>
+                                    <option value="medium">Papas Medianas</option>
+                                    <option value="large">Papas Grandes</option>
+                                </select>
+                            </div>
+                            <!-- END CHIPS ORDER -->
+
+                            <!-- START CLARIFICATIONS -->
+                            <div class="form-group">
+                                <label for="clarifications">Aclaraciones</label>
+                                <input class="form-control" type="text" id="clarifications" name="clarifications">
+                            </div>
+                            <!-- END CLARIFICATIONS -->
                         </div>
-                        <!-- END BURGER ORDER -->
+                        <!-- END COMBO -->
 
-                        <!-- START CHIPS ORDER -->
-                        <div class="form-group">
-                            <label for="chip">Papas</label>
-                            <select class="form-control" name="chip" id="chip">
-                                <option value="noChips">Sin Papas</option>
-                                <option value="small">Papas Chicas</option>
-                                <option value="medium">Papas Medianas</option>
-                                <option value="large">Papas Grandes</option>
-                            </select>
-                        </div>
-                        <!-- END CHIPS ORDER -->
-
-                        <!-- START CLARIFICATIONS -->
-                        <div class="form-group">
-                            <label for="clarifications">Aclaraciones</label>
-                            <input class="form-control" type="text" id="clarifications" name="clarifications">
-                        </div>
-                        <!-- END CLARIFICATIONS -->
-
+                        <button id="addCombo" type="button" class="btn btn-sm btn-dark w-100 mb-2"
+                            onclick="addNewCombo()">Añadir Combo</button>
                     </div>
                     <!-- END ORDER AREA -->
 
@@ -118,23 +124,23 @@
 
                     <div class="custom-control custom-radio">
                         <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                            value="delivery">
+                            value="delivery" onclick="setDeliveryDisabled(false)">
                         <label class="custom-control-label" for="delivery">Envío</label>
                     </div>
 
                     <div class="custom-control custom-radio">
                         <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                            value="takeAway">
+                            value="takeAway" onclick="setDeliveryDisabled(true)">
                         <label class="custom-control-label" for="takeAway">Take Away</label>
                     </div>
                     <!-- END DELIVERY OR TAKE AWAY -->
 
-                    <!-- START ADRESS -->
+                    <!-- START ADDRESS -->
                     <div class="form-group mt-2">
-                        <label for="adress">Dirección</label>
-                        <input class="form-control" type="text" id="adress" name="adress" placeholder="Calle 9999">
+                        <label for="address">Dirección</label>
+                        <input class="form-control" type="text" id="address" name="address" placeholder="Calle 9999">
                     </div>
-                    <!-- END ADRESS -->
+                    <!-- END ADDRESS -->
 
                     <!-- START DATE AND HOUR AREA -->
                     <div class="form-group">
@@ -251,6 +257,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../scripts/orders.js"></script>
 </body>
 
 </html>
