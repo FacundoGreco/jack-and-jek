@@ -1,7 +1,7 @@
 {
   "name": "jack-and-jek",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a project for my web development course, based on Jack & Jek, a burger shop in Rosario, Santa Fe, Argentina.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/FacundoGreco/jack-and-jek.git"
   },
-  "author": "",
+  "author": "Facundo Greco",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FacundoGreco/jack-and-jek/issues"
