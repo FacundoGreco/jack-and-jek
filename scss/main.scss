@@ -121,9 +121,9 @@ main {
 
 /* START GENERAL FORMS */
 form {
-    border: solid black;
-    border-radius: 2%;
     text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 6px 25px black;
 
     h2 {
         text-align: center;
@@ -285,6 +285,7 @@ form {
     width: 510px;
     height: 510px;
     border: solid black;
+    box-shadow: 0 2px 30px black;
 
     h2 {
         @include darkStyle();
@@ -394,7 +395,8 @@ form {
     width: 60%;
     padding: 20px 10px;
     background-color: rgb(255, 203, 92);
-    border: solid black;
+    box-shadow: 0 6px 25px black;
+    border-radius: 2%;
 
     h2 {
         width: 100%;

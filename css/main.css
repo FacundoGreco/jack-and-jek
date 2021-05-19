@@ -66,9 +66,9 @@ main {
 
 /* START GENERAL FORMS */
 form {
-  border: solid black;
+  text-align: left;
   border-radius: 2%;
-  text-align: left; }
+  box-shadow: 0 6px 25px black; }
   form h2 {
     text-align: center;
     font-size: 25px;
@@ -187,7 +187,8 @@ form {
 .chips__card {
   width: 510px;
   height: 510px;
-  border: solid black; }
+  border: solid black;
+  box-shadow: 0 2px 30px black; }
   .burgers__card h2,
   .chips__card h2 {
     background-color: black;
@@ -269,7 +270,8 @@ form {
   width: 60%;
   padding: 20px 10px;
   background-color: #ffcb5c;
-  border: solid black; }
+  box-shadow: 0 6px 25px black;
+  border-radius: 2%; }
   .mapContainer h2 {
     width: 100%;
     font-size: 25px;
