@@ -54,8 +54,6 @@ button:hover {
 .header {
     @include primaryStyle();
     z-index: 3;
-    // background-color: green;
-    // color: white;
     padding: 10px;
 
     .nav {
@@ -78,8 +76,6 @@ button:hover {
 
         .nav__brand {
             @include flex-center();
-            // display: flex;
-            // align-items: center;
         }
 
         .nav__title {
@@ -165,8 +161,6 @@ form {
 .card-body {
     @include primaryStyle();
     height: 60px;
-    // color: white;
-    // background-color: green;
     font-size: 16px;
     border: solid black;
     border-width: 2px 0 0 0;
@@ -290,8 +284,6 @@ form {
     h2 {
         @include darkStyle();
         height: 40px;
-        // color: white;
-        // background-color: black;
         font-size: 28px;
         z-index: 2;
     }
@@ -335,8 +327,6 @@ form {
 
     h2 {
         @include darkStyle();
-        // color: white;
-        // background-color: black;
         font-size: 30px;
         padding: 5px 0;
     }
@@ -387,10 +377,8 @@ form {
 
 .mapContainer {
     @include flex-center();
-    // display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: center;
     height: 610px;
     width: 60%;
     padding: 20px 10px;
@@ -461,9 +449,7 @@ form {
 .aboutUs__title {
     @include flex-center();
     width: 40%;
-    // display: flex;
     flex-direction: column;
-    // align-items: center;
     padding-bottom: 2%;
 
     h2 {
@@ -511,8 +497,6 @@ form {
         width: 100%;
         padding: 5px 0;
         font-size: 28px;
-        // color: white;
-        // background-color: black;
     }
 
     .jobs__areas {
@@ -607,16 +591,12 @@ form {
 .footer {
     @include secondaryStyle();
     z-index: 1;
-    // background-color: rgb(38, 38, 38);
-    // color: white;
     padding: 20px 15px;
 
     div {
         @include flex-center();
-        // display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        // align-items: center;
 
         h3 {
             margin-bottom: 15px;
