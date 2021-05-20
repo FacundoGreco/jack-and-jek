@@ -1,28 +1,10 @@
-@mixin primaryStyle {
-    background-color: green;
-    color: white;
-}
-
-@mixin secondaryStyle {
-    background-color: rgb(38, 38, 38);
-    color: white;
-}
-
-@mixin darkStyle {
-    background-color: black;
-    color: white;
-}
-
-@mixin flex-center () {
-    display: flex;
-    align-items: center;
-}
+@import "_operators.scss";
 
 /* START GENERAL */
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: $font;
 }
 
 html,
@@ -89,7 +71,7 @@ button:hover {
             font-size: 26px;
 
             a {
-                color: white;
+                color: $text-color;
                 text-decoration: none;
             }
         }
@@ -240,7 +222,7 @@ form {
         height: 50px;
         top: 50%;
         z-index: 2;
-        color: white;
+        color: $text-color;
         background-color: transparent;
         border-color: transparent;
         cursor: pointer;
@@ -464,7 +446,7 @@ form {
 
         h2.about {
             transform: translate(-50%, 4px);
-            color: green;
+            color: $primary-color;
         }
 
         h2.us {
@@ -483,7 +465,7 @@ form {
         padding: 20px;
         border-left: solid white;
         font-size: 26px;
-        color: white;
+        color: $text-color;
     }
 
 }
@@ -531,7 +513,7 @@ form {
             flex-flow: column nowrap;
 
             box-shadow: 15px 15px 15px grey;
-            color: white;
+            color: $text-color;
             padding: 15px 16px;
 
             .jobDescription {
@@ -611,7 +593,7 @@ form {
 
         a {
             text-decoration: none;
-            color: white;
+            color: $text-color;
 
             &:hover {
                 text-decoration: underline;

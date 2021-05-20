@@ -1,0 +1,24 @@
+$primary-color: green;
+$secondary-color: rgb(38, 38, 38);
+$text-color: white;
+$font: 'Roboto Slab', serif;
+
+@mixin primaryStyle {
+    background-color: $primary-color;
+    color: $text-color;
+}
+
+@mixin secondaryStyle {
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+@mixin darkStyle {
+    background-color: black;
+    color: $text-color;
+}
+
+@mixin flex-center () {
+    display: flex;
+    align-items: center;
+}
