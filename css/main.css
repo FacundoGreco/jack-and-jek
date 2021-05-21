@@ -380,18 +380,15 @@ form {
         text-align: start; }
       .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button,
       .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button {
-        margin: 0 auto;
-        width: min-content; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
-        width: 110px;
-        height: 40px;
-        font-size: 18px; }
-        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
-        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
-          transition-duration: 0.3s;
-          transform: scale(1.1);
-          box-shadow: 0 0 8px white; }
+        margin: 0 auto; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
+          font-size: 18px; }
+          .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
+          .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
+            transition-duration: 0.3s;
+            transform: scale(1.1);
+            box-shadow: 0 0 8px white; }
 
 /* END JOBS SECTION */
 /* START POSTULATION SECTION */

@@ -532,20 +532,18 @@ form {
 
                 .jobDescription__button {
                     margin: 0 auto;
-                    width: min-content;
-                }
 
-                .jobDescription__button button {
-                    width: 110px;
-                    height: 40px;
-                    font-size: 18px;
+                    button {
+                        font-size: 18px;
 
-                    &:hover {
-                        transition-duration: 0.3s;
-                        transform: scale(1.1);
-                        box-shadow: 0 0 8px white;
+                        &:hover {
+                            transition-duration: 0.3s;
+                            transform: scale(1.1);
+                            box-shadow: 0 0 8px white;
+                        }
                     }
                 }
+
             }
         }
     }
