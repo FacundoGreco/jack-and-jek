@@ -345,50 +345,52 @@ form {
     width: 100%;
     padding: 5px 0;
     font-size: 28px; }
-  .jobsSection .jobs__areas div h3 {
-    font-size: 24px;
-    padding-bottom: 5px;
-    border-bottom: solid white;
-    margin-bottom: 10px; }
-  .jobsSection .jobs__areas .jobs__areas__jobLeft {
-    background-color: #006d00; }
-  .jobsSection .jobs__areas .jobs__areas__jobRight {
-    background-color: black; }
-  .jobsSection .jobs__areas .jobs__areas__jobLeft,
-  .jobsSection .jobs__areas .jobs__areas__jobRight {
-    height: 280px;
-    max-height: 280px;
-    width: 260px;
-    max-width: 260px;
-    margin: 20px auto;
-    display: flex;
-    flex-flow: column nowrap;
-    box-shadow: 15px 15px 15px grey;
-    color: white;
-    padding: 15px 16px; }
-    .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription,
-    .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription {
-      height: 100%;
+  .jobsSection .jobs__areas {
+    overflow: hidden; }
+    .jobsSection .jobs__areas div h3 {
+      font-size: 24px;
+      padding-bottom: 5px;
+      border-bottom: solid white;
+      margin-bottom: 10px; }
+    .jobsSection .jobs__areas .jobs__areas__jobLeft {
+      background-color: #006d00; }
+    .jobsSection .jobs__areas .jobs__areas__jobRight {
+      background-color: black; }
+    .jobsSection .jobs__areas .jobs__areas__jobLeft,
+    .jobsSection .jobs__areas .jobs__areas__jobRight {
+      height: 280px;
+      max-height: 280px;
+      width: 260px;
+      max-width: 260px;
+      margin: 20px auto;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__intro,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__intro {
-        text-align: center; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__data,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__data {
-        text-align: start; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button {
-        margin: 0 auto; }
-        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
-        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
-          font-size: 18px; }
-          .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
-          .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
-            transition-duration: 0.3s;
-            transform: scale(1.1);
-            box-shadow: 0 0 8px white; }
+      box-shadow: 15px 15px 15px grey;
+      color: white;
+      padding: 15px 16px; }
+      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription,
+      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__intro,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__intro {
+          text-align: center; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__data,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__data {
+          text-align: start; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button {
+          margin: 0 auto; }
+          .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
+          .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
+            font-size: 18px; }
+            .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
+            .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
+              transition-duration: 0.3s;
+              transform: scale(1.1);
+              box-shadow: 0 0 8px white; }
 
 /* END JOBS SECTION */
 /* START POSTULATION SECTION */
