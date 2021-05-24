@@ -449,5 +449,5 @@ form {
     justify-content: center !important; }
   main {
     margin-top: 0; }
-  .aboutUs__story {
-    font-size: larger; } }
+  .aboutUs__story p {
+    font-size: large; } }
