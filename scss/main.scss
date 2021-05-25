@@ -1,36 +1,15 @@
-@mixin primaryStyle {
-    background-color: green;
-    color: white;
-}
-
-@mixin secondaryStyle {
-    background-color: rgb(38, 38, 38);
-    color: white;
-}
-
-@mixin darkStyle {
-    background-color: black;
-    color: white;
-}
-
-@mixin flex-center () {
-    display: flex;
-    align-items: center;
-}
+@import "_operators.scss";
 
 /* START GENERAL */
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto Slab', serif;
+    font-family: $font;
 }
 
 html,
 body {
-    min-width: 100vh;
-    max-width: auto;
-    min-height: 100vh;
-    height: auto;
+    min-width: min-content;
     overflow-x: hidden;
 }
 
@@ -53,9 +32,8 @@ button:hover {
 /* START HEADER */
 .header {
     @include primaryStyle();
+    min-width: 490px;
     z-index: 3;
-    // background-color: green;
-    // color: white;
     padding: 10px;
 
     .nav {
@@ -78,8 +56,6 @@ button:hover {
 
         .nav__brand {
             @include flex-center();
-            // display: flex;
-            // align-items: center;
         }
 
         .nav__title {
@@ -93,7 +69,7 @@ button:hover {
             font-size: 26px;
 
             a {
-                color: white;
+                color: $text-color;
                 text-decoration: none;
             }
         }
@@ -113,6 +89,7 @@ button:hover {
 
 /* START MAIN */
 main {
+    min-width: 490px;
     width: 100%;
     z-index: 1;
     margin-top: 98px;
@@ -121,9 +98,9 @@ main {
 
 /* START GENERAL FORMS */
 form {
-    border: solid black;
-    border-radius: 2%;
     text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 6px 25px black;
 
     h2 {
         text-align: center;
@@ -165,8 +142,6 @@ form {
 .card-body {
     @include primaryStyle();
     height: 60px;
-    // color: white;
-    // background-color: green;
     font-size: 16px;
     border: solid black;
     border-width: 2px 0 0 0;
@@ -195,82 +170,83 @@ form {
     border-style: solid;
     border-color: black;
     overflow: hidden;
-}
 
-.heroSection__button {
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    transition-duration: 0.3s;
-
-    &:hover {
-        top: 10%;
-        transition-duration: 0.3s;
-    }
-
-    button {
-        width: 200px;
-        height: 50px;
-        font-family: 'Lato', sans-serif;
-        font-size: 22px;
-        color: black;
-        background-color: orange;
-        border: solid black;
-        border-radius: 5px;
+    .heroSection__button {
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
         transition-duration: 0.3s;
 
         &:hover {
-            transform: scale(1.1);
+            top: 10%;
             transition-duration: 0.3s;
-            box-shadow: 0 0 20px white;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-family: 'Lato', sans-serif;
+            font-size: 22px;
+            color: black;
+            background-color: orange;
+            border: solid black;
+            border-radius: 5px;
+            transition-duration: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+                box-shadow: 0 0 20px white;
+            }
         }
     }
-}
 
-.heroSection__carousel__images {
-    display: flex;
-    width: 100%;
-    z-index: 1;
-
-    img {
-        height: 670px;
+    .heroSection__carousel__images {
+        display: flex;
         width: 100%;
+        z-index: 1;
+
+        img {
+            min-height: 580px;
+            max-height: 670px;
+            width: 100%;
+        }
     }
-}
 
-.swipe-left,
-.swipe-right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 50%;
-    z-index: 2;
-    color: white;
-    background-color: transparent;
-    border-color: transparent;
-    cursor: pointer;
-    transition-duration: 0.3s;
-}
+    .swipe-left,
+    .swipe-right {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        z-index: 2;
+        color: $text-color;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
 
-.swipe-left:hover,
-.swipe-right:hover {
-    width: 70px;
-    height: 70px;
-    transition-duration: 0.3s;
+    .swipe-left:hover,
+    .swipe-right:hover {
+        width: 70px;
+        height: 70px;
+        transition-duration: 0.3s;
 
-}
+    }
 
-.swipe-left {
-    left: 0%;
-    transform: translate(0%, -50%);
+    .swipe-left {
+        left: 0%;
+        transform: translate(0%, -50%);
 
-}
+    }
 
-.swipe-right {
-    right: 0%;
-    transform: translate(0%, -50%);
+    .swipe-right {
+        right: 0%;
+        transform: translate(0%, -50%);
+    }
 }
 
 /* END HERO SECTION */
@@ -278,46 +254,46 @@ form {
 /* START PRODUCTS SECTION */
 .productsSection {
     padding: 40px 0;
-}
 
-.burgers__card,
-.chips__card {
-    width: 510px;
-    height: 510px;
-    border: solid black;
+    .burgers__card,
+    .chips__card {
+        width: 510px;
+        height: 510px;
+        border: solid black;
+        box-shadow: 0 2px 30px black;
 
-    h2 {
-        @include darkStyle();
-        height: 40px;
-        // color: white;
-        // background-color: black;
-        font-size: 28px;
-        z-index: 2;
+        h2 {
+            @include darkStyle();
+            height: 40px;
+            font-size: 28px;
+            z-index: 2;
+        }
     }
-}
 
-/* START PRODUCTS Carousel */
-.burgers__card__carousel,
-.chips__card__carousel {
-    position: relative;
-    height: 470px;
-    overflow: hidden;
-}
-
-.burger,
-.chip {
-    position: relative;
-    min-width: 510px;
-    width: 510px;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 410px;
+    /* START PRODUCTS Carousel */
+    .burgers__card__carousel,
+    .chips__card__carousel {
+        position: relative;
+        height: 470px;
+        overflow: hidden;
     }
-}
 
-/* END PRODUCTS Carousel */
+    .burger,
+    .chip {
+        position: relative;
+        min-width: 510px;
+        width: 510px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 410px;
+        }
+    }
+
+    /* END PRODUCTS Carousel */
+
+}
 
 /* END PRODUCTS SECTION */
 
@@ -334,23 +310,22 @@ form {
 
     h2 {
         @include darkStyle();
-        // color: white;
-        // background-color: black;
         font-size: 30px;
         padding: 5px 0;
     }
-}
 
-.burger__card,
-.chip__card {
-    box-sizing: border-box;
-    border: solid black;
-    height: 600px;
+    .burger__card,
+    .chip__card {
+        box-sizing: border-box;
+        border: solid black;
+        height: 600px;
 
-    img {
-        height: 532px;
+        img {
+            height: 532px;
+        }
     }
 }
+
 
 /* END MENU PAGE */
 
@@ -361,52 +336,52 @@ form {
 /* START ORDERS SECTION */
 .ordersSection {
     margin: 40px 0;
-}
 
-.ordersForm {
-    width: 75%;
-    height: 100%;
-    background-color: rgb(255, 203, 92);
+    .ordersForm {
+        width: 75%;
+        height: 100%;
+        background-color: $form-color;
 
-    .orderArea {
-        border-bottom: solid black;
-        margin-bottom: 10px;
-        height: 348px;
-        max-height: 348px;
-        overflow-y: auto;
+        .orderArea {
+            border-bottom: solid black;
+            margin-bottom: 10px;
+            height: 348px;
+            max-height: 348px;
+            overflow-y: auto;
+        }
     }
 }
+
 
 /* END ORDERS SECTION */
 
 /* START MAP SECTION */
 .mapSection {
     margin: 40px 0;
-}
 
-.mapContainer {
-    @include flex-center();
-    // display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // align-items: center;
-    height: 610px;
-    width: 60%;
-    padding: 20px 10px;
-    background-color: rgb(255, 203, 92);
-    border: solid black;
+    .mapContainer {
+        @include flex-center();
+        flex-direction: column;
+        justify-content: space-between;
+        height: 610px;
+        width: 60%;
+        padding: 20px 10px;
+        background-color: $form-color;
+        box-shadow: 0 6px 25px black;
+        border-radius: 2%;
 
-    h2 {
-        width: 100%;
-        font-size: 25px;
-        margin-top: 1%;
-        padding-bottom: 5px;
-        border-bottom: solid black;
-    }
+        h2 {
+            width: 100%;
+            font-size: 25px;
+            margin-top: 1%;
+            padding-bottom: 5px;
+            border-bottom: solid black;
+        }
 
-    iframe {
-        width: 90%;
-        height: 85%;
+        iframe {
+            width: 90%;
+            height: 85%;
+        }
     }
 }
 
@@ -419,25 +394,25 @@ form {
 /* START CONTACT PAGE */
 .contactSection {
     margin: 30px 0;
-}
 
-.contactForm {
-    width: 70%;
-    background-color: rgb(255, 203, 92);
+    .contactForm {
+        width: 70%;
+        background-color: $form-color;
+    }
 }
 
 .newsletterSection {
     margin: 30px 0;
-}
 
-.newsletterForm {
-    width: 90%;
-    margin: 50px 0 0 0;
-    background-color: rgb(255, 203, 92);
+    .newsletterForm {
+        @include secondaryStyle;
+        width: 90%;
+        margin: 50px 0 0 0;
 
-    h2 {
-        font-size: 21px;
-        margin-bottom: 20px;
+        h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -454,46 +429,45 @@ form {
     border-bottom: solid black 5px;
     background: linear-gradient(to right, white 35%, black 40%);
     margin-bottom: 30px;
-}
 
-.aboutUs__title {
-    @include flex-center();
-    width: 40%;
-    // display: flex;
-    flex-direction: column;
-    // align-items: center;
-    padding-bottom: 2%;
+    .aboutUs__title {
+        @include flex-center();
+        width: 40%;
+        flex-direction: column;
+        padding-bottom: 2%;
 
-    h2 {
-        padding: 5px 10px;
-        font-size: 80px;
-        box-shadow: 10px 10px 40px grey;
-        background-color: transparent;
-        border: solid black 4px;
+        h2 {
+            padding: 5px 10px;
+            font-size: 80px;
+            box-shadow: 10px 10px 40px grey;
+            background-color: transparent;
+            border: solid black 4px;
+        }
+
+        h2.about {
+            transform: translate(-50%, 4px);
+            color: $primary-color;
+        }
+
+        h2.us {
+            transform: translate(+10%);
+        }
     }
 
-    h2.about {
-        transform: translate(-50%, 4px);
-        color: green;
+    .aboutUs__story {
+        height: 83%;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        justify-content: space-between;
+
+        padding: 20px;
+        border-left: solid white;
+        font-size: 26px;
+        color: $text-color;
     }
 
-    h2.us {
-        transform: translate(+10%);
-    }
-}
-
-.aboutUs__story {
-    height: 83%;
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    justify-content: space-between;
-
-    padding: 20px;
-    border-left: solid white;
-    font-size: 26px;
-    color: white;
 }
 
 /* END ABOUT US SECTION */
@@ -509,11 +483,11 @@ form {
         width: 100%;
         padding: 5px 0;
         font-size: 28px;
-        // color: white;
-        // background-color: black;
     }
 
     .jobs__areas {
+
+        overflow: hidden;
 
         div h3 {
             font-size: 24px;
@@ -541,7 +515,7 @@ form {
             flex-flow: column nowrap;
 
             box-shadow: 15px 15px 15px grey;
-            color: white;
+            color: $text-color;
             padding: 15px 16px;
 
             .jobDescription {
@@ -560,27 +534,23 @@ form {
 
                 .jobDescription__button {
                     margin: 0 auto;
-                    width: min-content;
-                }
 
-                .jobDescription__button button {
-                    width: 110px;
-                    height: 40px;
-                    font-size: 18px;
+                    button {
+                        font-size: 18px;
 
-                    &:hover {
-                        transition-duration: 0.3s;
-                        transform: scale(1.1);
-                        box-shadow: 0 0 8px white;
+                        &:hover {
+                            transition-duration: 0.3s;
+                            transform: scale(1.1);
+                            box-shadow: 0 0 8px white;
+                        }
                     }
                 }
+
             }
         }
     }
 
-
 }
-
 
 /* END JOBS SECTION */
 
@@ -589,7 +559,7 @@ form {
 .postulationForm {
     margin: 30px;
     width: 60%;
-    background-color: rgb(255, 203, 92);
+    background-color: $form-color;
 }
 
 /* END POSTULATION SECTION */
@@ -604,17 +574,14 @@ form {
 /* START FOOTER */
 .footer {
     @include secondaryStyle();
+    min-width: 490px;
     z-index: 1;
-    // background-color: rgb(38, 38, 38);
-    // color: white;
     padding: 20px 15px;
 
     div {
         @include flex-center();
-        // display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        // align-items: center;
 
         h3 {
             margin-bottom: 15px;
@@ -627,26 +594,27 @@ form {
 
         a {
             text-decoration: none;
-            color: white;
+            color: $text-color;
 
             &:hover {
                 text-decoration: underline;
             }
         }
     }
-}
 
-.footer__schedule {
+    .footer__schedule {
 
-    dt {
-        font-size: 18px;
-        font-weight: unset;
-        text-align: center;
+        dt {
+            font-size: 18px;
+            font-weight: unset;
+            text-align: center;
+        }
+
+        dd {
+            text-align: center;
+        }
     }
 
-    dd {
-        text-align: center;
-    }
 }
 
 /* END FOOTER */
@@ -680,15 +648,23 @@ form {
         position: unset;
     }
 
-    main {
-        margin-top: 0;
-    }
-
     .nav__menu {
         justify-content: center !important;
     }
 
-    .aboutUs__story {
-        font-size: larger;
+    main {
+        margin-top: 0;
     }
+
+    .aboutUs__story p {
+        font-size: large;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav__menu {
+        font-size: 20px !important;
+    }
+
 }

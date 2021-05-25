@@ -2,14 +2,11 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto Slab', serif; }
+  font-family: "Roboto Slab", serif; }
 
 html,
 body {
-  min-width: 100vh;
-  max-width: auto;
-  min-height: 100vh;
-  height: auto;
+  min-width: min-content;
   overflow-x: hidden; }
 
 li {
@@ -26,6 +23,7 @@ button:hover {
 .header {
   background-color: green;
   color: white;
+  min-width: 490px;
   z-index: 3;
   padding: 10px; }
   .header .nav {
@@ -59,6 +57,7 @@ button:hover {
 /* END HEADER */
 /* START MAIN */
 main {
+  min-width: 490px;
   width: 100%;
   z-index: 1;
   margin-top: 98px;
@@ -66,9 +65,9 @@ main {
 
 /* START GENERAL FORMS */
 form {
-  border: solid black;
+  text-align: left;
   border-radius: 2%;
-  text-align: left; }
+  box-shadow: 0 6px 25px black; }
   form h2 {
     text-align: center;
     font-size: 25px;
@@ -117,104 +116,97 @@ form {
   border-style: solid;
   border-color: black;
   overflow: hidden; }
-
-.heroSection__button {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  transition-duration: 0.3s; }
-  .heroSection__button:hover {
-    top: 10%;
+  .heroSection .heroSection__button {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     transition-duration: 0.3s; }
-  .heroSection__button button {
-    width: 200px;
+    .heroSection .heroSection__button:hover {
+      top: 10%;
+      transition-duration: 0.3s; }
+    .heroSection .heroSection__button button {
+      width: 200px;
+      height: 50px;
+      font-family: 'Lato', sans-serif;
+      font-size: 22px;
+      color: black;
+      background-color: orange;
+      border: solid black;
+      border-radius: 5px;
+      transition-duration: 0.3s; }
+      .heroSection .heroSection__button button:hover {
+        transform: scale(1.1);
+        transition-duration: 0.3s;
+        box-shadow: 0 0 20px white; }
+  .heroSection .heroSection__carousel__images {
+    display: flex;
+    width: 100%;
+    z-index: 1; }
+    .heroSection .heroSection__carousel__images img {
+      min-height: 580px;
+      max-height: 670px;
+      width: 100%; }
+  .heroSection .swipe-left,
+  .heroSection .swipe-right {
+    position: absolute;
+    width: 50px;
     height: 50px;
-    font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    color: black;
-    background-color: orange;
-    border: solid black;
-    border-radius: 5px;
+    top: 50%;
+    z-index: 2;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
     transition-duration: 0.3s; }
-    .heroSection__button button:hover {
-      transform: scale(1.1);
-      transition-duration: 0.3s;
-      box-shadow: 0 0 20px white; }
-
-.heroSection__carousel__images {
-  display: flex;
-  width: 100%;
-  z-index: 1; }
-  .heroSection__carousel__images img {
-    height: 670px;
-    width: 100%; }
-
-.swipe-left,
-.swipe-right {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  z-index: 2;
-  color: white;
-  background-color: transparent;
-  border-color: transparent;
-  cursor: pointer;
-  transition-duration: 0.3s; }
-
-.swipe-left:hover,
-.swipe-right:hover {
-  width: 70px;
-  height: 70px;
-  transition-duration: 0.3s; }
-
-.swipe-left {
-  left: 0%;
-  transform: translate(0%, -50%); }
-
-.swipe-right {
-  right: 0%;
-  transform: translate(0%, -50%); }
+  .heroSection .swipe-left:hover,
+  .heroSection .swipe-right:hover {
+    width: 70px;
+    height: 70px;
+    transition-duration: 0.3s; }
+  .heroSection .swipe-left {
+    left: 0%;
+    transform: translate(0%, -50%); }
+  .heroSection .swipe-right {
+    right: 0%;
+    transform: translate(0%, -50%); }
 
 /* END HERO SECTION */
 /* START PRODUCTS SECTION */
 .productsSection {
-  padding: 40px 0; }
+  padding: 40px 0;
+  /* START PRODUCTS Carousel */
+  /* END PRODUCTS Carousel */ }
+  .productsSection .burgers__card,
+  .productsSection .chips__card {
+    width: 510px;
+    height: 510px;
+    border: solid black;
+    box-shadow: 0 2px 30px black; }
+    .productsSection .burgers__card h2,
+    .productsSection .chips__card h2 {
+      background-color: black;
+      color: white;
+      height: 40px;
+      font-size: 28px;
+      z-index: 2; }
+  .productsSection .burgers__card__carousel,
+  .productsSection .chips__card__carousel {
+    position: relative;
+    height: 470px;
+    overflow: hidden; }
+  .productsSection .burger,
+  .productsSection .chip {
+    position: relative;
+    min-width: 510px;
+    width: 510px; }
+    .productsSection .burger img,
+    .productsSection .chip img {
+      display: block;
+      width: 100%;
+      height: 410px; }
 
-.burgers__card,
-.chips__card {
-  width: 510px;
-  height: 510px;
-  border: solid black; }
-  .burgers__card h2,
-  .chips__card h2 {
-    background-color: black;
-    color: white;
-    height: 40px;
-    font-size: 28px;
-    z-index: 2; }
-
-/* START PRODUCTS Carousel */
-.burgers__card__carousel,
-.chips__card__carousel {
-  position: relative;
-  height: 470px;
-  overflow: hidden; }
-
-.burger,
-.chip {
-  position: relative;
-  min-width: 510px;
-  width: 510px; }
-  .burger img,
-  .chip img {
-    display: block;
-    width: 100%;
-    height: 410px; }
-
-/* END PRODUCTS Carousel */
 /* END PRODUCTS SECTION */
 /* END INDEX PAGE */
 /* START MENU PAGE */
@@ -228,78 +220,79 @@ form {
     color: white;
     font-size: 30px;
     padding: 5px 0; }
-
-.burger__card,
-.chip__card {
-  box-sizing: border-box;
-  border: solid black;
-  height: 600px; }
-  .burger__card img,
-  .chip__card img {
-    height: 532px; }
+  .burgers .burger__card,
+  .burgers .chip__card,
+  .chips .burger__card,
+  .chips .chip__card {
+    box-sizing: border-box;
+    border: solid black;
+    height: 600px; }
+    .burgers .burger__card img,
+    .burgers .chip__card img,
+    .chips .burger__card img,
+    .chips .chip__card img {
+      height: 532px; }
 
 /* END MENU PAGE */
 /* START ORDERS PAGE */
 /* START ORDERS SECTION */
 .ordersSection {
   margin: 40px 0; }
-
-.ordersForm {
-  width: 75%;
-  height: 100%;
-  background-color: #ffcb5c; }
-  .ordersForm .orderArea {
-    border-bottom: solid black;
-    margin-bottom: 10px;
-    height: 348px;
-    max-height: 348px;
-    overflow-y: auto; }
+  .ordersSection .ordersForm {
+    width: 75%;
+    height: 100%;
+    background-color: #ffcb5c; }
+    .ordersSection .ordersForm .orderArea {
+      border-bottom: solid black;
+      margin-bottom: 10px;
+      height: 348px;
+      max-height: 348px;
+      overflow-y: auto; }
 
 /* END ORDERS SECTION */
 /* START MAP SECTION */
 .mapSection {
   margin: 40px 0; }
-
-.mapContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 610px;
-  width: 60%;
-  padding: 20px 10px;
-  background-color: #ffcb5c;
-  border: solid black; }
-  .mapContainer h2 {
-    width: 100%;
-    font-size: 25px;
-    margin-top: 1%;
-    padding-bottom: 5px;
-    border-bottom: solid black; }
-  .mapContainer iframe {
-    width: 90%;
-    height: 85%; }
+  .mapSection .mapContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 610px;
+    width: 60%;
+    padding: 20px 10px;
+    background-color: #ffcb5c;
+    box-shadow: 0 6px 25px black;
+    border-radius: 2%; }
+    .mapSection .mapContainer h2 {
+      width: 100%;
+      font-size: 25px;
+      margin-top: 1%;
+      padding-bottom: 5px;
+      border-bottom: solid black; }
+    .mapSection .mapContainer iframe {
+      width: 90%;
+      height: 85%; }
 
 /* END MAP SECTION */
 /* END ORDERS PAGE */
 /* START CONTACT PAGE */
 .contactSection {
   margin: 30px 0; }
-
-.contactForm {
-  width: 70%;
-  background-color: #ffcb5c; }
+  .contactSection .contactForm {
+    width: 70%;
+    background-color: #ffcb5c; }
 
 .newsletterSection {
   margin: 30px 0; }
-
-.newsletterForm {
-  width: 90%;
-  margin: 50px 0 0 0;
-  background-color: #ffcb5c; }
-  .newsletterForm h2 {
-    font-size: 21px;
-    margin-bottom: 20px; }
+  .newsletterSection .newsletterForm {
+    background-color: #262626;
+    color: white;
+    width: 90%;
+    margin: 50px 0 0 0; }
+    .newsletterSection .newsletterForm h2 {
+      font-size: 21px;
+      margin-bottom: 20px; }
 
 /* END CONTACT PAGE */
 /* START JOBS PAGE */
@@ -311,36 +304,34 @@ form {
   border-bottom: solid black 5px;
   background: linear-gradient(to right, white 35%, black 40%);
   margin-bottom: 30px; }
-
-.aboutUs__title {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  flex-direction: column;
-  padding-bottom: 2%; }
-  .aboutUs__title h2 {
-    padding: 5px 10px;
-    font-size: 80px;
-    box-shadow: 10px 10px 40px grey;
-    background-color: transparent;
-    border: solid black 4px; }
-  .aboutUs__title h2.about {
-    transform: translate(-50%, 4px);
-    color: green; }
-  .aboutUs__title h2.us {
-    transform: translate(10%); }
-
-.aboutUs__story {
-  height: 83%;
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  justify-content: space-between;
-  padding: 20px;
-  border-left: solid white;
-  font-size: 26px;
-  color: white; }
+  .aboutUsSection .aboutUs__title {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    flex-direction: column;
+    padding-bottom: 2%; }
+    .aboutUsSection .aboutUs__title h2 {
+      padding: 5px 10px;
+      font-size: 80px;
+      box-shadow: 10px 10px 40px grey;
+      background-color: transparent;
+      border: solid black 4px; }
+    .aboutUsSection .aboutUs__title h2.about {
+      transform: translate(-50%, 4px);
+      color: green; }
+    .aboutUsSection .aboutUs__title h2.us {
+      transform: translate(10%); }
+  .aboutUsSection .aboutUs__story {
+    height: 83%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    padding: 20px;
+    border-left: solid white;
+    font-size: 26px;
+    color: white; }
 
 /* END ABOUT US SECTION */
 /* START JOBS SECTION */
@@ -354,53 +345,52 @@ form {
     width: 100%;
     padding: 5px 0;
     font-size: 28px; }
-  .jobsSection .jobs__areas div h3 {
-    font-size: 24px;
-    padding-bottom: 5px;
-    border-bottom: solid white;
-    margin-bottom: 10px; }
-  .jobsSection .jobs__areas .jobs__areas__jobLeft {
-    background-color: #006d00; }
-  .jobsSection .jobs__areas .jobs__areas__jobRight {
-    background-color: black; }
-  .jobsSection .jobs__areas .jobs__areas__jobLeft,
-  .jobsSection .jobs__areas .jobs__areas__jobRight {
-    height: 280px;
-    max-height: 280px;
-    width: 260px;
-    max-width: 260px;
-    margin: 20px auto;
-    display: flex;
-    flex-flow: column nowrap;
-    box-shadow: 15px 15px 15px grey;
-    color: white;
-    padding: 15px 16px; }
-    .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription,
-    .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription {
-      height: 100%;
+  .jobsSection .jobs__areas {
+    overflow: hidden; }
+    .jobsSection .jobs__areas div h3 {
+      font-size: 24px;
+      padding-bottom: 5px;
+      border-bottom: solid white;
+      margin-bottom: 10px; }
+    .jobsSection .jobs__areas .jobs__areas__jobLeft {
+      background-color: #006d00; }
+    .jobsSection .jobs__areas .jobs__areas__jobRight {
+      background-color: black; }
+    .jobsSection .jobs__areas .jobs__areas__jobLeft,
+    .jobsSection .jobs__areas .jobs__areas__jobRight {
+      height: 280px;
+      max-height: 280px;
+      width: 260px;
+      max-width: 260px;
+      margin: 20px auto;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__intro,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__intro {
-        text-align: center; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__data,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__data {
-        text-align: start; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button {
-        margin: 0 auto;
-        width: min-content; }
-      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
-      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
-        width: 110px;
-        height: 40px;
-        font-size: 18px; }
-        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
-        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
-          transition-duration: 0.3s;
-          transform: scale(1.1);
-          box-shadow: 0 0 8px white; }
+      box-shadow: 15px 15px 15px grey;
+      color: white;
+      padding: 15px 16px; }
+      .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription,
+      .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription {
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__intro,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__intro {
+          text-align: center; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__data,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__data {
+          text-align: start; }
+        .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button,
+        .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button {
+          margin: 0 auto; }
+          .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button,
+          .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button {
+            font-size: 18px; }
+            .jobsSection .jobs__areas .jobs__areas__jobLeft .jobDescription .jobDescription__button button:hover,
+            .jobsSection .jobs__areas .jobs__areas__jobRight .jobDescription .jobDescription__button button:hover {
+              transition-duration: 0.3s;
+              transform: scale(1.1);
+              box-shadow: 0 0 8px white; }
 
 /* END JOBS SECTION */
 /* START POSTULATION SECTION */
@@ -416,6 +406,7 @@ form {
 .footer {
   background-color: #262626;
   color: white;
+  min-width: 490px;
   z-index: 1;
   padding: 20px 15px; }
   .footer div {
@@ -433,14 +424,12 @@ form {
       color: white; }
       .footer div a:hover {
         text-decoration: underline; }
-
-.footer__schedule dt {
-  font-size: 18px;
-  font-weight: unset;
-  text-align: center; }
-
-.footer__schedule dd {
-  text-align: center; }
+  .footer .footer__schedule dt {
+    font-size: 18px;
+    font-weight: unset;
+    text-align: center; }
+  .footer .footer__schedule dd {
+    text-align: center; }
 
 /* END FOOTER */
 @media only screen and (max-width: 1200px) {
@@ -459,9 +448,13 @@ form {
 @media only screen and (max-width: 992px) {
   .header {
     position: unset; }
-  main {
-    margin-top: 0; }
   .nav__menu {
     justify-content: center !important; }
-  .aboutUs__story {
-    font-size: larger; } }
+  main {
+    margin-top: 0; }
+  .aboutUs__story p {
+    font-size: large; } }
+
+@media only screen and (max-width: 600px) {
+  .nav__menu {
+    font-size: 20px !important; } }
