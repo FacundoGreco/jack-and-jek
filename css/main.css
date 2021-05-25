@@ -6,10 +6,7 @@
 
 html,
 body {
-  min-width: 100vh;
-  max-width: auto;
-  min-height: 100vh;
-  height: auto;
+  min-width: min-content;
   overflow-x: hidden; }
 
 li {
@@ -26,6 +23,7 @@ button:hover {
 .header {
   background-color: green;
   color: white;
+  min-width: 490px;
   z-index: 3;
   padding: 10px; }
   .header .nav {
@@ -59,6 +57,7 @@ button:hover {
 /* END HEADER */
 /* START MAIN */
 main {
+  min-width: 490px;
   width: 100%;
   z-index: 1;
   margin-top: 98px;
@@ -146,7 +145,8 @@ form {
     width: 100%;
     z-index: 1; }
     .heroSection .heroSection__carousel__images img {
-      height: 670px;
+      min-height: 580px;
+      max-height: 670px;
       width: 100%; }
   .heroSection .swipe-left,
   .heroSection .swipe-right {
@@ -406,6 +406,7 @@ form {
 .footer {
   background-color: #262626;
   color: white;
+  min-width: 490px;
   z-index: 1;
   padding: 20px 15px; }
   .footer div {
@@ -453,3 +454,7 @@ form {
     margin-top: 0; }
   .aboutUs__story p {
     font-size: large; } }
+
+@media only screen and (max-width: 600px) {
+  .nav__menu {
+    font-size: 20px !important; } }

@@ -9,10 +9,7 @@
 
 html,
 body {
-    min-width: 100vh;
-    max-width: auto;
-    min-height: 100vh;
-    height: auto;
+    min-width: min-content;
     overflow-x: hidden;
 }
 
@@ -35,6 +32,7 @@ button:hover {
 /* START HEADER */
 .header {
     @include primaryStyle();
+    min-width: 490px;
     z-index: 3;
     padding: 10px;
 
@@ -91,6 +89,7 @@ button:hover {
 
 /* START MAIN */
 main {
+    min-width: 490px;
     width: 100%;
     z-index: 1;
     margin-top: 98px;
@@ -210,7 +209,8 @@ form {
         z-index: 1;
 
         img {
-            height: 670px;
+            min-height: 580px;
+            max-height: 670px;
             width: 100%;
         }
     }
@@ -488,7 +488,7 @@ form {
     .jobs__areas {
 
         overflow: hidden;
-        
+
         div h3 {
             font-size: 24px;
             padding-bottom: 5px;
@@ -574,6 +574,7 @@ form {
 /* START FOOTER */
 .footer {
     @include secondaryStyle();
+    min-width: 490px;
     z-index: 1;
     padding: 20px 15px;
 
@@ -658,4 +659,12 @@ form {
     .aboutUs__story p {
         font-size: large;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav__menu {
+        font-size: 20px !important;
+    }
+
 }
