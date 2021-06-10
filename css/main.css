@@ -243,11 +243,17 @@ form {
     height: 100%;
     background-color: #ffcb5c; }
     .ordersSection .ordersForm .orderArea {
+      position: relative;
       border-bottom: solid black;
       margin-bottom: 10px;
       height: 348px;
       max-height: 348px;
       overflow-y: auto; }
+      .ordersSection .ordersForm .orderArea .delete {
+        position: absolute;
+        right: 0;
+        width: 28px;
+        cursor: pointer; }
 
 /* END ORDERS SECTION */
 /* START MAP SECTION */

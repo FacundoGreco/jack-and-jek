@@ -343,11 +343,19 @@ form {
         background-color: $form-color;
 
         .orderArea {
+            position: relative;
             border-bottom: solid black;
             margin-bottom: 10px;
             height: 348px;
             max-height: 348px;
             overflow-y: auto;
+
+            .delete {
+                position: absolute;
+                right: 0;
+                width: 28px;
+                cursor: pointer;
+            }
         }
     }
 }

@@ -57,13 +57,14 @@
                     <h2>Hacé tu pedido!</h2>
 
                     <!-- START ORDER AREA -->
-                    <div class="orderArea">
+                    <div id="orderArea" class="orderArea">
 
                         <!-- START COMBO -->
                         <div id="combo">
                             <!-- START BURGER ORDER -->
                             <div class="form-group">
                                 <label for="burger">Burger</label>
+                                <img class="delete" src="https://i.ibb.co/ZHZzvBG/delete-combo.png" alt="Eliminar Combo" onclick="deleteCombo('combo')">
                                 <select class="form-control" name="burger" id="burger">
                                     <option value="bacon">Jack Bacon</option>
                                     <option value="onion">Jack Crispy</option>
