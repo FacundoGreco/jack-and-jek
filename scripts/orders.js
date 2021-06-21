@@ -1,19 +1,19 @@
-const combo = document.getElementById('combo');
+const combo = document.querySelector('#combo');
 
 let comboCounter = 1;
 let comboIdNumber = 0;
 
 function addNewCombo() {
 
-    const btnAddCombo = document.getElementById('addCombo');
-    const newComboId = "combo" + (comboIdNumber + 1);
+    const btnAddCombo = document.querySelector('#addCombo');
+    const newComboId = `combo${comboIdNumber+1}`;
 
     let newCombo = combo.cloneNode(true);
     newCombo.id = newComboId;
     btnAddCombo.before(newCombo);
 
-    let deleteButtons = document.getElementsByClassName("delete");
-    deleteButtons[deleteButtons.length-1].setAttribute("onclick", "deleteCombo('"+newComboId+"');");
+    let deleteButtons = document.querySelectorAll('.delete');
+    deleteButtons[deleteButtons.length-1].setAttribute('onclick', `deleteCombo('${newComboId}');`);
 
     comboIdNumber++;
     comboCounter++;
@@ -23,18 +23,18 @@ function deleteCombo(comboId) {
 
     if (comboCounter > 1) {
 
-        const orderArea = document.getElementById("orderArea");
-        const combo = document.getElementById(comboId);
+        const combo = document.querySelector(`#${comboId}`);
         
-        orderArea.removeChild(combo);
+        combo.parentNode.removeChild(combo);
         comboCounter--;
+
     }
 
 }
 
 function setDeliveryDisabled(disabled) {
 
-    let address = document.getElementById('address');
+    let address = document.querySelector('#address');
     address.disabled = disabled;
 
 }
