@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script defer src="../scripts/orders.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script defer src="../js/bootstrap.min.js"></script>
-    <script defer src="../scripts/orders.js"></script>
 </head>
 
 <body class="body">
@@ -79,7 +79,7 @@
                                     <option value="guacamole">Jack Guacamole</option>
                                 </select>
 
-                                <select class="form-control mt-1" name="burgerSlices" id="burgerSlices">
+                                <select class="form-control mt-1" name="slices" id="slices">
                                     <option value="simple">Simple</option>
                                     <option value="double">Doble</option>
                                     <option value="triple">Triple</option>
@@ -89,8 +89,8 @@
 
                             <!-- START CHIPS ORDER -->
                             <div class="form-group">
-                                <label for="chip">Papas</label>
-                                <select class="form-control" name="chip" id="chip">
+                                <label for="chips">Papas</label>
+                                <select class="form-control" name="chips" id="chips">
                                     <option value="noChips">Sin Papas</option>
                                     <option value="small">Papas Chicas</option>
                                     <option value="medium">Papas Medianas</option>
@@ -170,8 +170,8 @@
 
                     <!-- START BUTTONS -->
                     <div class="formButtons">
-                        <button class="btn btn-dark" type="reset">LIMPIAR</button>
-                        <button class="btn btn-dark" type="submit">ENVIAR</button>
+                        <button class="btn btn-dark" type="reset" onclick="localStorage.clear(), location.reload()">LIMPIAR</button>
+                        <button class="btn btn-dark" type="submit" onclick="localStorage.clear()">ENVIAR</button>
                     </div>
                     <!-- END BUTTONS -->
 
