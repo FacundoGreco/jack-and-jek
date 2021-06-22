@@ -23,18 +23,16 @@ class Combos {
 
         const comboJSON = JSON.stringify(this);
         localStorage.setItem(this.comboId, comboJSON); //Saves in local storage
-        order.push(this); //Saves in order array
 
     }
 
     deleteComboInLocalStorage() {
 
         localStorage.removeItem(this.comboId); //Removes from local storage
-        order.splice(order.indexOf(this), 1); //Removes from order array
 
     }
 
-    addSavedCombo(firstCombo) {
+    appendSavedCombo(firstCombo) {
 
         let savedCombo;
 
@@ -73,6 +71,8 @@ function createCombo(comboId) {
 
     const combo = new Combos(comboId, burger, slices, chips, clarifications);
     combo.saveComboInLocalStorage();
+    order.push(combo); //Saves in order array
+
 
 }
 
@@ -105,10 +105,27 @@ function deleteCombo(comboId) {
         const combo = order.find(combo => combo.comboId == comboId);
 
         combo.deleteComboInLocalStorage();
+        order.splice(order.indexOf(combo), 1); //Removes from order array
         comboNode.parentNode.removeChild(comboNode);
         comboCounter--;
 
     }
+
+}
+
+/* SAVE COMBO */
+function saveCombo(element) {
+    
+    const comboId = element.parentNode.parentNode.id;
+    const comboIndex = order.indexOf(order.find(combo => combo.comboId == comboId));
+    const combo = order[comboIndex];
+
+    combo.burger = document.querySelector(`#${comboId} #burger`).value;
+    combo.slices = document.querySelector(`#${comboId} #slices`).value;
+    combo.chips = document.querySelector(`#${comboId} #chips`).value;
+    combo.clarifications = document.querySelector(`#${comboId} #clarifications`).value;
+
+    combo.saveComboInLocalStorage();
 
 }
 
@@ -131,9 +148,9 @@ function loadOrder() {
             order.push(new Combos(combo.comboId, combo.burger, combo.slices, combo.chips, combo.clarifications));
 
             if (i === 0) {
-                order[i].addSavedCombo(true);
+                order[i].appendSavedCombo(true);
             } else {
-                order[i].addSavedCombo(false);
+                order[i].appendSavedCombo(false);
             }
 
         }

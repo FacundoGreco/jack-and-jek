@@ -70,7 +70,7 @@
                                 <label for="burger">Burger</label>
                                 <img class="delete" src="https://i.ibb.co/ZHZzvBG/delete-combo.png" alt="Eliminar Combo"
                                     onclick="deleteCombo('combo')">
-                                <select class="form-control" name="burger" id="burger">
+                                <select class="form-control" name="burger" id="burger" onchange="saveCombo(this)">
                                     <option value="bacon">Jack Bacon</option>
                                     <option value="onion">Jack Crispy</option>
                                     <option value="quarter">Jack Cuarto</option>
@@ -79,7 +79,7 @@
                                     <option value="guacamole">Jack Guacamole</option>
                                 </select>
 
-                                <select class="form-control mt-1" name="slices" id="slices">
+                                <select class="form-control mt-1" name="slices" id="slices" onchange="saveCombo(this)">
                                     <option value="simple">Simple</option>
                                     <option value="double">Doble</option>
                                     <option value="triple">Triple</option>
@@ -90,7 +90,7 @@
                             <!-- START CHIPS ORDER -->
                             <div class="form-group">
                                 <label for="chips">Papas</label>
-                                <select class="form-control" name="chips" id="chips">
+                                <select class="form-control" name="chips" id="chips" onchange="saveCombo(this)">
                                     <option value="noChips">Sin Papas</option>
                                     <option value="small">Papas Chicas</option>
                                     <option value="medium">Papas Medianas</option>
@@ -102,7 +102,7 @@
                             <!-- START CLARIFICATIONS -->
                             <div class="form-group">
                                 <label for="clarifications">Aclaraciones</label>
-                                <input class="form-control" type="text" id="clarifications" name="clarifications">
+                                <input class="form-control" type="text" id="clarifications" name="clarifications" onchange="saveCombo(this)">
                             </div>
                             <!-- END CLARIFICATIONS -->
                         </div>
