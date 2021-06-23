@@ -29,7 +29,7 @@ class Combos {
         let savedCombo;
 
         if (firstCombo) {
-            savedCombo = document.querySelector(`#combo`);
+            savedCombo = document.querySelector(`#combo0`);
         } else {
             savedCombo = comboModel.cloneNode(true);
             btnAddCombo.before(savedCombo);
@@ -60,6 +60,6 @@ function createCombo(comboId) {
 
     const combo = new Combos(comboId, burger, slices, chips, clarifications);
     combo.saveComboInLocalStorage();
-    
+
     return combo;
 }

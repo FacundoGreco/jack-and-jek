@@ -1,5 +1,5 @@
 /* GLOBAL VARIABLES */
-const comboModel = document.querySelector('#combo').cloneNode(true);
+const comboModel = document.querySelector('#combo0').cloneNode(true);
 const btnAddCombo = document.querySelector('#addCombo');
 
 let order = [];
@@ -43,7 +43,7 @@ function deleteCombo(deleteButton) {
 
 /* SAVE COMBO */
 function saveCombo(element) {
-    
+
     const comboId = element.parentNode.parentNode.id;
     const comboIndex = order.indexOf(order.find(combo => combo.comboId == comboId));
     const combo = order[comboIndex];
@@ -57,31 +57,43 @@ function saveCombo(element) {
 
 }
 
+/* FILL ORDER ARRAY FROM LOCAL STORAGE */
+function fillOrderArray() {
+    for (let i = 0; i < localStorage.length; i++) {
+        const comboId = localStorage.key(i);
+        const combo = JSON.parse(localStorage.getItem(comboId));
+        order.push(new Combos(combo.comboId, combo.burger, combo.slices, combo.chips, combo.clarifications));
+    }
+}
+
+/* SORT ORDER ARRAY */
+function sortOrderArray() {
+    order.sort((a, b) => parseInt(a.comboId.slice(5)) - parseInt(b.comboId.slice(5)));
+}
+
 /* LOAD ORDER */
 function loadOrder() {
 
     if (localStorage.length == 0) {
 
-        order.push(createCombo('combo')); //Creates combo object and saves in order array
+        order.push(createCombo('combo0')); // Creates combo object and saves in order array
 
     } else {
 
-        for (let i = 0; i < localStorage.length; i++) {
-            
-            const comboId = localStorage.key(i);
-            const combo = JSON.parse(localStorage.getItem(comboId));
-            order.push(new Combos(combo.comboId, combo.burger, combo.slices, combo.chips, combo.clarifications));
+        fillOrderArray();
+        sortOrderArray();
 
+        // Adds nodes
+        for (let i = 0; i < order.length; i++) {
             if (i === 0) {
                 order[i].appendSavedCombo(true);
             } else {
                 order[i].appendSavedCombo(false);
             }
-            
         }
-        
-        comboCounter = localStorage.length;
-        comboIdNumber = localStorage.length - 1;
+
+        comboCounter = order.length;
+        comboIdNumber = parseInt((order[order.length - 1]).comboId.slice(5));
 
     }
 

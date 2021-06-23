@@ -65,7 +65,7 @@
                     <div class="orderArea">
 
                         <!-- START COMBO -->
-                        <div id="combo">
+                        <div id="combo0">
                             <!-- START BURGER ORDER -->
                             <div class="form-group">
                                 <label for="burger">Burger</label>
@@ -103,7 +103,8 @@
                             <!-- START CLARIFICATIONS -->
                             <div class="form-group">
                                 <label for="clarifications">Aclaraciones</label>
-                                <input class="form-control" type="text" id="clarifications" name="clarifications" onchange="saveCombo(this)">
+                                <input class="form-control" type="text" id="clarifications" name="clarifications"
+                                    onchange="saveCombo(this)">
                             </div>
                             <!-- END CLARIFICATIONS -->
                         </div>
@@ -171,7 +172,8 @@
 
                     <!-- START BUTTONS -->
                     <div class="formButtons">
-                        <button class="btn btn-dark" type="reset" onclick="localStorage.clear(), location.reload()">LIMPIAR</button>
+                        <button class="btn btn-dark" type="reset"
+                            onclick="localStorage.clear(), location.reload()">LIMPIAR</button>
                         <button class="btn btn-dark" type="submit" onclick="localStorage.clear()">ENVIAR</button>
                     </div>
                     <!-- END BUTTONS -->
