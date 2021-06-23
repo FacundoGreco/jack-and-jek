@@ -44,14 +44,11 @@ class Combos {
         }
         savedCombo.id = this.comboId;
 
-        const deleteButton = document.querySelector(`#${this.comboId} .delete`);
         const burger = document.querySelector(`#${this.comboId} #burger option[value=${this.burger}]`);
         const slices = document.querySelector(`#${this.comboId} #slices option[value=${this.slices}]`);
         const chips = document.querySelector(`#${this.comboId} #chips option[value=${this.chips}]`);
         const clarifications = document.querySelector(`#${this.comboId} #clarifications`);
 
-
-        deleteButton.setAttribute('onclick', `deleteCombo('${this.comboId}');`);
         burger.selected = true;
         slices.selected = true;
         chips.selected = true;
@@ -73,7 +70,6 @@ function createCombo(comboId) {
     combo.saveComboInLocalStorage();
     order.push(combo); //Saves in order array
 
-
 }
 
 
@@ -86,9 +82,6 @@ function addNewCombo() {
     newCombo.id = newComboId;
     btnAddCombo.before(newCombo);
 
-    let deleteButton = document.querySelector(`#${newComboId} .delete`);
-    deleteButton.setAttribute('onclick', `deleteCombo('${newComboId}');`);
-
     createCombo(newComboId);
 
     comboIdNumber++;
@@ -97,11 +90,12 @@ function addNewCombo() {
 }
 
 /* DELETE COMBO */
-function deleteCombo(comboId) {
+function deleteCombo(deleteButton) {
 
     if (comboCounter > 1) {
 
-        const comboNode = document.querySelector(`#${comboId}`);
+        const comboNode = deleteButton.parentNode.parentNode;
+        const comboId = comboNode.id;
         const combo = order.find(combo => combo.comboId == comboId);
 
         combo.deleteComboInLocalStorage();
