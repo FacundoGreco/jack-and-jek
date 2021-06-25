@@ -13,7 +13,8 @@ li {
   list-style: none; }
 
 .icon {
-  width: 30px; }
+  width: 35px;
+  height: 35px; }
 
 button:hover {
   cursor: pointer; }
@@ -236,51 +237,82 @@ form {
 /* END MENU PAGE */
 /* START ORDERS PAGE */
 /* START ORDERS SECTION */
-.ordersSection {
-  margin: 40px 0; }
-  .ordersSection .ordersForm {
-    width: 75%;
-    height: 100%;
-    background-color: #ffcb5c; }
-    .ordersSection .ordersForm .orderArea {
-      position: relative;
-      border-bottom: solid black;
-      margin-bottom: 10px;
-      height: 348px;
-      max-height: 348px;
-      overflow-y: auto; }
-      .ordersSection .ordersForm .orderArea .delete {
-        position: absolute;
-        right: 0;
-        width: 28px;
+.ordersSection h2 {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  padding: 5px 0; }
+
+.ordersSection .menuContainer {
+  background-color: #262626;
+  color: white;
+  text-align: left;
+  border-radius: 2%;
+  box-shadow: 0 6px 25px black;
+  width: 35%;
+  padding: 1% 2%; }
+  .ordersSection .menuContainer h3 {
+    text-align: center;
+    border-bottom: solid white;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+  .ordersSection .menuContainer .burgerItem,
+  .ordersSection .menuContainer .chipsItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    .ordersSection .menuContainer .burgerItem .itemName,
+    .ordersSection .menuContainer .chipsItem .itemName {
+      display: flex;
+      width: 40%;
+      max-width: 180px;
+      justify-content: space-between;
+      align-items: center; }
+      .ordersSection .menuContainer .burgerItem .itemName h4,
+      .ordersSection .menuContainer .chipsItem .itemName h4 {
+        font-size: 22px; }
+    .ordersSection .menuContainer .burgerItem .itemOptions,
+    .ordersSection .menuContainer .chipsItem .itemOptions {
+      display: flex;
+      width: 50%;
+      max-width: 270px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px; }
+      .ordersSection .menuContainer .burgerItem .itemOptions li,
+      .ordersSection .menuContainer .chipsItem .itemOptions li {
+        text-align: center;
+        width: 70px;
         cursor: pointer; }
 
 /* END ORDERS SECTION */
-/* START MAP SECTION */
-.mapSection {
+/* START TAKE AWAY SECTION */
+.takeawaySection {
   margin: 40px 0; }
-  .mapSection .mapContainer {
+  .takeawaySection .mapContainer {
     display: flex;
     align-items: center;
+    text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 6px 25px black;
     flex-direction: column;
     justify-content: space-between;
     height: 610px;
     width: 60%;
     padding: 20px 10px;
-    background-color: #ffcb5c;
-    box-shadow: 0 6px 25px black;
-    border-radius: 2%; }
-    .mapSection .mapContainer h2 {
+    background-color: #ffcb5c; }
+    .takeawaySection .mapContainer h2 {
       width: 100%;
       font-size: 25px;
       margin-top: 1%;
       padding-bottom: 5px;
-      border-bottom: solid black; }
-    .mapSection .mapContainer iframe {
+      border-bottom: solid black;
+      text-align: center; }
+    .takeawaySection .mapContainer iframe {
       width: 90%;
       height: 85%; }
 
-/* END MAP SECTION */
+/* END TAKE AWAY SECTION */
 /* END ORDERS PAGE */
 /* START CONTACT PAGE */
 .contactSection {
@@ -348,9 +380,8 @@ form {
   .jobsSection h2 {
     background-color: black;
     color: white;
-    width: 100%;
-    padding: 5px 0;
-    font-size: 28px; }
+    font-size: 30px;
+    padding: 5px 0; }
   .jobsSection .jobs__areas {
     overflow: hidden; }
     .jobsSection .jobs__areas div h3 {
