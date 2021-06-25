@@ -278,8 +278,8 @@ form {
         overflow: hidden;
     }
 
-    .burger,
-    .chip {
+    .burgerProduct,
+    .chipsProduct {
         position: relative;
         min-width: 510px;
         width: 510px;
@@ -303,8 +303,8 @@ form {
 
 /* START MENU PAGE */
 
-.burgers,
-.chips {
+.burgersArticle,
+.chipsArticle {
     position: relative;
     margin-bottom: 30px;
 
@@ -315,7 +315,7 @@ form {
     }
 
     .burger__card,
-    .chip__card {
+    .chips__card {
         box-sizing: border-box;
         border: solid black;
         height: 600px;

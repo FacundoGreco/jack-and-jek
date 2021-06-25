@@ -196,13 +196,13 @@ form {
     position: relative;
     height: 470px;
     overflow: hidden; }
-  .productsSection .burger,
-  .productsSection .chip {
+  .productsSection .burgerProduct,
+  .productsSection .chipsProduct {
     position: relative;
     min-width: 510px;
     width: 510px; }
-    .productsSection .burger img,
-    .productsSection .chip img {
+    .productsSection .burgerProduct img,
+    .productsSection .chipsProduct img {
       display: block;
       width: 100%;
       height: 410px; }
@@ -210,27 +210,27 @@ form {
 /* END PRODUCTS SECTION */
 /* END INDEX PAGE */
 /* START MENU PAGE */
-.burgers,
-.chips {
+.burgersArticle,
+.chipsArticle {
   position: relative;
   margin-bottom: 30px; }
-  .burgers h2,
-  .chips h2 {
+  .burgersArticle h2,
+  .chipsArticle h2 {
     background-color: black;
     color: white;
     font-size: 30px;
     padding: 5px 0; }
-  .burgers .burger__card,
-  .burgers .chip__card,
-  .chips .burger__card,
-  .chips .chip__card {
+  .burgersArticle .burger__card,
+  .burgersArticle .chips__card,
+  .chipsArticle .burger__card,
+  .chipsArticle .chips__card {
     box-sizing: border-box;
     border: solid black;
     height: 600px; }
-    .burgers .burger__card img,
-    .burgers .chip__card img,
-    .chips .burger__card img,
-    .chips .chip__card img {
+    .burgersArticle .burger__card img,
+    .burgersArticle .chips__card img,
+    .chipsArticle .burger__card img,
+    .chipsArticle .chips__card img {
       height: 532px; }
 
 /* END MENU PAGE */
