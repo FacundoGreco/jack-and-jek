@@ -55,18 +55,57 @@
 
     <main class="mainOrders container-fluid row">
 
-        <section class="ordersSection container-fluid col-12 col-xl-6">
-            <form class="ordersForm m-auto" action="orders.html">
+        <!-- START ORDER SECTION -->
+        <section class="ordersSection container-fluid col-12">
+            <h2>Añadir Productos</h2>
+
+            <img class="cart" src="" alt="Carrito" onclick="">
+
+            <div class="container-fluid m-auto">
+
+                <!-- START BURGERS SECTION -->
+                <section class="burgersSection">
+                    <h3>Burgers</h3>
+
+                    <div class="burgerProduct">
+                        <img class="icon" src="https://i.ibb.co/9wT92j3/jack-cheese.jpg" alt="Jack Cheese">
+                        <h4>Jack Cheese</h4>
+                        <p>Simple</p>
+                        <p>Doble</p>
+                        <p>Triple</p>
+                    </div>
+                    
+                </section>
+                <!-- END BURGERS SECTION -->
+                
+                <!-- START CHIPS SECTION -->
+                <section class="chipsSection">
+                    <h3>Chips</h3>
+
+                    <div class="chipsProduct">
+                        <img class="icon" src="https://i.ibb.co/JpLHq3J/medium-potatoes.jpg" alt="Papas Fritas">
+                        <h4>Papas Fritas</h4>
+                        <p>Chicas</p>
+                        <p>Medias</p>
+                        <p>Grandes</p>
+                    </div>
+
+                </section>
+                <!-- END CHIPS SECTION -->
+
+            </div>
+
+            <!-- 
+             <form class="ordersForm m-auto" action="orders.html">
                 <fieldset class="ordersForm__fieldset">
                     <legend>Pedidos</legend>
-                    <h2>Hacé tu pedido!</h2>
 
-                    <!-- START ORDER AREA -->
+                    AGREGARINICIARCOMENTARIOS START ORDER AREA AGREGARFINALIZARCOMENTARIOS
                     <div class="orderArea">
 
-                        <!-- START COMBO -->
+                        AGREGARINICIARCOMENTARIOS START COMBO AGREGARFINALIZARCOMENTARIOS
                         <div id="combo0">
-                            <!-- START BURGER ORDER -->
+                            AGREGARINICIARCOMENTARIOS START BURGER ORDER AGREGARFINALIZARCOMENTARIOS
                             <div class="form-group">
                                 <label for="burger">Burger</label>
                                 <img class="delete" src="https://i.ibb.co/ZHZzvBG/delete-combo.png" alt="Eliminar Combo"
@@ -86,9 +125,9 @@
                                     <option value="triple">Triple</option>
                                 </select>
                             </div>
-                            <!-- END BURGER ORDER -->
+                            AGREGARINICIARCOMENTARIOS END BURGER ORDER AGREGARFINALIZARCOMENTARIOS
 
-                            <!-- START CHIPS ORDER -->
+                            AGREGARINICIARCOMENTARIOS START CHIPS ORDER AGREGARFINALIZARCOMENTARIOS
                             <div class="form-group">
                                 <label for="chips">Papas</label>
                                 <select class="form-control" name="chips" id="chips" onchange="saveCombo(this)">
@@ -98,39 +137,39 @@
                                     <option value="large">Papas Grandes</option>
                                 </select>
                             </div>
-                            <!-- END CHIPS ORDER -->
+                            AGREGARINICIARCOMENTARIOS END CHIPS ORDER AGREGARFINALIZARCOMENTARIOS
 
-                            <!-- START CLARIFICATIONS -->
+                            AGREGARINICIARCOMENTARIOS START CLARIFICATIONS AGREGARFINALIZARCOMENTARIOS
                             <div class="form-group">
                                 <label for="clarifications">Aclaraciones</label>
                                 <input class="form-control" type="text" id="clarifications" name="clarifications"
                                     onchange="saveCombo(this)">
                             </div>
-                            <!-- END CLARIFICATIONS -->
+                            AGREGARINICIARCOMENTARIOS END CLARIFICATIONS AGREGARFINALIZARCOMENTARIOS
                         </div>
-                        <!-- END COMBO -->
+                        AGREGARINICIARCOMENTARIOS END COMBO AGREGARFINALIZARCOMENTARIOS
 
                         <button id="addCombo" type="button" class="btn btn-sm btn-dark w-100 mb-2"
                             onclick="addNewCombo()">Añadir Combo</button>
                     </div>
-                    <!-- END ORDER AREA -->
+                    AGREGARINICIARCOMENTARIOS END ORDER AREA AGREGARFINALIZARCOMENTARIOS
 
 
-                    <!-- START FIRST NAME -->
+                    AGREGARINICIARCOMENTARIOS START FIRST NAME AGREGARFINALIZARCOMENTARIOS
                     <div class="form-group">
                         <label for="firstName">Nombre</label>
                         <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Pepe">
                     </div>
-                    <!-- END FIRST NAME -->
+                    AGREGARINICIARCOMENTARIOS END FIRST NAME AGREGARFINALIZARCOMENTARIOS
 
-                    <!-- START PHONE NUMBER -->
+                    AGREGARINICIARCOMENTARIOS START PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
                     <div class="form-group">
                         <label for="phone">Teléfono</label>
                         <input class="form-control" type="number" id="phone" name="phone" placeholder="3416555555">
                     </div>
-                    <!-- END PHONE NUMBER -->
+                    AGREGARINICIARCOMENTARIOS END PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
 
-                    <!-- START DELIVERY OR TAKE AWAY -->
+                    AGREGARINICIARCOMENTARIOS START DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
                     <label>¿Envío o Take Away?</label>
 
                     <div class="custom-control custom-radio">
@@ -144,16 +183,16 @@
                             value="takeAway" onclick="setDeliveryDisabled(true)">
                         <label class="custom-control-label" for="takeAway">Take Away</label>
                     </div>
-                    <!-- END DELIVERY OR TAKE AWAY -->
+                    AGREGARINICIARCOMENTARIOS END DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
 
-                    <!-- START ADDRESS -->
+                    AGREGARINICIARCOMENTARIOS START ADDRESS AGREGARFINALIZARCOMENTARIOS
                     <div class="form-group mt-2">
                         <label for="address">Dirección</label>
                         <input class="form-control" type="text" id="address" name="address" placeholder="Calle 9999">
                     </div>
-                    <!-- END ADDRESS -->
+                    AGREGARINICIARCOMENTARIOS END ADDRESS AGREGARFINALIZARCOMENTARIOS
 
-                    <!-- START DATE AND HOUR AREA -->
+                    AGREGARINICIARCOMENTARIOS START DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
                     <div class="form-group">
 
                         <label class="d-block">Fecha y Hora</label>
@@ -168,21 +207,24 @@
                             <option value="2300">23:00</option>
                         </select>
                     </div>
-                    <!-- END DATE AND HOUR AREA -->
+                    AGREGARINICIARCOMENTARIOS END DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
 
-                    <!-- START BUTTONS -->
+                    AGREGARINICIARCOMENTARIOS START BUTTONS AGREGARFINALIZARCOMENTARIOS
                     <div class="formButtons">
                         <button class="btn btn-dark" type="reset"
                             onclick="localStorage.clear(), location.reload()">LIMPIAR</button>
                         <button class="btn btn-dark" type="submit" onclick="localStorage.clear()">ENVIAR</button>
                     </div>
-                    <!-- END BUTTONS -->
+                    AGREGARINICIARCOMENTARIOS END BUTTONS AGREGARFINALIZARCOMENTARIOS
 
                 </fieldset>
             </form>
+        -->
         </section>
+        <!-- END ORDER SECTION -->
 
-        <section class="mapSection container-fluid col-12 col-xl-6">
+        <!-- START TAKE AWAY SECTION -->
+        <section class="mapSection container-fluid col-12">
             <div class="mapContainer m-auto">
                 <h2>Pasá a buscar tu comida!</h2>
                 <iframe
@@ -191,6 +233,7 @@
                 </iframe>
             </div>
         </section>
+        <!-- END TAKE AWAY SECTION -->
 
     </main>
 
