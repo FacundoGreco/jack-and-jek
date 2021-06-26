@@ -333,6 +333,7 @@ form {
 /* START ORDERS SECTION */
 
 .ordersSection {
+    margin-bottom: 20px;
 
     h2 {
         @include sectionTitle();
@@ -343,6 +344,7 @@ form {
         @include modernContainer ();
         width: 35%;
         padding: 1% 2%;
+        margin: 30px auto;
 
         h3 {
             text-align: center;
@@ -359,7 +361,7 @@ form {
 
             .itemName {
                 display: flex;
-                width: 40%;
+                width: 50%;
                 max-width: 180px;
                 justify-content: space-between;
                 align-items: center;
@@ -418,19 +420,24 @@ form {
 
 /* START TAKE AWAY SECTION */
 .takeawaySection {
-    margin: 40px 0;
+    margin: 20px 0;
+    
+    h2 {
+        @include sectionTitle();
+    }
 
     .mapContainer {
         @include flex-center();
         @include modernContainer();
+        margin: 40px auto;
         flex-direction: column;
         justify-content: space-between;
         height: 610px;
-        width: 60%;
+        width: 50%;
         padding: 20px 10px;
         background-color: $form-color;
 
-        h2 {
+        h3 {
             width: 100%;
             font-size: 25px;
             margin-top: 1%;
@@ -441,7 +448,7 @@ form {
 
         iframe {
             width: 90%;
-            height: 85%;
+            height: 88%;
         }
     }
 }
