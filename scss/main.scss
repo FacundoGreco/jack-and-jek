@@ -33,7 +33,7 @@ button:hover {
 /* START HEADER */
 .header {
     @include primaryStyle();
-    min-width: 490px;
+    // min-width: 490px;
     z-index: 3;
     padding: 10px;
 
@@ -90,7 +90,7 @@ button:hover {
 
 /* START MAIN */
 main {
-    min-width: 490px;
+    // min-width: 490px;
     width: 100%;
     z-index: 1;
     margin-top: 98px;
@@ -280,7 +280,7 @@ form {
     .burgerProduct,
     .chipsProduct {
         position: relative;
-        min-width: 510px;
+        // min-width: 510px;
         width: 510px;
 
         img {
@@ -342,9 +342,11 @@ form {
     .menuContainer {
         @include secondaryStyle ();
         @include modernContainer ();
-        width: 35%;
-        padding: 1% 2%;
+        padding: 10px 20px;
         margin: 30px auto;
+        width: 97%;
+        max-width: 720px;
+        box-sizing: border-box;
 
         h3 {
             text-align: center;
@@ -361,7 +363,7 @@ form {
 
             .itemName {
                 display: flex;
-                width: 50%;
+                width: 48%;
                 max-width: 180px;
                 justify-content: space-between;
                 align-items: center;
@@ -373,14 +375,15 @@ form {
 
             .itemOptions {
                 display: flex;
-                width: 50%;
+                width: 52%;
                 max-width: 270px;
                 justify-content: space-between;
                 align-items: center;
                 font-size: 18px;
-                
+
                 li {
                     text-align: center;
+                    min-width: 50px;
                     width: 70px;
                     cursor: pointer;
                 }
@@ -421,7 +424,7 @@ form {
 /* START TAKE AWAY SECTION */
 .takeawaySection {
     margin: 20px 0;
-    
+
     h2 {
         @include sectionTitle();
     }
@@ -430,11 +433,13 @@ form {
         @include flex-center();
         @include modernContainer();
         margin: 40px auto;
+        padding: 20px 10px;
         flex-direction: column;
         justify-content: space-between;
         height: 610px;
-        width: 50%;
-        padding: 20px 10px;
+        width: 95%;
+        max-width: 720px;
+        box-sizing: border-box;
         background-color: $form-color;
 
         h3 {
@@ -639,7 +644,7 @@ form {
 /* START FOOTER */
 .footer {
     @include secondaryStyle();
-    min-width: 490px;
+    // min-width: 490px;
     z-index: 1;
     padding: 20px 15px;
 
@@ -730,6 +735,61 @@ form {
 
     .nav__menu {
         font-size: 20px !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .ordersSection,
+    .takeawaySection {
+
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .menuContainer,
+    .mapContainer {
+        h3 {
+            font-size: 23px !important;
+        }
+    }
+
+    .menuContainer {
+        padding: 10px 10px;
+
+
+        .itemName {
+            justify-content: flex-start !important;
+
+            h4 {
+                margin-left: 3px;
+                font-size: 16px !important;
+            }
+        }
+
+        .burgersSection li {
+            font-size: 15px;
+        }
+
+        .chipsSection li {
+            font-size: 13.5px;
+        }
+    }
+
+
+    .takeawaySection {
+
+        .mapContainer {
+            padding: 10px 5px;
+            height: 580px;
+
+            iframe{
+                height: 90%;
+            }
+        }
+
     }
 
 }
