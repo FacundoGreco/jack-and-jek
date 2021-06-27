@@ -286,6 +286,9 @@ form {
           min-width: 50px;
           width: 70px;
           cursor: pointer; }
+          .ordersSection .menuContainer .burgerItem .itemOptions li:hover,
+          .ordersSection .menuContainer .chipsItem .itemOptions li:hover {
+            text-decoration: underline; }
 
 /* END ORDERS SECTION */
 /* START TAKE AWAY SECTION */
