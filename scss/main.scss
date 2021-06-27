@@ -388,7 +388,7 @@ form {
                     width: 70px;
                     cursor: pointer;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
 
@@ -746,6 +746,22 @@ form {
         font-size: 20px !important;
     }
 
+
+}
+
+@media only screen and (max-width: 576px) {
+    .footer div{
+            margin: 20px 0;
+
+            h3 {
+                font-size: 28px;
+            }
+
+            li {
+                font-size: 18px;
+            }
+        
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -766,7 +782,7 @@ form {
     }
 
     .menuContainer {
-        padding: 10px 10px!important;
+        padding: 10px 10px !important;
 
 
         .itemName {
@@ -794,7 +810,7 @@ form {
             padding: 10px 5px;
             height: 580px;
 
-            iframe{
+            iframe {
                 height: 90%;
             }
         }
