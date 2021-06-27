@@ -356,26 +356,27 @@ form {
         }
 
         .burgerItem,
-        .chipsItem {
+        .guarnitionItem {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
 
             .itemName {
                 display: flex;
-                width: 48%;
-                max-width: 180px;
-                justify-content: space-between;
+                width: 52%;
+                max-width: 230px;
+                justify-content: flex-start;
                 align-items: center;
 
                 h4 {
+                    margin-left: 5%;
                     font-size: 22px;
                 }
             }
 
             .itemOptions {
                 display: flex;
-                width: 52%;
+                width: 48%;
                 max-width: 270px;
                 justify-content: space-between;
                 align-items: center;
@@ -386,8 +387,13 @@ form {
                     min-width: 50px;
                     width: 70px;
                     cursor: pointer;
+
                     &:hover{
                         text-decoration: underline;
+                    }
+
+                    p {
+                        margin-bottom: 0;
                     }
                 }
             }
@@ -760,7 +766,7 @@ form {
     }
 
     .menuContainer {
-        padding: 10px 10px;
+        padding: 10px 10px!important;
 
 
         .itemName {
@@ -776,7 +782,7 @@ form {
             font-size: 15px;
         }
 
-        .chipsSection li {
+        .guarnitionSection li {
             font-size: 13.5px;
         }
     }

@@ -258,37 +258,41 @@ form {
       padding-bottom: 5px;
       margin-bottom: 10px; }
     .ordersSection .menuContainer .burgerItem,
-    .ordersSection .menuContainer .chipsItem {
+    .ordersSection .menuContainer .guarnitionItem {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px; }
       .ordersSection .menuContainer .burgerItem .itemName,
-      .ordersSection .menuContainer .chipsItem .itemName {
-        display: flex;
-        width: 48%;
-        max-width: 180px;
-        justify-content: space-between;
-        align-items: center; }
-        .ordersSection .menuContainer .burgerItem .itemName h4,
-        .ordersSection .menuContainer .chipsItem .itemName h4 {
-          font-size: 22px; }
-      .ordersSection .menuContainer .burgerItem .itemOptions,
-      .ordersSection .menuContainer .chipsItem .itemOptions {
+      .ordersSection .menuContainer .guarnitionItem .itemName {
         display: flex;
         width: 52%;
+        max-width: 230px;
+        justify-content: flex-start;
+        align-items: center; }
+        .ordersSection .menuContainer .burgerItem .itemName h4,
+        .ordersSection .menuContainer .guarnitionItem .itemName h4 {
+          margin-left: 5%;
+          font-size: 22px; }
+      .ordersSection .menuContainer .burgerItem .itemOptions,
+      .ordersSection .menuContainer .guarnitionItem .itemOptions {
+        display: flex;
+        width: 48%;
         max-width: 270px;
         justify-content: space-between;
         align-items: center;
         font-size: 18px; }
         .ordersSection .menuContainer .burgerItem .itemOptions li,
-        .ordersSection .menuContainer .chipsItem .itemOptions li {
+        .ordersSection .menuContainer .guarnitionItem .itemOptions li {
           text-align: center;
           min-width: 50px;
           width: 70px;
           cursor: pointer; }
           .ordersSection .menuContainer .burgerItem .itemOptions li:hover,
-          .ordersSection .menuContainer .chipsItem .itemOptions li:hover {
+          .ordersSection .menuContainer .guarnitionItem .itemOptions li:hover {
             text-decoration: underline; }
+          .ordersSection .menuContainer .burgerItem .itemOptions li p,
+          .ordersSection .menuContainer .guarnitionItem .itemOptions li p {
+            margin-bottom: 0; }
 
 /* END ORDERS SECTION */
 /* START TAKE AWAY SECTION */
@@ -516,7 +520,7 @@ form {
   .mapContainer h3 {
     font-size: 23px !important; }
   .menuContainer {
-    padding: 10px 10px; }
+    padding: 10px 10px !important; }
     .menuContainer .itemName {
       justify-content: flex-start !important; }
       .menuContainer .itemName h4 {
@@ -524,7 +528,7 @@ form {
         font-size: 16px !important; }
     .menuContainer .burgersSection li {
       font-size: 15px; }
-    .menuContainer .chipsSection li {
+    .menuContainer .guarnitionSection li {
       font-size: 13.5px; }
   .takeawaySection .mapContainer {
     padding: 10px 5px;
