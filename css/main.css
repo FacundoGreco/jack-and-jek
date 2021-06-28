@@ -93,7 +93,6 @@ form {
 .card-body {
   background-color: green;
   color: white;
-  height: 60px;
   font-size: 16px;
   border: solid black;
   border-width: 2px 0 0 0;
@@ -228,12 +227,24 @@ form {
   .chipsArticle .chips__card {
     box-sizing: border-box;
     border: solid black;
-    height: 600px; }
+    min-height: 500px;
+    max-height: 600px;
+    overflow: hidden; }
     .burgersArticle .burger__card img,
     .burgersArticle .chips__card img,
     .chipsArticle .burger__card img,
     .chipsArticle .chips__card img {
-      height: 532px; }
+      box-sizing: border-box;
+      min-height: 420px;
+      max-height: 90%; }
+    .burgersArticle .burger__card .card-body,
+    .burgersArticle .chips__card .card-body,
+    .chipsArticle .burger__card .card-body,
+    .chipsArticle .chips__card .card-body {
+      box-sizing: border-box;
+      min-height: 73px;
+      height: 80%;
+      max-height: 80px; }
 
 /* END MENU PAGE */
 /* START ORDERS PAGE */

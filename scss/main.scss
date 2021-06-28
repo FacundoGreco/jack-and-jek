@@ -138,7 +138,6 @@ form {
 /* START GENERAL CARD */
 .card-body {
     @include primaryStyle();
-    height: 60px;
     font-size: 16px;
     border: solid black;
     border-width: 2px 0 0 0;
@@ -316,10 +315,21 @@ form {
     .chips__card {
         box-sizing: border-box;
         border: solid black;
-        height: 600px;
-
+        min-height: 500px;
+        max-height: 600px;
+        overflow: hidden;
+        
         img {
-            height: 532px;
+            box-sizing: border-box;
+            min-height: 420px;
+            max-height: 90%;
+        }
+        
+        .card-body {
+            box-sizing: border-box;
+            min-height: 73px;
+            height: 80%;
+            max-height: 80px;
         }
     }
 }
