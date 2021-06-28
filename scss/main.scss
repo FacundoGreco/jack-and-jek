@@ -33,7 +33,6 @@ button:hover {
 /* START HEADER */
 .header {
     @include primaryStyle();
-    // min-width: 490px;
     z-index: 3;
     padding: 10px;
 
@@ -90,7 +89,6 @@ button:hover {
 
 /* START MAIN */
 main {
-    // min-width: 490px;
     width: 100%;
     z-index: 1;
     margin-top: 98px;
@@ -176,6 +174,8 @@ form {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        width: 100%;
+        max-width: 200px;
         transition-duration: 0.3s;
 
         &:hover {
@@ -184,7 +184,7 @@ form {
         }
 
         button {
-            width: 200px;
+            width: 100%;
             height: 50px;
             font-family: 'Lato', sans-serif;
             font-size: 22px;
@@ -208,7 +208,7 @@ form {
         z-index: 1;
 
         img {
-            min-height: 580px;
+            min-height: 450px;
             max-height: 670px;
             width: 100%;
         }
@@ -217,8 +217,8 @@ form {
     .swipe-left,
     .swipe-right {
         position: absolute;
-        width: 50px;
-        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
         top: 50%;
         z-index: 2;
         color: $text-color;
@@ -226,15 +226,15 @@ form {
         border-color: transparent;
         cursor: pointer;
         transition-duration: 0.3s;
+        
+        &:hover {
+            max-width: 70px;
+            max-height: 70px;
+            transition-duration: 0.3s;
+    
+        }
     }
 
-    .swipe-left:hover,
-    .swipe-right:hover {
-        width: 70px;
-        height: 70px;
-        transition-duration: 0.3s;
-
-    }
 
     .swipe-left {
         left: 0%;
@@ -256,7 +256,8 @@ form {
 
     .burgers__card,
     .chips__card {
-        width: 510px;
+        width: 95%;
+        max-width: 510px;
         height: 510px;
         border: solid black;
         box-shadow: 0 2px 30px black;
@@ -273,15 +274,15 @@ form {
     .burgers__card__carousel,
     .chips__card__carousel {
         position: relative;
-        height: 470px;
+        max-height: 470px;
         overflow: hidden;
     }
 
     .burgerProduct,
     .chipsProduct {
         position: relative;
-        // min-width: 510px;
-        width: 510px;
+        min-width: 300px;
+        max-width: 510px;
 
         img {
             display: block;
@@ -653,7 +654,6 @@ form {
 /* START FOOTER */
 .footer {
     @include secondaryStyle();
-    // min-width: 490px;
     z-index: 1;
     padding: 20px 15px;
 
@@ -750,71 +750,110 @@ form {
 }
 
 @media only screen and (max-width: 576px) {
-    .footer div{
-            margin: 20px 0;
+    .footer div {
+        margin: 20px 0;
 
-            h3 {
-                font-size: 28px;
-            }
+        h3 {
+            font-size: 28px;
+        }
 
-            li {
-                font-size: 18px;
+        li {
+            font-size: 18px;
+        }
+
+    }
+
+    .productsSection {
+
+        .burgers__card,
+        .chips__card {
+            height: 480px;
+        }
+
+        .burgerProduct,
+        .chipsProduct {
+            img {
+                height: 378px;
             }
-        
+        }
     }
 }
 
 @media only screen and (max-width: 500px) {
 
+    /* START HERO SECTION */
+    .heroSection__button {
+        max-width: fit-content !important;
+
+        button {
+            height: 45px !important;
+            font-size: 18px !important;
+        }
+    }
+
+    .swipe-left,
+    .swipe-right {
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    /* END HERO SECTION */
+    
+    /* START ORDERS PAGE */
     .ordersSection,
     .takeawaySection {
-
+        
         h2 {
             font-size: 25px;
         }
     }
-
+    
     .menuContainer,
     .mapContainer {
         h3 {
             font-size: 23px !important;
         }
     }
-
+    
     .menuContainer {
         padding: 10px 10px !important;
-
-
+        
+        
         .itemName {
             justify-content: flex-start !important;
-
+            
             h4 {
                 margin-left: 3px;
                 font-size: 16px !important;
             }
         }
-
+        
         .burgersSection li {
             font-size: 15px;
         }
-
+        
         .guarnitionSection li {
             font-size: 13.5px;
         }
     }
-
-
+    
+    
     .takeawaySection {
-
+        
         .mapContainer {
             padding: 10px 5px;
             height: 580px;
-
+            
             iframe {
                 height: 90%;
             }
         }
-
+        
     }
-
+    /* END ORDERS PAGE */
+    
 }
