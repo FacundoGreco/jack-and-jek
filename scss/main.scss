@@ -41,7 +41,7 @@ button:hover {
 
         ul li {
             display: inline;
-            margin: 20px 0 0 20px;
+            margin-left: 20px;
         }
 
         .nav__logo {
@@ -91,7 +91,7 @@ button:hover {
 main {
     width: 100%;
     z-index: 1;
-    margin-top: 98px;
+    margin-top: 90px;
     text-align: center;
 }
 
@@ -226,12 +226,12 @@ form {
         border-color: transparent;
         cursor: pointer;
         transition-duration: 0.3s;
-        
+
         &:hover {
             max-width: 70px;
             max-height: 70px;
             transition-duration: 0.3s;
-    
+
         }
     }
 
@@ -723,13 +723,16 @@ form {
 
 @media only screen and (max-width: 992px) {
 
+    /* START HEADER */
     .header {
         position: unset;
     }
 
-    .nav__menu {
-        justify-content: center !important;
+    .nav__menu, .nav-item {
+        margin: 0 !important;
     }
+
+    /* END HEADER */
 
     main {
         margin-top: 0;
@@ -738,15 +741,6 @@ form {
     .aboutUs__story p {
         font-size: large;
     }
-}
-
-@media only screen and (max-width: 600px) {
-
-    .nav__menu {
-        font-size: 20px !important;
-    }
-
-
 }
 
 @media only screen and (max-width: 576px) {
@@ -781,6 +775,36 @@ form {
 
 @media only screen and (max-width: 500px) {
 
+    /* START HEADER */
+
+    .nav__brand {
+        margin: 0 !important;
+
+        .nav__logo {
+            height: 65px !important;
+
+            img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        .nav__title {
+            font-size: 35px;
+            margin-left: 5% !important;
+        }
+    }
+
+    .navbar-toggler,
+    .navbar-toggler-icon {
+
+        width: 40px;
+        height: 40px;
+    }
+
+    /* END HEADER */
+
+
     /* START HERO SECTION */
     .heroSection__button {
         max-width: fit-content !important;
@@ -801,59 +825,61 @@ form {
             height: 50px;
         }
     }
+
     /* END HERO SECTION */
-    
+
     /* START ORDERS PAGE */
     .ordersSection,
     .takeawaySection {
-        
+
         h2 {
             font-size: 25px;
         }
     }
-    
+
     .menuContainer,
     .mapContainer {
         h3 {
             font-size: 23px !important;
         }
     }
-    
+
     .menuContainer {
         padding: 10px 10px !important;
-        
-        
+
+
         .itemName {
             justify-content: flex-start !important;
-            
+
             h4 {
                 margin-left: 3px;
                 font-size: 16px !important;
             }
         }
-        
+
         .burgersSection li {
             font-size: 15px;
         }
-        
+
         .guarnitionSection li {
             font-size: 13.5px;
         }
     }
-    
-    
+
+
     .takeawaySection {
-        
+
         .mapContainer {
             padding: 10px 5px;
             height: 580px;
-            
+
             iframe {
                 height: 90%;
             }
         }
-        
+
     }
+
     /* END ORDERS PAGE */
-    
+
 }

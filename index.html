@@ -25,25 +25,28 @@
 
     <header class="header fixed-top">
 
-        <nav class="nav container-fluid row">
+        <nav class="nav navbar-dark navbar navbar-expand-lg container-fluid row">
 
             <!-- START NAV BRAND-->
-            <div class="nav__brand col-xs-12 mb-2 col-lg-4">
-                <a class="nav__logo" href="index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
+            <div class="nav__brand col-10 col-lg-4">
+                <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
                 <h1 class="nav__title ">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
-            <div class="nav__menu col-sm-12 m-auto col-lg-8">
-                <ul class="my-auto mx-lg-4 mx-xl-5">
-                    <!-- NAVIGATION -->
-                    <li><a class="active" href="index.html">Inicio</a></li>
-                    <li><a href="pages/menu.html">Menú</a></li>
-                    <li><a href="pages/orders.html">Pedidos</a></li>
-                    <li><a href="pages/contact.html">Contacto</a></li>
-                    <li><a href="pages/jobs.html">Empleos</a></li>
-                </ul>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="nav__menu m-auto col-lg-8">
+                    <ul class="navbar-nav my-auto mx-lg-4 mx-xl-5 collapse navbar-collapse" id="collapse_target">
+                        <!-- NAVIGATION -->
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/menu.html">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/orders.html">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/jobs.html">Empleos</a></li>
+                    </ul>
             </div>
             <!-- END NAV MENU -->
 
