@@ -6,8 +6,7 @@
 
 html,
 body {
-  min-width: min-content;
-  overflow-x: hidden; }
+  min-width: min-content; }
 
 li {
   list-style: none; }
@@ -251,6 +250,18 @@ form {
 /* START ORDERS SECTION */
 .ordersSection {
   margin-bottom: 20px; }
+  .ordersSection .cart {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer; }
+    .ordersSection .cart:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.3);
+      box-shadow: 0 0 3px black; }
   .ordersSection h2 {
     background-color: black;
     color: white;
@@ -268,6 +279,7 @@ form {
     max-width: 720px;
     box-sizing: border-box; }
     .ordersSection .menuContainer h3 {
+      height: 33px;
       text-align: center;
       border-bottom: solid white;
       padding-bottom: 5px;
@@ -517,11 +529,18 @@ form {
   /* START HEADER */
   .header {
     position: unset; }
-  .nav__menu, .nav-item {
+  .nav__menu,
+  .nav-item {
     margin: 0 !important; }
   /* END HEADER */
   main {
     margin-top: 0; }
+  .cart {
+    top: 78px !important;
+    right: 30px !important;
+    width: 29px;
+    height: 29px;
+    padding: 7px !important; }
   .aboutUs__story p {
     font-size: large; } }
 
@@ -575,6 +594,9 @@ form {
   .ordersSection h2,
   .takeawaySection h2 {
     font-size: 25px; }
+  .cart {
+    top: 72px !important;
+    right: 17px !important; }
   .menuContainer h3,
   .mapContainer h3 {
     font-size: 23px !important; }
