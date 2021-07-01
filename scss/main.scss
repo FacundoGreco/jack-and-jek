@@ -340,12 +340,47 @@ form {
 
 /* START ORDERS PAGE */
 
-/* START ORDERS SECTION */
+.cartContainer,
+.menuContainer {
+    @include secondaryStyle ();
+    @include modernContainer ();
+    padding: 10px 20px;
+    width: 97%;
+    max-width: 720px;
+    box-sizing: border-box;
 
+    h3 {
+        height: 33px;
+        text-align: center;
+        border-bottom: solid white;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .burgerItem,
+    .guarnitionItem,
+    .cartColumns {
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 20px;
+
+        .itemName {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            h4 {
+                margin-left: 5%;
+            }
+        }
+    }
+}
+
+/* START ORDERS SECTION */
 .ordersSection {
     margin-bottom: 20px;
 
-    .cart {
+    .cartButton {
         position: absolute;
         top: 60px;
         right: 15px;
@@ -366,39 +401,18 @@ form {
     }
 
     .menuContainer {
-        @include secondaryStyle ();
-        @include modernContainer ();
-        padding: 10px 20px;
         margin: 30px auto;
-        width: 97%;
-        max-width: 720px;
-        box-sizing: border-box;
-
-        h3 {
-            height: 33px;
-            text-align: center;
-            border-bottom: solid white;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
 
         .burgerItem,
         .guarnitionItem {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+
+            h4 {
+                font-size: 22px;
+            }
 
             .itemName {
-                display: flex;
                 width: 52%;
                 max-width: 230px;
-                justify-content: flex-start;
-                align-items: center;
-
-                h4 {
-                    margin-left: 5%;
-                    font-size: 22px;
-                }
             }
 
             .itemOptions {
@@ -429,31 +443,127 @@ form {
 }
 
 
-// .ordersSection {
-//     margin: 40px 0;
+/* START CART SECTION */
+.cartSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
-//     .ordersForm {
-//         width: 75%;
-//         height: 100%;
-//         background-color: $form-color;
+.cartSectionOpened {
+    visibility: visible;
+    background-color: rgba($color: #000000, $alpha: 0.78);
+}
 
-//         .orderArea {
-//             position: relative;
-//             border-bottom: solid black;
-//             margin-bottom: 10px;
-//             height: 348px;
-//             max-height: 348px;
-//             overflow-y: auto;
+.cartSectionClosed {
+    visibility: hidden;
+}
 
-//             .delete {
-//                 position: absolute;
-//                 right: 0;
-//                 width: 28px;
-//                 cursor: pointer;
-//             }
-//         }
-//     }
-// }
+.cartContainer {
+    max-width: 620px;
+    max-height: 85%;
+    position: relative;
+    
+    .cartCloseButton {
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+        background-color: white;
+        border: solid white;
+        border-radius: 50%;
+    }
+
+    h4 {
+        font-size: 17px;
+    }
+
+    .cartColumns {
+        margin-bottom: 30px;
+        text-align: center;
+
+        h4 {
+            justify-self: center;
+        }
+
+    }
+
+    .itemNameCol,
+    .itemName {
+        width: 41.5%;
+        max-width: 200px;
+    }
+
+    .itemSizeCol,
+    .itemSize {
+        width: 20%;
+    }
+
+    .itemClarificationsCol,
+    .itemClarifications {
+        width: 28.5%;
+    }
+
+    .itemPriceCol,
+    .itemPrice {
+        width: 10%;
+    }
+
+    .cartForm {
+        box-shadow: none;
+        
+        .cartItems {
+            max-height: 320px;
+            overflow-y: auto;
+            
+            .burgerItem,
+            .guarnitionItem {
+
+                .itemSize,
+                .itemClarifications,
+                .itemPrice {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .itemName {
+                    h4 {
+                        margin-left: 3px;
+                    }
+                }
+
+                .itemSize select {
+                    width: 100%;
+                    max-width: 90px;
+                    padding: 3px;
+                    font-size: 14px;
+                }
+
+                .itemClarifications input {
+                    width: 100%;
+                    max-width: 110px;
+                    padding: 3px;
+                    font-size: 14px;
+                }
+
+                .itemPrice p {
+                    margin: 0 0;
+                }
+
+            }
+        }
+    }
+}
+
+/* END CART SECTION */
 
 /* END ORDERS SECTION */
 
@@ -765,12 +875,12 @@ form {
         margin-top: 0;
     }
 
-    .cart {
-        top: 78px!important;
-        right: 30px!important;
+    .cartButton {
+        top: 78px !important;
+        right: 30px !important;
         width: 29px;
         height: 29px;
-        padding: 7px!important;
+        padding: 7px !important;
     }
 
     .aboutUs__story p {
@@ -811,7 +921,6 @@ form {
 @media only screen and (max-width: 500px) {
 
     /* START HEADER */
-
     .nav__brand {
         margin: 0 !important;
 
@@ -872,13 +981,14 @@ form {
         }
     }
 
-    .cart {
-        top: 72px!important;
-        right: 17px!important;
+    .cartButton {
+        top: 72px !important;
+        right: 17px !important;
     }
 
     .menuContainer,
-    .mapContainer {
+    .mapContainer,
+    .cartContainer {
         h3 {
             font-size: 23px !important;
         }
@@ -889,7 +999,6 @@ form {
 
 
         .itemName {
-            justify-content: flex-start !important;
 
             h4 {
                 margin-left: 3px;
@@ -906,6 +1015,44 @@ form {
         }
     }
 
+    .cartContainer {
+        padding: 10px 10px !important;
+
+        h4 {
+            margin-left: 0px !important;
+            font-size: 14px !important;
+        }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .itemSize select {
+            padding: 1px !important;
+            font-size: 12px !important;
+            max-width: 73px !important;
+        }
+
+        .itemClarifications input {
+            padding: 1px !important;
+            font-size: 12px !important;
+            max-width: 80px !important;
+        }
+
+        .itemPrice p {
+            font-size: 14px !important;
+        }
+
+        .formButtons {
+
+            button {
+                font-size: 14px;
+                padding: 3px 6px;
+
+            }
+        }
+    }
 
     .takeawaySection {
 

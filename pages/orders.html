@@ -40,14 +40,14 @@
                 <span class="navbar-toggler-icon "></span>
             </button>
             <div class="nav__menu m-auto col-lg-8">
-                    <ul class="navbar-nav my-auto mx-lg-4 mx-xl-5 collapse navbar-collapse" id="collapse_target">
-                        <!-- NAVIGATION -->
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="orders.html">Pedidos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="jobs.html">Empleos</a></li>
-                    </ul>
+                <ul class="navbar-nav my-auto mx-lg-4 mx-xl-5 collapse navbar-collapse" id="collapse_target">
+                    <!-- NAVIGATION -->
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="orders.html">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jobs.html">Empleos</a></li>
+                </ul>
             </div>
             <!-- END NAV MENU -->
 
@@ -61,25 +61,80 @@
         <!-- START ORDER SECTION -->
         <section class="ordersSection container-fluid col-12">
             <h2>Añadir Productos</h2>
-            
-            <img class="cart" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="">
+
+            <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="">
 
             <div class="menuContainer">
-                
+
                 <!-- START BURGERS SECTION -->
                 <section class="burgersSection">
                     <h3>Hamburguesas</h3>
                 </section>
                 <!-- END BURGERS SECTION -->
-                
+
                 <!-- START GUARNITION SECTION -->
                 <section class="guarnitionSection">
                     <h3>Guarnición</h3>
                 </section>
                 <!-- END CHIPS SECTION -->
-                
+
             </div>
-            
+
+            <section class="cartSection cartSectionOpened">
+                <section class="cartContainer">
+                    <h3>Carrito</h3>
+                    <button class="cartCloseButton" type="button">X</button>
+                    <!-- START COLUMNS -->
+                    <div class="cartColumns">
+                        <h4 class="itemNameCol">Producto</h4>
+                        <h4 class="itemSizeCol">Tamaño</h4>
+                        <h4 class="itemClarificationsCol">Aclaraciones</h4>
+                        <h4 class="itemPriceCol">Precio</h4>
+                    </div>
+                    <!-- END COLUMNS -->
+
+                    <!-- START FORM -->
+                    <form class="form cartForm" action="">
+
+                        <div class="cartItems">
+                        
+                            <li class="burgerItem">
+                                <div class="itemName">
+                                    <img class="icon" src="https://i.ibb.co/7SGTXX5/delete-product.png"
+                                        alt="Eliminar Producto">
+                                    <h4>Jack Guacamole</h4>
+                                </div>
+
+                                <div class="itemSize">
+                                    <select class="form-control" name="size" onchange="">
+                                        <option value="simple">Simple</option>
+                                        <option value="double">Doble</option>
+                                        <option value="triple">Grandes</option>
+                                    </select>
+                                </div>
+
+                                <div class="itemClarifications">
+                                    <input class="form-control" type="text" name="clarifications" onchange="">
+                                </div>
+
+                                <div class="itemPrice">
+                                    <p>$380</p>
+                                </div>
+                            </li>
+                            
+                        </div>
+
+                        <!-- START BUTTONS -->
+                        <div class="formButtons">
+                            <button class="btn btn-light" type="reset">LIMPIAR</button>
+                            <button class="btn btn-light" type="button">CONTINUAR</button>
+                        </div>
+                        <!-- END BUTTONS -->
+                    </form>
+                    <!-- END FORM -->
+                </section>
+            </section>
+
             <!-- 
                 <form class="ordersForm m-auto" action="orders.html">
                     <fieldset class="ordersForm__fieldset">
@@ -205,15 +260,15 @@
                 </fieldset>
             </form>
         -->
-    </section>
-    <!-- END ORDER SECTION -->
-    
-    <!-- START TAKE AWAY SECTION -->
-    <section class="takeawaySection container-fluid col-12">
-        <h2>Take Away</h2>
-        <div class="mapContainer">
-            <h3>Sucursales</h3>
-            <iframe
+        </section>
+        <!-- END ORDER SECTION -->
+
+        <!-- START TAKE AWAY SECTION -->
+        <section class="takeawaySection container-fluid col-12">
+            <h2>Take Away</h2>
+            <div class="mapContainer">
+                <h3>Sucursales</h3>
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.731112950105!2d-60.650859884267796!3d-32.98449518113633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abbf03e164d7%3A0x2e0cd8ef77b4e496!2sCenteno%201156%2C%20S2001BFJ%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1616960890065!5m2!1ses!2sar"
                     width="500" height="470" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
