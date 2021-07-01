@@ -62,7 +62,7 @@
         <section class="ordersSection container-fluid col-12">
             <h2>Añadir Productos</h2>
 
-            <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="">
+            <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="openCart()">
 
             <div class="menuContainer">
 
@@ -80,10 +80,10 @@
 
             </div>
 
-            <section class="cartSection cartSectionOpened">
+            <section class="cartSection cartSectionClosed" onclick="closeCart(event)">
                 <section class="cartContainer">
                     <h3>Carrito</h3>
-                    <button class="cartCloseButton" type="button">X</button>
+                    <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
                     <!-- START COLUMNS -->
                     <div class="cartColumns">
                         <h4 class="itemNameCol">Producto</h4>
@@ -121,7 +121,7 @@
                                     <p>$380</p>
                                 </div>
                             </li>
-                            
+
                         </div>
 
                         <!-- START BUTTONS -->
