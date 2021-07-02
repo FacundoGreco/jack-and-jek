@@ -22,7 +22,7 @@ class Items {
         </div>
 
         <div class="itemSize">
-            <select class="form-control" name="size" onchange="">
+            <select class="form-control" name="size" onchange="saveItem(event)">
                 <option value="${this.prices[0][0]}">${this.prices[0][0]}</option>
                 <option value="${this.prices[1][0]}">${this.prices[1][0]}</option>
                 <option value="${this.prices[2][0]}">${this.prices[2][0]}</option>
@@ -30,7 +30,7 @@ class Items {
         </div>
 
         <div class="itemClarifications">
-            <input class="form-control" type="text" name="clarifications" value="${this.clarifications}" onchange="">
+            <input class="form-control" type="text" name="clarifications" value="${this.clarifications}" onchange="saveItem(event)">
         </div>
 
         <div class="itemPrice">

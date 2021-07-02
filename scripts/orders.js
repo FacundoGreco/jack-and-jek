@@ -70,18 +70,48 @@ function addItem(e) {
     localStorage.setItem('order', JSON.stringify(order));
 }
 
+/* GET ITEM INDEX */
+function getItemIndex(itemNode) {
+    const itemsInCart = Array.from(itemNode.parentNode.querySelectorAll('li'));
+    const itemIndex = itemsInCart.findIndex(li => li == itemNode);
+
+    return itemIndex;
+}
+
 /* DELETE ITEM */
 function deleteItem(e) {
-
+    
     const itemNode = e.target.parentNode.parentNode;
-    console.log(itemNode);
-    const itemsInCart = Array.from(itemNode.parentNode.querySelectorAll('li'));
-    console.log(itemsInCart);
-    const itemIndex = itemsInCart.findIndex(li => li == itemNode);
-    console.log(itemIndex);
-
+    const itemIndex = getItemIndex(itemNode);
+    
     itemNode.parentNode.removeChild(itemNode);
     order.splice(itemIndex, 1); //Removes item from order array
     localStorage.setItem('order', JSON.stringify(order));
+    
+}
 
+/* SAVE ITEM */
+function saveItem(e) {
+
+    const itemNode = e.target.parentNode.parentNode;
+    const itemIndex = getItemIndex(itemNode);
+
+    const type = itemNode.classList.value;
+    const name = itemNode.querySelector('.itemName h4').innerHTML;
+    const size = itemNode.querySelector('.itemSize select option:checked').value;
+    const clarifications = itemNode.querySelector('.itemClarifications input').value;
+    const prices = order[itemIndex].prices;
+    const sizeIndex = prices.findIndex(option => option[0] == size); //Gets index of the size of the item.
+    const price = prices[sizeIndex][1];
+
+    itemNode.querySelector('.itemPrice p').innerHTML = price;
+
+    console.log(type);
+    console.log(name);
+    console.log(sizeIndex);
+    console.log(clarifications);
+    console.log(price);
+
+    order[itemIndex] = new Items(type, name, sizeIndex, prices, clarifications);
+    localStorage.setItem('order', JSON.stringify(order));
 }
