@@ -428,6 +428,12 @@ form {
       .cartContainer .cartForm .cartItems .burgerItem .itemPrice p,
       .cartContainer .cartForm .cartItems .guarnitionItem .itemPrice p {
         margin: 0 0; }
+    .cartContainer .cartForm .totalPrice {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      width: 10%;
+      text-align: center; }
 
 /* END CART SECTION */
 /* END ORDERS SECTION */
@@ -738,8 +744,12 @@ form {
     .cartContainer .itemPrice p {
       font-size: 14px !important; }
     .cartContainer .formButtons button {
+      margin: 0 20px;
       font-size: 14px;
       padding: 3px 6px; }
+    .cartContainer .totalPrice {
+      right: 10px !important;
+      bottom: 10px !important; }
   .takeawaySection .mapContainer {
     padding: 10px 5px;
     height: 580px; }

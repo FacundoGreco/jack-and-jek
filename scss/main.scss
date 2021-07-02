@@ -565,6 +565,14 @@ form {
 
             }
         }
+        
+        .totalPrice {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            width: 10%;
+            text-align: center;
+        }
     }
 }
 
@@ -1052,11 +1060,18 @@ form {
         .formButtons {
 
             button {
+                margin: 0 20px;
                 font-size: 14px;
                 padding: 3px 6px;
-
             }
+
         }
+
+        .totalPrice{
+            right: 10px!important;
+            bottom: 10px!important;
+        }
+
     }
 
     .takeawaySection {
