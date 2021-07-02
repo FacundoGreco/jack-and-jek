@@ -410,6 +410,9 @@ form {
       .cartContainer .cartForm .cartItems .burgerItem .itemName h4,
       .cartContainer .cartForm .cartItems .guarnitionItem .itemName h4 {
         margin-left: 3px; }
+      .cartContainer .cartForm .cartItems .burgerItem .itemName .deleteItem,
+      .cartContainer .cartForm .cartItems .guarnitionItem .itemName .deleteItem {
+        cursor: pointer; }
       .cartContainer .cartForm .cartItems .burgerItem .itemSize select,
       .cartContainer .cartForm .cartItems .guarnitionItem .itemSize select {
         width: 100%;

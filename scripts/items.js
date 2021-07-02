@@ -16,8 +16,8 @@ class Items {
         itemNode.className = `${this.type}`;
         itemNode.innerHTML = `
         <div class="itemName">
-            <img class="icon" src="https://i.ibb.co/7SGTXX5/delete-product.png"
-                alt="Eliminar Producto">
+            <img class="icon deleteItem" src="https://i.ibb.co/7SGTXX5/delete-product.png"
+                alt="Eliminar Producto" onclick="deleteItem(event)">
             <h4>${this.name}</h4>
         </div>
 
@@ -36,9 +36,8 @@ class Items {
         <div class="itemPrice">
             <p>${this.prices[this.size][1]}</p>
         </div>`;
-
         itemNode.querySelectorAll(`.itemSize select option`)[this.size].selected = true;
-
+        
         cartItemsNode.appendChild(itemNode);
     }
 }
