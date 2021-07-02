@@ -11,6 +11,11 @@ products.forEach(product => {
 });
 
 /* FILLS CART WITH ITEMS */
+order = JSON.parse(localStorage.getItem('order'));
+order.forEach(item => {
+    item = new Items(item.type, item.name, item.size, item.prices, item.clarifications);
+    item.appendItem();
+});
 
 /* OPEN CART */
 function openCart() {
@@ -57,4 +62,5 @@ function addItem(e) {
     const item = new Items(type, name, size, prices,'');
     item.appendItem();
     order.push(item);
+    localStorage.setItem('order', JSON.stringify(order));
 }
