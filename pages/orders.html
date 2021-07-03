@@ -62,25 +62,25 @@
         <!-- START ORDER SECTION -->
         <section class="ordersSection container-fluid col-12">
             <h2>Añadir Productos</h2>
-            
+
             <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="openCart()">
-            
+
             <div class="menuContainer">
-                
+
                 <!-- START BURGERS SECTION -->
                 <section class="burgersSection">
                     <h3>Hamburguesas</h3>
                 </section>
                 <!-- END BURGERS SECTION -->
-                
+
                 <!-- START GUARNITION SECTION -->
                 <section class="guarnitionSection">
                     <h3>Guarnición</h3>
                 </section>
                 <!-- END CHIPS SECTION -->
-                
+
             </div>
-            
+
             <!-- START CART SECTION -->
             <section class="cartSection cartSectionClosed" onclick="closeCart(event)">
                 <!-- START CART CONTAINER -->
@@ -95,21 +95,21 @@
                         <h4 class="itemPriceCol">Precio</h4>
                     </div>
                     <!-- END COLUMNS -->
-                    
+
                     <!-- START FORM -->
-                    <form class="form cartForm" action="">
-                        
+                    <form class="form cartForm" action="orders.html">
+
                         <div class="cartItems">
-                            
+
                         </div>
-                        
+
                         <!-- START BUTTONS -->
                         <div class="formButtons">
                             <button class="btn btn-light" type="reset" onclick="deleteOrder()">LIMPIAR</button>
                             <button class="btn btn-light" type="button" onclick="openDelivery()">CONTINUAR</button>
                         </div>
                         <!-- END BUTTONS -->
-                        
+
                         <div class="totalPrice">
                             <h4>Total</h4>
                             <h4></h4>
@@ -118,90 +118,94 @@
                     <!-- END FORM -->
                 </div>
                 <!-- END CART CONTAINER -->
-                
+
+
                 <!-- START DELIVERY CONTAINER -->
                 <div class="deliveryContainer">
                     <h3>Entrega</h3>
                     <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
                     <button class="cartGoBackButton" type="button" onclick="openCart()">←</button>
+
+                    <form class="form deliveryForm" action="orders.html">
+                        <!-- START DATE AND HOUR FIELDSET -->
+                        <fieldset>
+                            <div>
+                                <label class="d-block">Fecha</label>
+                                <input class="form-control" type="date" name="date"
+                                    id="date">
+                            </div>
+
+                            <div>
+                                <label class="d-block">Hora</label>
+                                <select class="form-control" name="hour" id="hour">
+                                    <option value="2000">20:00</option>
+                                    <option value="2030">20:30</option>
+                                    <option value="2100">21:00</option>
+                                    <option value="2130">21:30</option>
+                                    <option value="2200">22:00</option>
+                                    <option value="2230">22:30</option>
+                                    <option value="2300">23:00</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <!-- END DATE AND HOUR FIELDSET -->
+
+                        <!-- START NAME AND PHONE FIELDSET -->
+                        <fieldset>
+                            <div>
+                                <label for="name">Nombre</label>
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Pepe">
+                            </div>
+
+                            <div>
+                                <label for="phone">Teléfono</label>
+                                <input class="form-control" type="number" id="phone" name="phone"
+                                    placeholder="3416555555">
+                            </div>
+                        </fieldset>
+                        <!-- END NAME AND PHONE FIELDSET -->
+
+                        <!-- START DELIVERY OR TAKE AWAY FIELDSET -->
+                        <fieldset>
+                            <div>
+                                <label>¿Envío o Take Away?</label>
+
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
+                                        value="delivery" onclick="setDeliveryDisabled(false)">
+                                    <label class="custom-control-label" for="delivery">Envío</label>
+                                </div>
+
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
+                                        value="takeAway" onclick="setDeliveryDisabled(true)">
+                                    <label class="custom-control-label" for="takeAway">Take Away</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Dirección</label>
+                                <input class="form-control" type="text" id="address" name="address"
+                                    placeholder="Calle 9999">
+                            </div>
+                        </fieldset>
+                        <!-- END DELIVERY OR TAKE AWAY FIELDSET -->
+
+                        <!-- START BUTTON -->
+                        <div class="formButtons">
+                            <button class="btn btn-light" type="submit" onclick="payOrder()">PAGAR</button>
+                        </div>
+                        <!-- END BUTTON -->
+
+                    </form>
                 </div>
                 <!-- END DELIVERY CONTAINER -->
+
             </section>
             <!-- END CART SECTION -->
-            
-            
-            <!-- 
-                AGREGARINICIARCOMENTARIOS START DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
-                <div class="form-group">
-                    
-                    <label class="d-block">Fecha y Hora</label>
-                    <input class="form-control w-50 custom-control-inline" type="date" name="date" id="date">
-                    <select class="form-control w-25 custom-control-inline" name="hour" id="hour">
-                        <option value="2000">20:00</option>
-                        <option value="2030">20:30</option>
-                        <option value="2100">21:00</option>
-                        <option value="2130">21:30</option>
-                        <option value="2200">22:00</option>
-                        <option value="2230">22:30</option>
-                        <option value="2300">23:00</option>
-                    </select>
-                </div>
-
-                AGREGARINICIARCOMENTARIOS END DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
-        
-                AGREGARINICIARCOMENTARIOS START FIRST NAME AGREGARFINALIZARCOMENTARIOS
-                <div class="form-group">
-                    <label for="firstName">Nombre</label>
-                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Pepe">
-                </div>
-                AGREGARINICIARCOMENTARIOS END FIRST NAME AGREGARFINALIZARCOMENTARIOS
-                
-                AGREGARINICIARCOMENTARIOS START PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
-                <div class="form-group">
-                    <label for="phone">Teléfono</label>
-                    <input class="form-control" type="number" id="phone" name="phone" placeholder="3416555555">
-                </div>
-                AGREGARINICIARCOMENTARIOS END PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
-                    
-                AGREGARINICIARCOMENTARIOS START DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
-                <label>¿Envío o Take Away?</label>
-                
-                <div class="custom-control custom-radio">
-                    <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                    value="delivery" onclick="setDeliveryDisabled(false)">
-                    <label class="custom-control-label" for="delivery">Envío</label>
-                </div>
-                
-                <div class="custom-control custom-radio">
-                    <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                    value="takeAway" onclick="setDeliveryDisabled(true)">
-                    <label class="custom-control-label" for="takeAway">Take Away</label>
-                </div>
-                AGREGARINICIARCOMENTARIOS END DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
-                    
-                AGREGARINICIARCOMENTARIOS START ADDRESS AGREGARFINALIZARCOMENTARIOS
-                <div class="form-group mt-2">
-                    <label for="address">Dirección</label>
-                    <input class="form-control" type="text" id="address" name="address" placeholder="Calle 9999">
-                </div>
-                AGREGARINICIARCOMENTARIOS END ADDRESS AGREGARFINALIZARCOMENTARIOS
-                    
-                    
-                    
-                    
-                    AGREGARINICIARCOMENTARIOS START BUTTONS AGREGARFINALIZARCOMENTARIOS
-                    <div class="formButtons">
-                        <button class="btn btn-dark" type="reset"
-                        onclick="localStorage.clear(), location.reload()">LIMPIAR</button>
-                        <button class="btn btn-dark" type="submit" onclick="localStorage.clear()">ENVIAR</button>
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END BUTTONS AGREGARFINALIZARCOMENTARIOS
-                    
-                </fieldset>
-            </form>
-        -->
         </section>
         <!-- END ORDER SECTION -->
+
 
         <!-- START TAKE AWAY SECTION -->
         <section class="takeawaySection container-fluid col-12">
@@ -215,7 +219,6 @@
             </div>
         </section>
         <!-- END TAKE AWAY SECTION -->
-
     </main>
 
 

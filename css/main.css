@@ -471,6 +471,20 @@ h4 {
     width: 10%;
     text-align: center; }
 
+.deliveryForm {
+  box-shadow: none; }
+  .deliveryForm fieldset {
+    padding: unset;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; }
+    .deliveryForm fieldset div {
+      align-self: flex-start;
+      width: 45%; }
+      .deliveryForm fieldset div div label {
+        width: max-content;
+        font-size: 16px; }
+
 /* END CART SECTION */
 /* END ORDERS SECTION */
 /* START TAKE AWAY SECTION */
