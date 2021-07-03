@@ -105,7 +105,7 @@
                         
                         <!-- START BUTTONS -->
                         <div class="formButtons">
-                            <button class="btn btn-light" type="reset">LIMPIAR</button>
+                            <button class="btn btn-light" type="reset" onclick="deleteOrder()">LIMPIAR</button>
                             <button class="btn btn-light" type="button" onclick="openDelivery()">CONTINUAR</button>
                         </div>
                         <!-- END BUTTONS -->
@@ -128,121 +128,66 @@
                 <!-- END DELIVERY CONTAINER -->
             </section>
             <!-- END CART SECTION -->
-
-
+            
+            
             <!-- 
-                <form class="ordersForm m-auto" action="orders.html">
-                    <fieldset class="ordersForm__fieldset">
-                        <legend>Pedidos</legend>
-                        
-                        AGREGARINICIARCOMENTARIOS START ORDER AREA AGREGARFINALIZARCOMENTARIOS
-                        <div class="orderArea">
-                            
-                            AGREGARINICIARCOMENTARIOS START COMBO AGREGARFINALIZARCOMENTARIOS
-                            <div id="combo0">
-                                AGREGARINICIARCOMENTARIOS START BURGER ORDER AGREGARFINALIZARCOMENTARIOS
-                                <div class="form-group">
-                                    <label for="burger">Burger</label>
-                                    <img class="delete" src="https://i.ibb.co/ZHZzvBG/delete-combo.png" alt="Eliminar Combo"
-                                    onclick="deleteCombo(this)">
-                                    <select class="form-control" name="burger" id="burger" onchange="saveCombo(this)">
-                                        <option value="bacon">Jack Bacon</option>
-                                        <option value="onion">Jack Crispy</option>
-                                        <option value="quarter">Jack Cuarto</option>
-                                        <option value="cheese">Jack Cheese</option>
-                                        <option value="smoke">Jack Smoke</option>
-                                        <option value="guacamole">Jack Guacamole</option>
-                                    </select>
-                                    
-                                    <select class="form-control mt-1" name="slices" id="slices" onchange="saveCombo(this)">
-                                        <option value="simple">Simple</option>
-                                        <option value="double">Doble</option>
-                                        <option value="triple">Triple</option>
-                                    </select>
-                                </div>
-                                AGREGARINICIARCOMENTARIOS END BURGER ORDER AGREGARFINALIZARCOMENTARIOS
-                                
-                                AGREGARINICIARCOMENTARIOS START CHIPS ORDER AGREGARFINALIZARCOMENTARIOS
-                                <div class="form-group">
-                                    <label for="chips">Papas</label>
-                                    <select class="form-control" name="chips" id="chips" onchange="saveCombo(this)">
-                                    <option value="noChips">Sin Papas</option>
-                                    <option value="small">Papas Chicas</option>
-                                    <option value="medium">Papas Medianas</option>
-                                    <option value="large">Papas Grandes</option>
-                                </select>
-                            </div>
-                            AGREGARINICIARCOMENTARIOS END CHIPS ORDER AGREGARFINALIZARCOMENTARIOS
-                            
-                            AGREGARINICIARCOMENTARIOS START CLARIFICATIONS AGREGARFINALIZARCOMENTARIOS
-                            <div class="form-group">
-                                <label for="clarifications">Aclaraciones</label>
-                                <input class="form-control" type="text" id="clarifications" name="clarifications"
-                                onchange="saveCombo(this)">
-                            </div>
-                            AGREGARINICIARCOMENTARIOS END CLARIFICATIONS AGREGARFINALIZARCOMENTARIOS
-                        </div>
-                        AGREGARINICIARCOMENTARIOS END COMBO AGREGARFINALIZARCOMENTARIOS
-                        
-                        <button id="addCombo" type="button" class="btn btn-sm btn-dark w-100 mb-2"
-                        onclick="addNewCombo()">Añadir Combo</button>
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END ORDER AREA AGREGARFINALIZARCOMENTARIOS
+                AGREGARINICIARCOMENTARIOS START DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
+                <div class="form-group">
+                    
+                    <label class="d-block">Fecha y Hora</label>
+                    <input class="form-control w-50 custom-control-inline" type="date" name="date" id="date">
+                    <select class="form-control w-25 custom-control-inline" name="hour" id="hour">
+                        <option value="2000">20:00</option>
+                        <option value="2030">20:30</option>
+                        <option value="2100">21:00</option>
+                        <option value="2130">21:30</option>
+                        <option value="2200">22:00</option>
+                        <option value="2230">22:30</option>
+                        <option value="2300">23:00</option>
+                    </select>
+                </div>
+
+                AGREGARINICIARCOMENTARIOS END DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
+        
+                AGREGARINICIARCOMENTARIOS START FIRST NAME AGREGARFINALIZARCOMENTARIOS
+                <div class="form-group">
+                    <label for="firstName">Nombre</label>
+                    <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Pepe">
+                </div>
+                AGREGARINICIARCOMENTARIOS END FIRST NAME AGREGARFINALIZARCOMENTARIOS
+                
+                AGREGARINICIARCOMENTARIOS START PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input class="form-control" type="number" id="phone" name="phone" placeholder="3416555555">
+                </div>
+                AGREGARINICIARCOMENTARIOS END PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
+                    
+                AGREGARINICIARCOMENTARIOS START DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
+                <label>¿Envío o Take Away?</label>
+                
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
+                    value="delivery" onclick="setDeliveryDisabled(false)">
+                    <label class="custom-control-label" for="delivery">Envío</label>
+                </div>
+                
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
+                    value="takeAway" onclick="setDeliveryDisabled(true)">
+                    <label class="custom-control-label" for="takeAway">Take Away</label>
+                </div>
+                AGREGARINICIARCOMENTARIOS END DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
+                    
+                AGREGARINICIARCOMENTARIOS START ADDRESS AGREGARFINALIZARCOMENTARIOS
+                <div class="form-group mt-2">
+                    <label for="address">Dirección</label>
+                    <input class="form-control" type="text" id="address" name="address" placeholder="Calle 9999">
+                </div>
+                AGREGARINICIARCOMENTARIOS END ADDRESS AGREGARFINALIZARCOMENTARIOS
                     
                     
-                    AGREGARINICIARCOMENTARIOS START FIRST NAME AGREGARFINALIZARCOMENTARIOS
-                    <div class="form-group">
-                        <label for="firstName">Nombre</label>
-                        <input class="form-control" type="text" id="firstName" name="firstName" placeholder="Pepe">
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END FIRST NAME AGREGARFINALIZARCOMENTARIOS
                     
-                    AGREGARINICIARCOMENTARIOS START PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input class="form-control" type="number" id="phone" name="phone" placeholder="3416555555">
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END PHONE NUMBER AGREGARFINALIZARCOMENTARIOS
-                    
-                    AGREGARINICIARCOMENTARIOS START DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
-                    <label>¿Envío o Take Away?</label>
-                    
-                    <div class="custom-control custom-radio">
-                        <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                        value="delivery" onclick="setDeliveryDisabled(false)">
-                        <label class="custom-control-label" for="delivery">Envío</label>
-                    </div>
-                    
-                    <div class="custom-control custom-radio">
-                        <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                        value="takeAway" onclick="setDeliveryDisabled(true)">
-                        <label class="custom-control-label" for="takeAway">Take Away</label>
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END DELIVERY OR TAKE AWAY AGREGARFINALIZARCOMENTARIOS
-                    
-                    AGREGARINICIARCOMENTARIOS START ADDRESS AGREGARFINALIZARCOMENTARIOS
-                    <div class="form-group mt-2">
-                        <label for="address">Dirección</label>
-                        <input class="form-control" type="text" id="address" name="address" placeholder="Calle 9999">
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END ADDRESS AGREGARFINALIZARCOMENTARIOS
-                    
-                    AGREGARINICIARCOMENTARIOS START DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
-                    <div class="form-group">
-                        
-                        <label class="d-block">Fecha y Hora</label>
-                        <input class="form-control w-50 custom-control-inline" type="date" name="date" id="date">
-                        <select class="form-control w-25 custom-control-inline" name="hour" id="hour">
-                            <option value="2000">20:00</option>
-                            <option value="2030">20:30</option>
-                            <option value="2100">21:00</option>
-                            <option value="2130">21:30</option>
-                            <option value="2200">22:00</option>
-                            <option value="2230">22:30</option>
-                            <option value="2300">23:00</option>
-                        </select>
-                    </div>
-                    AGREGARINICIARCOMENTARIOS END DATE AND HOUR AREA AGREGARFINALIZARCOMENTARIOS
                     
                     AGREGARINICIARCOMENTARIOS START BUTTONS AGREGARFINALIZARCOMENTARIOS
                     <div class="formButtons">

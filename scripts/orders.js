@@ -1,7 +1,7 @@
 /* GLOBAL VARIABLES  */
 const cartSectionNode = document.querySelector('.cartSection');
-const cartContainerNode = document.querySelector('.cartContainer');
-const deliveryContainerNode = document.querySelector('.deliveryContainer');
+const cartContainerNode = cartSectionNode.querySelector('.cartContainer');
+const deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer');
 const cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
 
 let order = [];
@@ -9,7 +9,7 @@ let order = [];
 
 /* GET TOTAL PRICE */
 function getTotalPrice() {
-    const itemSubTotalNodes = Array.from(cartSectionNode.querySelectorAll('.cartItems li .itemPrice p'));
+    const itemSubTotalNodes = Array.from(cartItemsNode.querySelectorAll('li .itemPrice p'));
     let totalPrice = 0;
 
     itemSubTotalNodes.forEach(price => {
@@ -138,4 +138,13 @@ function saveItem(e) {
 
     order[itemIndex] = new Items(type, name, sizeIndex, prices, clarifications);
     localStorage.setItem('order', JSON.stringify(order));
+}
+
+/* DELETE ORDER */
+function deleteOrder() {
+
+    cartItemsNode.innerHTML = '';
+    order = [];
+    localStorage.removeItem('order');
+
 }
