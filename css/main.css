@@ -248,7 +248,8 @@ form {
 /* END MENU PAGE */
 /* START ORDERS PAGE */
 .cartContainer,
-.menuContainer {
+.menuContainer,
+.deliveryContainer {
   background-color: #262626;
   color: white;
   text-align: left;
@@ -259,7 +260,8 @@ form {
   max-width: 720px;
   box-sizing: border-box; }
   .cartContainer h3,
-  .menuContainer h3 {
+  .menuContainer h3,
+  .deliveryContainer h3 {
     height: 33px;
     text-align: center;
     border-bottom: solid white;
@@ -270,7 +272,10 @@ form {
   .cartContainer .cartColumns,
   .menuContainer .burgerItem,
   .menuContainer .guarnitionItem,
-  .menuContainer .cartColumns {
+  .menuContainer .cartColumns,
+  .deliveryContainer .burgerItem,
+  .deliveryContainer .guarnitionItem,
+  .deliveryContainer .cartColumns {
     justify-content: space-between;
     display: flex;
     margin-bottom: 20px; }
@@ -279,7 +284,10 @@ form {
     .cartContainer .cartColumns .itemName,
     .menuContainer .burgerItem .itemName,
     .menuContainer .guarnitionItem .itemName,
-    .menuContainer .cartColumns .itemName {
+    .menuContainer .cartColumns .itemName,
+    .deliveryContainer .burgerItem .itemName,
+    .deliveryContainer .guarnitionItem .itemName,
+    .deliveryContainer .cartColumns .itemName {
       display: flex;
       justify-content: flex-start;
       align-items: center; }
@@ -288,7 +296,10 @@ form {
       .cartContainer .cartColumns .itemName h4,
       .menuContainer .burgerItem .itemName h4,
       .menuContainer .guarnitionItem .itemName h4,
-      .menuContainer .cartColumns .itemName h4 {
+      .menuContainer .cartColumns .itemName h4,
+      .deliveryContainer .burgerItem .itemName h4,
+      .deliveryContainer .guarnitionItem .itemName h4,
+      .deliveryContainer .cartColumns .itemName h4 {
         margin-left: 5%; }
 
 /* START ORDERS SECTION */
@@ -352,6 +363,7 @@ form {
   top: 0;
   left: 0; }
 
+/* START FUNCTIONALITY CLASSES */
 .cartSectionOpened {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.78); }
@@ -359,81 +371,105 @@ form {
 .cartSectionClosed {
   visibility: hidden; }
 
-.cartContainer {
+.cartContainer,
+.deliveryContainer {
   max-width: 620px;
   max-height: 85%;
   position: relative; }
-  .cartContainer .cartCloseButton {
+
+.cartContainerOpened,
+.deliveryContainerOpened {
+  display: unset; }
+
+.cartContainerClosed,
+.deliveryContainerClosed {
+  display: none; }
+
+.cartCloseButton,
+.cartGoBackButton {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 12px;
+  font-size: 15px;
+  background-color: white;
+  border: solid white;
+  border-radius: 50%; }
+
+.cartCloseButton {
+  right: 20px; }
+
+.cartGoBackButton {
+  left: 20px; }
+
+/* END FUNCTIONALITY CLASSES */
+h4 {
+  font-size: 17px; }
+
+.cartColumns {
+  margin-bottom: 30px;
+  text-align: center; }
+  .cartColumns h4 {
+    justify-self: center; }
+
+.itemNameCol,
+.itemName {
+  width: 41.5%;
+  max-width: 200px; }
+
+.itemSizeCol,
+.itemSize {
+  width: 20%; }
+
+.itemClarificationsCol,
+.itemClarifications {
+  width: 28.5%; }
+
+.itemPriceCol,
+.itemPrice {
+  width: 10%; }
+
+.cartForm {
+  box-shadow: none; }
+  .cartForm .cartItems {
+    max-height: 320px;
+    overflow-y: auto; }
+    .cartForm .cartItems .burgerItem .itemSize,
+    .cartForm .cartItems .burgerItem .itemClarifications,
+    .cartForm .cartItems .burgerItem .itemPrice,
+    .cartForm .cartItems .guarnitionItem .itemSize,
+    .cartForm .cartItems .guarnitionItem .itemClarifications,
+    .cartForm .cartItems .guarnitionItem .itemPrice {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .cartForm .cartItems .burgerItem .itemName h4,
+    .cartForm .cartItems .guarnitionItem .itemName h4 {
+      margin-left: 3px; }
+    .cartForm .cartItems .burgerItem .itemName .deleteItem,
+    .cartForm .cartItems .guarnitionItem .itemName .deleteItem {
+      cursor: pointer; }
+    .cartForm .cartItems .burgerItem .itemSize select,
+    .cartForm .cartItems .guarnitionItem .itemSize select {
+      width: 100%;
+      max-width: 90px;
+      padding: 3px;
+      font-size: 14px; }
+    .cartForm .cartItems .burgerItem .itemClarifications input,
+    .cartForm .cartItems .guarnitionItem .itemClarifications input {
+      width: 100%;
+      max-width: 110px;
+      padding: 3px;
+      font-size: 14px; }
+    .cartForm .cartItems .burgerItem .itemPrice p,
+    .cartForm .cartItems .guarnitionItem .itemPrice p {
+      margin: 0 0; }
+  .cartForm .totalPrice {
     position: absolute;
-    top: 12px;
     right: 20px;
-    width: 25px;
-    height: 25px;
-    font-size: 15px;
-    background-color: white;
-    border: solid white;
-    border-radius: 50%; }
-  .cartContainer h4 {
-    font-size: 17px; }
-  .cartContainer .cartColumns {
-    margin-bottom: 30px;
+    bottom: 10px;
+    width: 10%;
     text-align: center; }
-    .cartContainer .cartColumns h4 {
-      justify-self: center; }
-  .cartContainer .itemNameCol,
-  .cartContainer .itemName {
-    width: 41.5%;
-    max-width: 200px; }
-  .cartContainer .itemSizeCol,
-  .cartContainer .itemSize {
-    width: 20%; }
-  .cartContainer .itemClarificationsCol,
-  .cartContainer .itemClarifications {
-    width: 28.5%; }
-  .cartContainer .itemPriceCol,
-  .cartContainer .itemPrice {
-    width: 10%; }
-  .cartContainer .cartForm {
-    box-shadow: none; }
-    .cartContainer .cartForm .cartItems {
-      max-height: 320px;
-      overflow-y: auto; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemSize,
-      .cartContainer .cartForm .cartItems .burgerItem .itemClarifications,
-      .cartContainer .cartForm .cartItems .burgerItem .itemPrice,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemSize,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemClarifications,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemPrice {
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemName h4,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemName h4 {
-        margin-left: 3px; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemName .deleteItem,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemName .deleteItem {
-        cursor: pointer; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemSize select,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemSize select {
-        width: 100%;
-        max-width: 90px;
-        padding: 3px;
-        font-size: 14px; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemClarifications input,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemClarifications input {
-        width: 100%;
-        max-width: 110px;
-        padding: 3px;
-        font-size: 14px; }
-      .cartContainer .cartForm .cartItems .burgerItem .itemPrice p,
-      .cartContainer .cartForm .cartItems .guarnitionItem .itemPrice p {
-        margin: 0 0; }
-    .cartContainer .cartForm .totalPrice {
-      position: absolute;
-      right: 20px;
-      bottom: 10px;
-      width: 10%;
-      text-align: center; }
 
 /* END CART SECTION */
 /* END ORDERS SECTION */

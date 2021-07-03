@@ -341,7 +341,8 @@ form {
 /* START ORDERS PAGE */
 
 .cartContainer,
-.menuContainer {
+.menuContainer,
+.deliveryContainer {
     @include secondaryStyle ();
     @include modernContainer ();
     padding: 10px 20px;
@@ -455,6 +456,7 @@ form {
     left: 0;
 }
 
+/* START FUNCTIONALITY CLASSES */
 .cartSectionOpened {
     visibility: visible;
     background-color: rgba($color: #000000, $alpha: 0.78);
@@ -464,115 +466,138 @@ form {
     visibility: hidden;
 }
 
-.cartContainer {
+.cartContainer,
+.deliveryContainer {
     max-width: 620px;
     max-height: 85%;
     position: relative;
-    
-    .cartCloseButton {
-        position: absolute;
-        top: 12px;
-        right: 20px;
-        width: 25px;
-        height: 25px;
-        font-size: 15px;
-        background-color: white;
-        border: solid white;
-        border-radius: 50%;
-    }
+}
+
+.cartContainerOpened,
+.deliveryContainerOpened {
+    display: unset;
+}
+
+.cartContainerClosed,
+.deliveryContainerClosed {
+    display: none;
+}
+
+.cartCloseButton,
+.cartGoBackButton {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 12px;
+
+    font-size: 15px;
+    background-color: white;
+    border: solid white;
+    border-radius: 50%;
+}
+
+.cartCloseButton {
+    right: 20px;
+}
+
+.cartGoBackButton {
+    left: 20px;
+}
+
+/* END FUNCTIONALITY CLASSES */
+
+
+h4 {
+    font-size: 17px;
+}
+
+.cartColumns {
+    margin-bottom: 30px;
+    text-align: center;
 
     h4 {
-        font-size: 17px;
+        justify-self: center;
     }
 
-    .cartColumns {
-        margin-bottom: 30px;
-        text-align: center;
+}
 
-        h4 {
-            justify-self: center;
-        }
+.itemNameCol,
+.itemName {
+    width: 41.5%;
+    max-width: 200px;
+}
 
-    }
+.itemSizeCol,
+.itemSize {
+    width: 20%;
+}
 
-    .itemNameCol,
-    .itemName {
-        width: 41.5%;
-        max-width: 200px;
-    }
+.itemClarificationsCol,
+.itemClarifications {
+    width: 28.5%;
+}
 
-    .itemSizeCol,
-    .itemSize {
-        width: 20%;
-    }
+.itemPriceCol,
+.itemPrice {
+    width: 10%;
+}
 
-    .itemClarificationsCol,
-    .itemClarifications {
-        width: 28.5%;
-    }
+.cartForm {
+    box-shadow: none;
 
-    .itemPriceCol,
-    .itemPrice {
-        width: 10%;
-    }
+    .cartItems {
+        max-height: 320px;
+        overflow-y: auto;
 
-    .cartForm {
-        box-shadow: none;
-        
-        .cartItems {
-            max-height: 320px;
-            overflow-y: auto;
-            
-            .burgerItem,
-            .guarnitionItem {
+        .burgerItem,
+        .guarnitionItem {
 
-                .itemSize,
-                .itemClarifications,
-                .itemPrice {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .itemName {
-                    
-                    h4 {
-                        margin-left: 3px;
-                    }
-
-                    .deleteItem {
-                        cursor: pointer;
-                    }
-                }
-
-                .itemSize select {
-                    width: 100%;
-                    max-width: 90px;
-                    padding: 3px;
-                    font-size: 14px;
-                }
-
-                .itemClarifications input {
-                    width: 100%;
-                    max-width: 110px;
-                    padding: 3px;
-                    font-size: 14px;
-                }
-
-                .itemPrice p {
-                    margin: 0 0;
-                }
-
+            .itemSize,
+            .itemClarifications,
+            .itemPrice {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
+
+            .itemName {
+
+                h4 {
+                    margin-left: 3px;
+                }
+
+                .deleteItem {
+                    cursor: pointer;
+                }
+            }
+
+            .itemSize select {
+                width: 100%;
+                max-width: 90px;
+                padding: 3px;
+                font-size: 14px;
+            }
+
+            .itemClarifications input {
+                width: 100%;
+                max-width: 110px;
+                padding: 3px;
+                font-size: 14px;
+            }
+
+            .itemPrice p {
+                margin: 0 0;
+            }
+
         }
-        
-        .totalPrice {
-            position: absolute;
-            right: 20px;
-            bottom: 10px;
-            width: 10%;
-            text-align: center;
-        }
+    }
+
+    .totalPrice {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        width: 10%;
+        text-align: center;
     }
 }
 
@@ -1067,9 +1092,9 @@ form {
 
         }
 
-        .totalPrice{
-            right: 10px!important;
-            bottom: 10px!important;
+        .totalPrice {
+            right: 10px !important;
+            bottom: 10px !important;
         }
 
     }

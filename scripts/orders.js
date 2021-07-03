@@ -1,6 +1,7 @@
 /* GLOBAL VARIABLES  */
 const cartSectionNode = document.querySelector('.cartSection');
-const cartCloseButton = cartSectionNode.querySelector('.cartCloseButton');
+const cartContainerNode = document.querySelector('.cartContainer');
+const deliveryContainerNode = document.querySelector('.deliveryContainer');
 const cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
 
 let order = [];
@@ -42,11 +43,19 @@ cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
 /* OPEN CART */
 function openCart() {
     cartSectionNode.classList = `cartSection cartSectionOpened`;
+    cartContainerNode.classList = `cartContainer cartContainerOpened`;
+    deliveryContainerNode.classList = `deliveryContainer deliveryContainerClosed`;
+}
+
+/* OPEN DELIVERY */
+function openDelivery() {
+    cartContainerNode.classList = `cartContainer cartContainerClosed`;
+    deliveryContainerNode.classList = `deliveryContainer deliveryContainerOpen`;
 }
 
 /* CLOSE CART */
 function closeCart(e) {
-    if ((e.target == cartSectionNode) || (e.target == cartCloseButton)) {
+    if ((e.target == cartSectionNode) || (e.target.classList.value == 'cartCloseButton')) {
 
         cartSectionNode.classList = `cartSection cartSectionClosed`;
 
