@@ -139,3 +139,11 @@ function saveDeliveryData() {
     localStorage.setItem('deliveryData', JSON.stringify(deliveryData));
 
 }
+
+/* SET DELIVERY DISABLED */
+function setDeliveryDisabled(disabled) {
+
+    const addressInput = deliveryContainerNode.querySelector('#address');
+    address.disabled = disabled;
+
+}
