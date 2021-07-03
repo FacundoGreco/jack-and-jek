@@ -1,110 +1,48 @@
-/* GLOBAL VARIABLES */
-const comboModel = document.querySelector('#combo0').cloneNode(true);
-const btnAddCombo = document.querySelector('#addCombo');
+/* GET TOTAL PRICE */
+function getTotalPrice() {
+    const itemSubTotalNodes = Array.from(cartItemsNode.querySelectorAll('li .itemPrice p'));
+    let totalPrice = 0;
 
-let order = [];
-let comboCounter = 1;
-let comboIdNumber = 0;
+    itemSubTotalNodes.forEach(price => {
+        const subTotal = Number(price.innerHTML.slice(1));
+        totalPrice += subTotal;
+    });
 
-
-/* ADD NEW COMBO */
-function addNewCombo() {
-
-    const newComboId = `combo${comboIdNumber+1}`;
-
-    let newCombo = comboModel.cloneNode(true);
-    newCombo.id = newComboId;
-    btnAddCombo.before(newCombo);
-
-    order.push(createCombo(newComboId));
-
-    comboIdNumber++;
-    comboCounter++;
-
+    return `$${totalPrice}`;
 }
 
-/* DELETE COMBO */
-function deleteCombo(deleteButton) {
+/* LOAD PRICES */
+function loadPrices(optionsLength, itemPricesNode) {
+    let prices = []
+    let j = 0;
+    for (let i = 0; i < optionsLength; i++) {
 
-    if (comboCounter > 1) {
-
-        const comboNode = deleteButton.parentNode.parentNode;
-        const comboId = comboNode.id;
-        const combo = order.find(combo => combo.comboId == comboId);
-
-        combo.deleteComboInLocalStorage();
-        order.splice(order.indexOf(combo), 1); //Removes from order array
-        comboNode.parentNode.removeChild(comboNode);
-        comboCounter--;
+        prices[i] = [itemPricesNode[j].innerHTML, itemPricesNode[j + 1].innerHTML];
+        j += 2;
 
     }
 
+    return prices;
 }
 
-/* SAVE COMBO */
-function saveCombo(element) {
+/* GET ITEM INDEX */
+function getItemIndex(itemNode) {
+    const itemsInCart = Array.from(itemNode.parentNode.querySelectorAll('li'));
+    const itemIndex = itemsInCart.findIndex(li => li == itemNode);
 
-    const comboId = element.parentNode.parentNode.id;
-    const comboIndex = order.indexOf(order.find(combo => combo.comboId == comboId));
-    const combo = order[comboIndex];
-
-    combo.burger = document.querySelector(`#${comboId} #burger`).value;
-    combo.slices = document.querySelector(`#${comboId} #slices`).value;
-    combo.chips = document.querySelector(`#${comboId} #chips`).value;
-    combo.clarifications = document.querySelector(`#${comboId} #clarifications`).value;
-
-    combo.saveComboInLocalStorage();
-
+    return itemIndex;
 }
 
-/* FILL ORDER ARRAY FROM LOCAL STORAGE */
-function fillOrderArray() {
-    for (let i = 0; i < localStorage.length; i++) {
-        const comboId = localStorage.key(i);
-        const combo = JSON.parse(localStorage.getItem(comboId));
-        order.push(new Combos(combo.comboId, combo.burger, combo.slices, combo.chips, combo.clarifications));
-    }
-}
+/* GET DELIVERY OPTION */
+function getDeliveryOption() {
+    
+    const radioChecked = Array.from(deliveryContainerNode.querySelectorAll('input[name="delyOrTakeAway"]')).find(radio => radio.checked);
+    const deliveryId = radioChecked ? radioChecked.id : false;
 
-/* SORT ORDER ARRAY */
-function sortOrderArray() {
-    order.sort((a, b) => parseInt(a.comboId.slice(5)) - parseInt(b.comboId.slice(5)));
-}
-
-/* LOAD ORDER */
-function loadOrder() {
-
-    if (localStorage.length == 0) {
-
-        order.push(createCombo('combo0')); // Creates combo object and saves in order array
-
+    if (deliveryId) {
+        return deliveryId;
     } else {
-
-        fillOrderArray();
-        sortOrderArray();
-
-        // Adds nodes
-        for (let i = 0; i < order.length; i++) {
-            if (i === 0) {
-                order[i].appendSavedCombo(true);
-            } else {
-                order[i].appendSavedCombo(false);
-            }
-        }
-
-        comboCounter = order.length;
-        comboIdNumber = parseInt((order[order.length - 1]).comboId.slice(5));
-
+        return null;
     }
 
 }
-
-/* SET DELIVERY DISABLED */
-function setDeliveryDisabled(disabled) {
-
-    let address = document.querySelector('#address');
-    address.disabled = disabled;
-
-}
-
-loadOrder();
