@@ -355,6 +355,7 @@ form {
 /* START CART SECTION */
 .cartSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -740,6 +741,12 @@ h4 {
     width: 40px;
     height: 40px; }
   /* END HEADER */
+  .formButtons {
+    margin-top: 15px !important; }
+    .formButtons button {
+      margin: 0 20px;
+      font-size: 14px;
+      padding: 3px 6px; }
   /* START HERO SECTION */
   .heroSection__button {
     max-width: fit-content !important; }
@@ -764,7 +771,8 @@ h4 {
     right: 17px !important; }
   .menuContainer h3,
   .mapContainer h3,
-  .cartContainer h3 {
+  .cartContainer h3,
+  .deliveryContainer h3 {
     font-size: 23px !important; }
   .menuContainer {
     padding: 10px 10px !important; }
@@ -793,13 +801,19 @@ h4 {
       max-width: 80px !important; }
     .cartContainer .itemPrice p {
       font-size: 14px !important; }
-    .cartContainer .formButtons button {
-      margin: 0 20px;
-      font-size: 14px;
-      padding: 3px 6px; }
     .cartContainer .totalPrice {
       right: 10px !important;
       bottom: 10px !important; }
+  .deliveryContainer label {
+    font-size: 16px; }
+  .deliveryContainer fieldset div .largeLabel,
+  .deliveryContainer fieldset div input,
+  .deliveryContainer fieldset div select,
+  .deliveryContainer fieldset div div label {
+    font-size: 14px !important; }
+  .deliveryContainer fieldset div input,
+  .deliveryContainer fieldset div select {
+    padding: 5px; }
   .takeawaySection .mapContainer {
     padding: 10px 5px;
     height: 580px; }

@@ -447,6 +447,7 @@ form {
 /* START CART SECTION */
 .cartSection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -610,18 +611,19 @@ h4 {
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
-        
+
         div {
             align-self: flex-start;
             width: 45%;
 
-            div label{
+            div label {
                 width: max-content;
                 font-size: 16px;
             }
         }
     }
 }
+
 /* END CART SECTION */
 
 /* END ORDERS SECTION */
@@ -1007,6 +1009,16 @@ h4 {
 
     /* END HEADER */
 
+    .formButtons {
+        margin-top: 15px !important;
+
+        button {
+            margin: 0 20px;
+            font-size: 14px;
+            padding: 3px 6px;
+        }
+
+    }
 
     /* START HERO SECTION */
     .heroSection__button {
@@ -1047,7 +1059,8 @@ h4 {
 
     .menuContainer,
     .mapContainer,
-    .cartContainer {
+    .cartContainer,
+    .deliveryContainer {
         h3 {
             font-size: 23px !important;
         }
@@ -1103,21 +1116,33 @@ h4 {
             font-size: 14px !important;
         }
 
-        .formButtons {
-
-            button {
-                margin: 0 20px;
-                font-size: 14px;
-                padding: 3px 6px;
-            }
-
-        }
-
         .totalPrice {
             right: 10px !important;
             bottom: 10px !important;
         }
 
+    }
+
+    .deliveryContainer {
+
+        label {
+            font-size: 16px;
+        }
+
+        fieldset div {
+
+            .largeLabel,
+            input,
+            select,
+            div label {
+                font-size: 14px !important;
+            }
+
+            input,
+            select {
+                padding: 5px;
+            }
+        }
     }
 
     .takeawaySection {
