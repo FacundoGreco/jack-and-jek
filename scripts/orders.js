@@ -28,6 +28,13 @@ if (orderJSON != null) {
 cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
 
 /* FILLS DELIVERY DATA */
+const date = new Date().toISOString().slice(0, -14);
+const dateInput = deliveryContainerNode.querySelector('#date');
+dateInput.min = date;
+dateInput.value = date;
+dateInput.max = getMaxDate(date);
+
+
 deliveryDataJSON = localStorage.getItem('deliveryData');
 if (deliveryDataJSON != null) {
 
