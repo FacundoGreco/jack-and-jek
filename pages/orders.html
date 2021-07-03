@@ -131,8 +131,7 @@
                         <fieldset>
                             <div>
                                 <label class="d-block">Fecha</label>
-                                <input class="form-control" type="date" name="date"
-                                    id="date">
+                                <input class="form-control" type="date" name="date" id="date">
                             </div>
 
                             <div>
@@ -154,13 +153,14 @@
                         <fieldset>
                             <div>
                                 <label for="name">Nombre</label>
-                                <input class="form-control" type="text" id="name" name="name" placeholder="Pepe">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Pepe"
+                                    onchange="saveDeliveryData()">
                             </div>
 
                             <div>
                                 <label for="phone">Teléfono</label>
                                 <input class="form-control" type="number" id="phone" name="phone"
-                                    placeholder="3416555555">
+                                    placeholder="3416555555" onchange="saveDeliveryData()">
                             </div>
                         </fieldset>
                         <!-- END NAME AND PHONE FIELDSET -->
@@ -172,13 +172,13 @@
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                                        value="delivery" onclick="setDeliveryDisabled(false)">
+                                        value="delivery" onclick="setDeliveryDisabled(false)" onchange="saveDeliveryData()">
                                     <label class="custom-control-label" for="delivery">Envío</label>
                                 </div>
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                                        value="takeAway" onclick="setDeliveryDisabled(true)">
+                                        value="takeAway" onclick="setDeliveryDisabled(true)" onchange="saveDeliveryData()">
                                     <label class="custom-control-label" for="takeAway">Take Away</label>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
                             <div class="form-group">
                                 <label for="address">Dirección</label>
                                 <input class="form-control" type="text" id="address" name="address"
-                                    placeholder="Calle 9999">
+                                    placeholder="Calle 9999" onchange="saveDeliveryData()">
                             </div>
                         </fieldset>
                         <!-- END DELIVERY OR TAKE AWAY FIELDSET -->

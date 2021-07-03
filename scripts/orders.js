@@ -5,7 +5,7 @@ const deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer'
 const cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
 
 let order = [];
-
+let deliveryData = [];
 
 /* GET TOTAL PRICE */
 function getTotalPrice() {
@@ -91,7 +91,7 @@ function addItem(e) {
     const prices = loadPrices(itemOptionsArray.length, itemPricesNode);
 
     const item = new Items(type, name, size, prices, '');
-    item.appendItem();                          //Appends item
+    item.appendItem(); //Appends item
     cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
 
     order.push(item);
@@ -147,4 +147,30 @@ function deleteOrder() {
     order = [];
     localStorage.removeItem('order');
 
+}
+
+/* GET DELIVERY OPTION */
+function getDeliveryOption() {
+    
+    const radioChecked = Array.from(deliveryContainerNode.querySelectorAll('input[name="delyOrTakeAway"]')).find(radio => radio.checked);
+    const deliveryId = radioChecked ? radioChecked.id : false;
+
+    if (deliveryId) {
+        return deliveryId;
+    } else {
+        return null;
+    }
+
+}
+
+/* SAVE DELIVERY DATA */
+function saveDeliveryData() {
+
+    const name = deliveryContainerNode.querySelector('#name').value;
+    const phone = deliveryContainerNode.querySelector('#phone').value;
+    const address = deliveryContainerNode.querySelector('#address').value;
+    const delivery = getDeliveryOption();
+
+    deliveryData = [name, phone, delivery, address];
+    localStorage.setItem('deliveryData', JSON.stringify(deliveryData));
 }
