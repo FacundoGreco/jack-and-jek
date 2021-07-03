@@ -27,6 +27,19 @@ if (orderJSON != null) {
 }
 cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
 
+/* FILLS DELIVERY DATA */
+deliveryDataJSON = localStorage.getItem('deliveryData');
+if (deliveryDataJSON != null) {
+
+    deliveryData = JSON.parse(deliveryDataJSON);
+    
+    deliveryContainerNode.querySelector('#name').value = deliveryData[0];
+    deliveryContainerNode.querySelector('#phone').value = deliveryData[1];
+    if(deliveryData[2] != null){deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;}
+    deliveryContainerNode.querySelector('#address').value = deliveryData[3];
+    
+}
+
 /* OPEN CART */
 function openCart() {
     cartSectionNode.classList = `cartSection cartSectionOpened`;
