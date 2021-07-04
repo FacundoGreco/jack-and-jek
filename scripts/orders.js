@@ -2,6 +2,7 @@
 const cartSectionNode = document.querySelector('.cartSection');
 const cartContainerNode = cartSectionNode.querySelector('.cartContainer');
 const deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer');
+const paymentContainerNode = cartSectionNode.querySelector('.paymentContainer');
 const cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
 
 let order = [];
@@ -39,12 +40,14 @@ deliveryDataJSON = localStorage.getItem('deliveryData');
 if (deliveryDataJSON != null) {
 
     deliveryData = JSON.parse(deliveryDataJSON);
-    
+
     deliveryContainerNode.querySelector('#name').value = deliveryData[0];
     deliveryContainerNode.querySelector('#phone').value = deliveryData[1];
-    if(deliveryData[2] != null){deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;}
+    if (deliveryData[2] != null) {
+        deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;
+    }
     deliveryContainerNode.querySelector('#address').value = deliveryData[3];
-    
+
 }
 
 /* OPEN CART */
@@ -52,6 +55,7 @@ function openCart() {
     cartSectionNode.classList = `cartSection cartSectionOpened`;
     cartContainerNode.classList = `cartContainer cartContainerOpened`;
     deliveryContainerNode.classList = `deliveryContainer deliveryContainerClosed`;
+    paymentContainerNode.classList = `paymentContainer paymentContainerClosed`;
 }
 
 /* OPEN DELIVERY */
@@ -129,6 +133,7 @@ function saveItem(e) {
 function deleteOrder() {
 
     cartItemsNode.innerHTML = '';
+    cartContainerNode.querySelectorAll('.totalPrice h4')[1].innerHTML = '';
     order = [];
     localStorage.removeItem('order');
 
@@ -153,4 +158,15 @@ function setDeliveryDisabled(disabled) {
     const addressInput = deliveryContainerNode.querySelector('#address');
     address.disabled = disabled;
 
+}
+
+/* PAY ORDER */
+function payOrder(e) {
+    e.preventDefault();
+
+    cartContainerNode.classList = `cartContainer cartContainerClosed`;
+    deliveryContainerNode.classList = `deliveryContainer deliveryContainerClosed`;
+    paymentContainerNode.classList = `paymentContainer paymentContainerOpened`;
+
+    deleteOrder();
 }

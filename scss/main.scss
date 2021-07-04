@@ -342,7 +342,8 @@ form {
 
 .cartContainer,
 .menuContainer,
-.deliveryContainer {
+.deliveryContainer,
+.paymentContainer {
     @include secondaryStyle ();
     @include modernContainer ();
     padding: 10px 20px;
@@ -468,19 +469,22 @@ form {
 }
 
 .cartContainer,
-.deliveryContainer {
+.deliveryContainer,
+.paymentContainer {
     max-width: 620px;
     max-height: 85%;
     position: relative;
 }
 
 .cartContainerOpened,
-.deliveryContainerOpened {
+.deliveryContainerOpened,
+.paymentContainerOpened {
     display: unset;
 }
 
 .cartContainerClosed,
-.deliveryContainerClosed {
+.deliveryContainerClosed,
+.paymentContainerClosed {
     display: none;
 }
 
@@ -622,6 +626,11 @@ h4 {
             }
         }
     }
+}
+
+.paymentContainer {
+    width: 95%;
+    padding: 40px 20px;
 }
 
 /* END CART SECTION */

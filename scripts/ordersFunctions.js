@@ -35,7 +35,7 @@ function getItemIndex(itemNode) {
 
 /* GET DELIVERY OPTION */
 function getDeliveryOption() {
-    
+
     const radioChecked = Array.from(deliveryContainerNode.querySelectorAll('input[name="delyOrTakeAway"]')).find(radio => radio.checked);
     const deliveryId = radioChecked ? radioChecked.id : false;
 
@@ -49,8 +49,8 @@ function getDeliveryOption() {
 
 /* GET MAX DATE */
 function getMaxDate(date) {
-    let maxDate = date.slice(0,5) + String(Number(date.slice(5,7))+1) + date.slice(7);
-    maxDate = maxDate.length === 10 ? maxDate : maxDate.slice(0,5) + '0' + maxDate.slice(5);
+    let maxDate = date.slice(0, 5) + String(Number(date.slice(5, 7)) + 1) + date.slice(7);
+    maxDate = maxDate.length === 10 ? maxDate : maxDate.slice(0, 5) + '0' + maxDate.slice(5);
 
     return maxDate;
 }

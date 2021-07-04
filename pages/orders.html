@@ -194,13 +194,20 @@
 
                         <!-- START BUTTON -->
                         <div class="formButtons">
-                            <button class="btn btn-light" type="submit" onclick="payOrder()">PAGAR</button>
+                            <button class="btn btn-light" type="submit" onclick="payOrder(event)">PAGAR</button>
                         </div>
                         <!-- END BUTTON -->
 
                     </form>
                 </div>
                 <!-- END DELIVERY CONTAINER -->
+                
+                <!-- START PAYMENT CONTAINER -->
+                <div class="paymentContainer">
+                    <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
+                    <h4>Su orden ha sido realizada con éxito, ¡muchas gracias!</h4>
+                </div>
+                <!-- END PAYMENT CONTAINER -->
 
             </section>
             <!-- END CART SECTION -->
