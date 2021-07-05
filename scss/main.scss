@@ -343,7 +343,8 @@ form {
 .cartContainer,
 .menuContainer,
 .deliveryContainer,
-.paymentContainer {
+.paymentContainer,
+.notificationContainer {
     @include secondaryStyle ();
     @include modernContainer ();
     padding: 10px 20px;
@@ -482,10 +483,18 @@ form {
     display: unset;
 }
 
+.notificationContainerOpened {
+    opacity: 1;
+}
+
 .cartContainerClosed,
 .deliveryContainerClosed,
 .paymentContainerClosed {
     display: none;
+}
+
+.notificationContainerClosed {
+    opacity: 0;
 }
 
 .cartCloseButton,
@@ -631,6 +640,16 @@ h4 {
 .paymentContainer {
     width: 95%;
     padding: 40px 20px;
+}
+
+.notificationContainer {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: fit-content;
+    padding: 5px 10px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 /* END CART SECTION */

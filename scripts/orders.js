@@ -111,6 +111,8 @@ function addItem(e) {
 
     order.push(item);
     localStorage.setItem('order', JSON.stringify(order));
+
+    showNotification();
 }
 
 /* DELETE ITEM */

@@ -250,7 +250,8 @@ form {
 .cartContainer,
 .menuContainer,
 .deliveryContainer,
-.paymentContainer {
+.paymentContainer,
+.notificationContainer {
   background-color: #262626;
   color: white;
   text-align: left;
@@ -263,7 +264,8 @@ form {
   .cartContainer h3,
   .menuContainer h3,
   .deliveryContainer h3,
-  .paymentContainer h3 {
+  .paymentContainer h3,
+  .notificationContainer h3 {
     height: 33px;
     text-align: center;
     border-bottom: solid white;
@@ -280,7 +282,10 @@ form {
   .deliveryContainer .cartColumns,
   .paymentContainer .burgerItem,
   .paymentContainer .guarnitionItem,
-  .paymentContainer .cartColumns {
+  .paymentContainer .cartColumns,
+  .notificationContainer .burgerItem,
+  .notificationContainer .guarnitionItem,
+  .notificationContainer .cartColumns {
     justify-content: space-between;
     display: flex;
     margin-bottom: 20px; }
@@ -295,7 +300,10 @@ form {
     .deliveryContainer .cartColumns .itemName,
     .paymentContainer .burgerItem .itemName,
     .paymentContainer .guarnitionItem .itemName,
-    .paymentContainer .cartColumns .itemName {
+    .paymentContainer .cartColumns .itemName,
+    .notificationContainer .burgerItem .itemName,
+    .notificationContainer .guarnitionItem .itemName,
+    .notificationContainer .cartColumns .itemName {
       display: flex;
       justify-content: flex-start;
       align-items: center; }
@@ -310,7 +318,10 @@ form {
       .deliveryContainer .cartColumns .itemName h4,
       .paymentContainer .burgerItem .itemName h4,
       .paymentContainer .guarnitionItem .itemName h4,
-      .paymentContainer .cartColumns .itemName h4 {
+      .paymentContainer .cartColumns .itemName h4,
+      .notificationContainer .burgerItem .itemName h4,
+      .notificationContainer .guarnitionItem .itemName h4,
+      .notificationContainer .cartColumns .itemName h4 {
         margin-left: 5%; }
 
 /* START ORDERS SECTION */
@@ -395,10 +406,16 @@ form {
 .paymentContainerOpened {
   display: unset; }
 
+.notificationContainerOpened {
+  opacity: 1; }
+
 .cartContainerClosed,
 .deliveryContainerClosed,
 .paymentContainerClosed {
   display: none; }
+
+.notificationContainerClosed {
+  opacity: 0; }
 
 .cartCloseButton,
 .cartGoBackButton {
@@ -503,6 +520,15 @@ h4 {
 .paymentContainer {
   width: 95%;
   padding: 40px 20px; }
+
+.notificationContainer {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: fit-content;
+  padding: 5px 10px;
+  transition: opacity 0.3s ease-in-out; }
 
 /* END CART SECTION */
 /* END ORDERS SECTION */

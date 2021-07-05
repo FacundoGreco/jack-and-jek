@@ -1,3 +1,17 @@
+const notificationContainerNode = document.querySelector('.notificationContainer');
+/* GET TOTAL PRICE */
+function showNotification() {
+
+    notificationContainerNode.classList = `notificationContainer notificationContainerOpened`;
+    
+    setTimeout(() => {
+
+        notificationContainerNode.classList = `notificationContainer notificationContainerClosed`;
+        
+    }, 1000);
+}
+
+
 /* GET TOTAL PRICE */
 function getTotalPrice() {
     const itemSubTotalNodes = Array.from(cartItemsNode.querySelectorAll('li .itemPrice p'));
