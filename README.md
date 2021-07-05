@@ -16,7 +16,16 @@ The carrer is composed of the next four courses, where I learned and implemented
 
 2) JavaScript (CURRENTLY STUDYING)
 
-- I developed two scripts, one for the hero carousel, and another for the order form. 
+I developed theese functionalities:
+- Script for the hero carousel, which controls swiping right and left.
+- Orders page cart frontend functionality. 
+
+I learned and implemented:
+- Basic sitax (variables, functions, objects, arrays, etc)
+- Storage and JSON
+- DOM
+- Events
+- JQuery and selectors
 
 3) React JS
 
