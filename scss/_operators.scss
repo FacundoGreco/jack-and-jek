@@ -2,7 +2,8 @@ $primary-color: green;
 $secondary-color: rgb(38, 38, 38);
 $text-color: white;
 $form-color: rgb(255, 203, 92);
-$font: 'Roboto Slab', serif;
+$font: 'Roboto Slab',
+serif;
 
 @mixin primaryStyle {
     background-color: $primary-color;
@@ -22,4 +23,16 @@ $font: 'Roboto Slab', serif;
 @mixin flex-center () {
     display: flex;
     align-items: center;
+}
+
+@mixin sectionTitle () {
+    @include darkStyle();
+    font-size: 30px;
+    padding: 5px 0;
+}
+
+@mixin modernContainer {
+    text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 6px 25px black;
 }

@@ -10,36 +10,42 @@
     <meta name="keywords"
         content="hamburguesas burger cheese-burger cheddar panceta bacon chips onion queso rosario jack jek jack&jek jack-and-jek">
     <link rel="icon" href="https://i.ibb.co/m0M8z8y/logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
-        rel="stylesheet">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script defer src="../js/bootstrap.min.js"></script>
 </head>
 
 <body class="body">
 
     <header class="header fixed-top">
 
-        <nav class="nav container-fluid row">
+        <nav class="nav navbar-dark navbar navbar-expand-lg container-fluid row">
 
             <!-- START NAV BRAND-->
-            <div class="nav__brand col-xs-12 mb-2 col-lg-4">
+            <div class="nav__brand col-10 col-lg-4">
                 <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
-                <h1 class="nav__title">JACK & JEK</h1>
+                <h1 class="nav__title ">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
 
             <!-- START NAV MENU -->
-            <div class="nav__menu col-sm-12 m-auto col-lg-8">
-                <ul class="my-auto mx-lg-4 mx-xl-5">
-                    <!-- NAVIGATION -->
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a class="active" href="menu.html">Menú</a></li>
-                    <li><a href="orders.html">Pedidos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="jobs.html">Empleos</a></li>
-                </ul>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="nav__menu m-auto col-lg-8">
+                    <ul class="navbar-nav my-auto mx-lg-4 mx-xl-5 collapse navbar-collapse" id="collapse_target">
+                        <!-- NAVIGATION -->
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="menu.html">Menú</a></li>
+                        <li class="nav-item"><a class="nav-link" href="orders.html">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="jobs.html">Empleos</a></li>
+                    </ul>
             </div>
             <!-- END NAV MENU -->
 
@@ -51,7 +57,7 @@
     <main class="mainMenu container-fluid">
 
         <!-- START BURGERS ARTICLE -->
-        <article class="burgers container-fluid row">
+        <article class="burgersArticle container-fluid row">
 
             <h2 class="burgersTitle col-12">Burgers!</h2>
 
@@ -125,13 +131,13 @@
         <!-- END BURGERS ARTICLE -->
 
         <!-- START CHIPS ARTICLE -->
-        <article class="chips container-fluid row">
+        <article class="chipsArticle container-fluid row">
 
             <h2 class="chipsTitle col-12">Papas!</h2>
 
-            <div class="chip__card col-12 col-md-6 col-xl-4">
+            <div class="chips__card col-12 col-md-6 col-xl-4">
 
-                <img class="card-img-top" src="https://i.ibb.co/wwZB3Mg/small-potatoes.jpg" alt="Papas Chicas">
+                <img class="card-img-top" src="https://i.ibb.co/PzTZFyK/small-potatoes.jpg" alt="Papas Chicas">
 
                 <div class="card-body">
                     <h4 class="card-title">Papas Chicas.</h4>
@@ -139,7 +145,7 @@
 
             </div>
 
-            <div class="chip__card col-12 col-md-6 col-xl-4">
+            <div class="chips__card col-12 col-md-6 col-xl-4">
 
                 <img class="card-img-top" src="https://i.ibb.co/JpLHq3J/medium-potatoes.jpg" alt="Papas Medianas">
 
@@ -149,9 +155,9 @@
 
             </div>
 
-            <div class="chip__card col-12 col-md-6 col-xl-4">
+            <div class="chips__card col-12 col-md-6 col-xl-4">
 
-                <img class="card-img-top" src="https://i.ibb.co/zJc4r57/big-potatoes.jpg" alt="Papas Grandes">
+                <img class="card-img-top" src="https://i.ibb.co/5KC3fYC/big-potatoes.jpg" alt="Papas Grandes">
 
                 <div class="card-body">
                     <h4 class="card-title">Papas Grandes.</h4>
@@ -171,7 +177,7 @@
     <footer class="footer container-fluid row">
 
         <!-- START FOOTER MAP -->
-        <div class="footer__map col-4 col-md-3">
+        <div class="footer__map col-12 col-sm-4 col-md-3">
             <h3>Mapa del Sitio</h3>
             <ul>
                 <li>Términos y Condiciones</li>
@@ -182,7 +188,7 @@
         <!-- END FOOTER MAP -->
 
         <!-- START FOOTER SOCIAL -->
-        <div class="footer__social col-4 col-md-2">
+        <div class="footer__social col-12 col-sm-4 col-md-2">
             <h3>Redes</h3>
             <ul>
                 <li><a href="https://www.instagram.com/jackandjek/" target="_blank">
@@ -204,7 +210,7 @@
         <!-- END FOOTER SOCIAL -->
 
         <!-- START FOOTER LOCATIONS -->
-        <div class="footer__locations col-4 col-md-2">
+        <div class="footer__locations col-12 col-sm-4 col-md-2">
             <h3>Sucursales</h3>
             <ul>
                 <li>Centeno 1156</li>
@@ -215,7 +221,7 @@
         <!-- END FOOTER LOCATIONS -->
 
         <!-- START FOOTER SCHEDULE -->
-        <div class="footer__schedule col-6 col-md-3">
+        <div class="footer__schedule col-12 col-sm-6 col-md-3">
             <h3>Horarios</h3>
             <dl>
                 <dt>Martes a Domingo</dt>
@@ -227,7 +233,7 @@
         <!-- END FOOTER SCHEDULE -->
 
         <!-- START FOOTER JOBS -->
-        <div class="footer__jobs col-6 col-md-2">
+        <div class="footer__jobs col-12 col-sm-6 col-md-2">
             <h3><a href="jobs.html">Empleos</a></h3>
             <ul>
                 <li>Repartos</li>
@@ -239,9 +245,6 @@
         <!-- END FOOTER JOBS -->
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

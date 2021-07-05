@@ -6,14 +6,14 @@
 
 html,
 body {
-  min-width: min-content;
-  overflow-x: hidden; }
+  min-width: min-content; }
 
 li {
   list-style: none; }
 
 .icon {
-  width: 30px; }
+  width: 35px;
+  height: 35px; }
 
 button:hover {
   cursor: pointer; }
@@ -23,14 +23,13 @@ button:hover {
 .header {
   background-color: green;
   color: white;
-  min-width: 490px;
   z-index: 3;
   padding: 10px; }
   .header .nav {
     font-size: 30px; }
     .header .nav ul li {
       display: inline;
-      margin: 20px 0 0 20px; }
+      margin-left: 20px; }
     .header .nav .nav__logo {
       height: 70px; }
       .header .nav .nav__logo:hover {
@@ -57,10 +56,9 @@ button:hover {
 /* END HEADER */
 /* START MAIN */
 main {
-  min-width: 490px;
   width: 100%;
   z-index: 1;
-  margin-top: 98px;
+  margin-top: 90px;
   text-align: center; }
 
 /* START GENERAL FORMS */
@@ -94,7 +92,6 @@ form {
 .card-body {
   background-color: green;
   color: white;
-  height: 60px;
   font-size: 16px;
   border: solid black;
   border-width: 2px 0 0 0;
@@ -122,12 +119,14 @@ form {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    width: 100%;
+    max-width: 200px;
     transition-duration: 0.3s; }
     .heroSection .heroSection__button:hover {
       top: 10%;
       transition-duration: 0.3s; }
     .heroSection .heroSection__button button {
-      width: 200px;
+      width: 100%;
       height: 50px;
       font-family: 'Lato', sans-serif;
       font-size: 22px;
@@ -143,16 +142,17 @@ form {
   .heroSection .heroSection__carousel__images {
     display: flex;
     width: 100%;
-    z-index: 1; }
+    z-index: 1;
+    transition: transform 0.6s ease-in-out; }
     .heroSection .heroSection__carousel__images img {
-      min-height: 580px;
+      min-height: 450px;
       max-height: 670px;
       width: 100%; }
   .heroSection .swipe-left,
   .heroSection .swipe-right {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
     top: 50%;
     z-index: 2;
     color: white;
@@ -160,11 +160,11 @@ form {
     border-color: transparent;
     cursor: pointer;
     transition-duration: 0.3s; }
-  .heroSection .swipe-left:hover,
-  .heroSection .swipe-right:hover {
-    width: 70px;
-    height: 70px;
-    transition-duration: 0.3s; }
+    .heroSection .swipe-left:hover,
+    .heroSection .swipe-right:hover {
+      max-width: 70px;
+      max-height: 70px;
+      transition-duration: 0.3s; }
   .heroSection .swipe-left {
     left: 0%;
     transform: translate(0%, -50%); }
@@ -180,7 +180,8 @@ form {
   /* END PRODUCTS Carousel */ }
   .productsSection .burgers__card,
   .productsSection .chips__card {
-    width: 510px;
+    width: 95%;
+    max-width: 510px;
     height: 510px;
     border: solid black;
     box-shadow: 0 2px 30px black; }
@@ -194,15 +195,15 @@ form {
   .productsSection .burgers__card__carousel,
   .productsSection .chips__card__carousel {
     position: relative;
-    height: 470px;
+    max-height: 470px;
     overflow: hidden; }
-  .productsSection .burger,
-  .productsSection .chip {
+  .productsSection .burgerProduct,
+  .productsSection .chipsProduct {
     position: relative;
-    min-width: 510px;
-    width: 510px; }
-    .productsSection .burger img,
-    .productsSection .chip img {
+    min-width: 300px;
+    max-width: 510px; }
+    .productsSection .burgerProduct img,
+    .productsSection .chipsProduct img {
       display: block;
       width: 100%;
       height: 410px; }
@@ -210,71 +211,363 @@ form {
 /* END PRODUCTS SECTION */
 /* END INDEX PAGE */
 /* START MENU PAGE */
-.burgers,
-.chips {
+.burgersArticle,
+.chipsArticle {
   position: relative;
   margin-bottom: 30px; }
-  .burgers h2,
-  .chips h2 {
+  .burgersArticle h2,
+  .chipsArticle h2 {
     background-color: black;
     color: white;
     font-size: 30px;
     padding: 5px 0; }
-  .burgers .burger__card,
-  .burgers .chip__card,
-  .chips .burger__card,
-  .chips .chip__card {
+  .burgersArticle .burger__card,
+  .burgersArticle .chips__card,
+  .chipsArticle .burger__card,
+  .chipsArticle .chips__card {
     box-sizing: border-box;
     border: solid black;
-    height: 600px; }
-    .burgers .burger__card img,
-    .burgers .chip__card img,
-    .chips .burger__card img,
-    .chips .chip__card img {
-      height: 532px; }
+    min-height: 500px;
+    max-height: 600px;
+    overflow: hidden; }
+    .burgersArticle .burger__card img,
+    .burgersArticle .chips__card img,
+    .chipsArticle .burger__card img,
+    .chipsArticle .chips__card img {
+      box-sizing: border-box;
+      min-height: 420px;
+      max-height: 90%; }
+    .burgersArticle .burger__card .card-body,
+    .burgersArticle .chips__card .card-body,
+    .chipsArticle .burger__card .card-body,
+    .chipsArticle .chips__card .card-body {
+      box-sizing: border-box;
+      min-height: 73px;
+      height: 80%;
+      max-height: 80px; }
 
 /* END MENU PAGE */
 /* START ORDERS PAGE */
+.cartContainer,
+.menuContainer,
+.deliveryContainer,
+.paymentContainer,
+.notificationContainer {
+  background-color: #262626;
+  color: white;
+  text-align: left;
+  border-radius: 2%;
+  box-shadow: 0 6px 25px black;
+  padding: 10px 20px;
+  width: 97%;
+  max-width: 720px;
+  box-sizing: border-box; }
+  .cartContainer h3,
+  .menuContainer h3,
+  .deliveryContainer h3,
+  .paymentContainer h3,
+  .notificationContainer h3 {
+    height: 33px;
+    text-align: center;
+    border-bottom: solid white;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+  .cartContainer .burgerItem,
+  .cartContainer .guarnitionItem,
+  .cartContainer .cartColumns,
+  .menuContainer .burgerItem,
+  .menuContainer .guarnitionItem,
+  .menuContainer .cartColumns,
+  .deliveryContainer .burgerItem,
+  .deliveryContainer .guarnitionItem,
+  .deliveryContainer .cartColumns,
+  .paymentContainer .burgerItem,
+  .paymentContainer .guarnitionItem,
+  .paymentContainer .cartColumns,
+  .notificationContainer .burgerItem,
+  .notificationContainer .guarnitionItem,
+  .notificationContainer .cartColumns {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px; }
+    .cartContainer .burgerItem .itemName,
+    .cartContainer .guarnitionItem .itemName,
+    .cartContainer .cartColumns .itemName,
+    .menuContainer .burgerItem .itemName,
+    .menuContainer .guarnitionItem .itemName,
+    .menuContainer .cartColumns .itemName,
+    .deliveryContainer .burgerItem .itemName,
+    .deliveryContainer .guarnitionItem .itemName,
+    .deliveryContainer .cartColumns .itemName,
+    .paymentContainer .burgerItem .itemName,
+    .paymentContainer .guarnitionItem .itemName,
+    .paymentContainer .cartColumns .itemName,
+    .notificationContainer .burgerItem .itemName,
+    .notificationContainer .guarnitionItem .itemName,
+    .notificationContainer .cartColumns .itemName {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .cartContainer .burgerItem .itemName h4,
+      .cartContainer .guarnitionItem .itemName h4,
+      .cartContainer .cartColumns .itemName h4,
+      .menuContainer .burgerItem .itemName h4,
+      .menuContainer .guarnitionItem .itemName h4,
+      .menuContainer .cartColumns .itemName h4,
+      .deliveryContainer .burgerItem .itemName h4,
+      .deliveryContainer .guarnitionItem .itemName h4,
+      .deliveryContainer .cartColumns .itemName h4,
+      .paymentContainer .burgerItem .itemName h4,
+      .paymentContainer .guarnitionItem .itemName h4,
+      .paymentContainer .cartColumns .itemName h4,
+      .notificationContainer .burgerItem .itemName h4,
+      .notificationContainer .guarnitionItem .itemName h4,
+      .notificationContainer .cartColumns .itemName h4 {
+        margin-left: 5%; }
+
 /* START ORDERS SECTION */
 .ordersSection {
-  margin: 40px 0; }
-  .ordersSection .ordersForm {
-    width: 75%;
-    height: 100%;
-    background-color: #ffcb5c; }
-    .ordersSection .ordersForm .orderArea {
-      border-bottom: solid black;
-      margin-bottom: 10px;
-      height: 348px;
-      max-height: 348px;
-      overflow-y: auto; }
+  margin-bottom: 20px; }
+  .ordersSection .cartButton {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer; }
+    .ordersSection .cartButton:hover {
+      transition-duration: 0.3s;
+      transform: scale(1.3);
+      box-shadow: 0 0 3px black; }
+  .ordersSection h2 {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 5px 0; }
+  .ordersSection .menuContainer {
+    margin: 30px auto; }
+    .ordersSection .menuContainer .burgerItem h4,
+    .ordersSection .menuContainer .guarnitionItem h4 {
+      font-size: 22px; }
+    .ordersSection .menuContainer .burgerItem .itemName,
+    .ordersSection .menuContainer .guarnitionItem .itemName {
+      width: 52%;
+      max-width: 230px; }
+    .ordersSection .menuContainer .burgerItem .itemOptions,
+    .ordersSection .menuContainer .guarnitionItem .itemOptions {
+      display: flex;
+      width: 48%;
+      max-width: 270px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px; }
+      .ordersSection .menuContainer .burgerItem .itemOptions li,
+      .ordersSection .menuContainer .guarnitionItem .itemOptions li {
+        text-align: center;
+        min-width: 50px;
+        width: 70px;
+        cursor: pointer; }
+        .ordersSection .menuContainer .burgerItem .itemOptions li:hover,
+        .ordersSection .menuContainer .guarnitionItem .itemOptions li:hover {
+          text-decoration: underline; }
+        .ordersSection .menuContainer .burgerItem .itemOptions li p,
+        .ordersSection .menuContainer .guarnitionItem .itemOptions li p {
+          margin-bottom: 0; }
 
+/* START CART SECTION */
+.cartSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+/* START FUNCTIONALITY CLASSES */
+.cartSectionOpened {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.78); }
+
+.cartSectionClosed {
+  visibility: hidden; }
+
+.cartContainer,
+.deliveryContainer,
+.paymentContainer {
+  max-width: 620px;
+  max-height: 85%;
+  position: relative; }
+
+.cartContainerOpened,
+.deliveryContainerOpened,
+.paymentContainerOpened {
+  display: unset; }
+
+.notificationContainerOpened {
+  opacity: 1; }
+
+.cartContainerClosed,
+.deliveryContainerClosed,
+.paymentContainerClosed {
+  display: none; }
+
+.notificationContainerClosed {
+  opacity: 0; }
+
+.cartCloseButton,
+.cartGoBackButton {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 12px;
+  font-size: 15px;
+  background-color: white;
+  border: solid white;
+  border-radius: 50%; }
+
+.cartCloseButton {
+  right: 20px; }
+
+.cartGoBackButton {
+  left: 20px; }
+
+/* END FUNCTIONALITY CLASSES */
+h4 {
+  font-size: 17px; }
+
+.cartColumns {
+  margin-bottom: 30px;
+  text-align: center; }
+  .cartColumns h4 {
+    justify-self: center; }
+
+.itemNameCol,
+.itemName {
+  width: 41.5%;
+  max-width: 200px; }
+
+.itemSizeCol,
+.itemSize {
+  width: 20%; }
+
+.itemClarificationsCol,
+.itemClarifications {
+  width: 28.5%; }
+
+.itemPriceCol,
+.itemPrice {
+  width: 10%; }
+
+.cartForm {
+  box-shadow: none; }
+  .cartForm .cartItems {
+    max-height: 320px;
+    overflow-y: auto; }
+    .cartForm .cartItems .burgerItem .itemSize,
+    .cartForm .cartItems .burgerItem .itemClarifications,
+    .cartForm .cartItems .burgerItem .itemPrice,
+    .cartForm .cartItems .guarnitionItem .itemSize,
+    .cartForm .cartItems .guarnitionItem .itemClarifications,
+    .cartForm .cartItems .guarnitionItem .itemPrice {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .cartForm .cartItems .burgerItem .itemName h4,
+    .cartForm .cartItems .guarnitionItem .itemName h4 {
+      margin-left: 3px; }
+    .cartForm .cartItems .burgerItem .itemName .deleteItem,
+    .cartForm .cartItems .guarnitionItem .itemName .deleteItem {
+      cursor: pointer; }
+    .cartForm .cartItems .burgerItem .itemSize select,
+    .cartForm .cartItems .guarnitionItem .itemSize select {
+      width: 100%;
+      max-width: 90px;
+      padding: 3px;
+      font-size: 14px; }
+    .cartForm .cartItems .burgerItem .itemClarifications input,
+    .cartForm .cartItems .guarnitionItem .itemClarifications input {
+      width: 100%;
+      max-width: 110px;
+      padding: 3px;
+      font-size: 14px; }
+    .cartForm .cartItems .burgerItem .itemPrice p,
+    .cartForm .cartItems .guarnitionItem .itemPrice p {
+      margin: 0 0; }
+  .cartForm .totalPrice {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 10%;
+    text-align: center; }
+
+.deliveryForm {
+  box-shadow: none; }
+  .deliveryForm fieldset {
+    padding: unset;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; }
+    .deliveryForm fieldset div {
+      align-self: flex-start;
+      width: 45%; }
+      .deliveryForm fieldset div div label {
+        width: max-content;
+        font-size: 16px; }
+
+.paymentContainer {
+  width: 95%;
+  padding: 40px 20px; }
+
+.notificationContainer {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: fit-content;
+  padding: 5px 10px;
+  transition: opacity 0.3s ease-in-out; }
+
+/* END CART SECTION */
 /* END ORDERS SECTION */
-/* START MAP SECTION */
-.mapSection {
-  margin: 40px 0; }
-  .mapSection .mapContainer {
+/* START TAKE AWAY SECTION */
+.takeawaySection {
+  margin: 20px 0; }
+  .takeawaySection h2 {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 5px 0; }
+  .takeawaySection .mapContainer {
     display: flex;
     align-items: center;
+    text-align: left;
+    border-radius: 2%;
+    box-shadow: 0 6px 25px black;
+    margin: 40px auto;
+    padding: 20px 10px;
     flex-direction: column;
     justify-content: space-between;
     height: 610px;
-    width: 60%;
-    padding: 20px 10px;
-    background-color: #ffcb5c;
-    box-shadow: 0 6px 25px black;
-    border-radius: 2%; }
-    .mapSection .mapContainer h2 {
+    width: 95%;
+    max-width: 720px;
+    box-sizing: border-box;
+    background-color: #ffcb5c; }
+    .takeawaySection .mapContainer h3 {
       width: 100%;
       font-size: 25px;
       margin-top: 1%;
       padding-bottom: 5px;
-      border-bottom: solid black; }
-    .mapSection .mapContainer iframe {
+      border-bottom: solid black;
+      text-align: center; }
+    .takeawaySection .mapContainer iframe {
       width: 90%;
-      height: 85%; }
+      height: 88%; }
 
-/* END MAP SECTION */
+/* END TAKE AWAY SECTION */
 /* END ORDERS PAGE */
 /* START CONTACT PAGE */
 .contactSection {
@@ -342,9 +635,8 @@ form {
   .jobsSection h2 {
     background-color: black;
     color: white;
-    width: 100%;
-    padding: 5px 0;
-    font-size: 28px; }
+    font-size: 30px;
+    padding: 5px 0; }
   .jobsSection .jobs__areas {
     overflow: hidden; }
     .jobsSection .jobs__areas div h3 {
@@ -406,7 +698,6 @@ form {
 .footer {
   background-color: #262626;
   color: white;
-  min-width: 490px;
   z-index: 1;
   padding: 20px 15px; }
   .footer div {
@@ -446,15 +737,131 @@ form {
       height: auto; } }
 
 @media only screen and (max-width: 992px) {
+  /* START HEADER */
   .header {
     position: unset; }
-  .nav__menu {
-    justify-content: center !important; }
+  .nav__menu,
+  .nav-item {
+    margin: 0 !important; }
+  /* END HEADER */
   main {
     margin-top: 0; }
+  .cartButton {
+    top: 78px !important;
+    right: 30px !important;
+    width: 29px;
+    height: 29px;
+    padding: 7px !important; }
   .aboutUs__story p {
     font-size: large; } }
 
-@media only screen and (max-width: 600px) {
-  .nav__menu {
-    font-size: 20px !important; } }
+@media only screen and (max-width: 576px) {
+  .footer div {
+    margin: 20px 0; }
+    .footer div h3 {
+      font-size: 28px; }
+    .footer div li {
+      font-size: 18px; }
+  .productsSection .burgers__card,
+  .productsSection .chips__card {
+    height: 480px; }
+  .productsSection .burgerProduct img,
+  .productsSection .chipsProduct img {
+    height: 378px; } }
+
+@media only screen and (max-width: 500px) {
+  /* START HEADER */
+  .nav__brand {
+    margin: 0 !important; }
+    .nav__brand .nav__logo {
+      height: 65px !important; }
+      .nav__brand .nav__logo img {
+        width: 65px;
+        height: 65px; }
+    .nav__brand .nav__title {
+      font-size: 35px;
+      margin-left: 5% !important; }
+  .navbar-toggler,
+  .navbar-toggler-icon {
+    width: 40px;
+    height: 40px; }
+  /* END HEADER */
+  .formButtons {
+    margin-top: 15px !important; }
+    .formButtons button {
+      margin: 0 20px;
+      font-size: 14px;
+      padding: 3px 6px; }
+  /* START HERO SECTION */
+  .heroSection__button {
+    max-width: fit-content !important; }
+    .heroSection__button button {
+      height: 45px !important;
+      font-size: 18px !important; }
+  .swipe-left,
+  .swipe-right {
+    width: 40px;
+    height: 40px; }
+    .swipe-left:hover,
+    .swipe-right:hover {
+      width: 50px;
+      height: 50px; }
+  /* END HERO SECTION */
+  /* START ORDERS PAGE */
+  .ordersSection h2,
+  .takeawaySection h2 {
+    font-size: 25px; }
+  .cartButton {
+    top: 72px !important;
+    right: 17px !important; }
+  .menuContainer h3,
+  .mapContainer h3,
+  .cartContainer h3,
+  .deliveryContainer h3 {
+    font-size: 23px !important; }
+  .menuContainer {
+    padding: 10px 10px !important; }
+    .menuContainer .itemName h4 {
+      margin-left: 3px;
+      font-size: 16px !important; }
+    .menuContainer .burgersSection li {
+      font-size: 15px; }
+    .menuContainer .guarnitionSection li {
+      font-size: 13.5px; }
+  .cartContainer {
+    padding: 10px 10px !important; }
+    .cartContainer h4 {
+      margin-left: 0px !important;
+      font-size: 14px !important; }
+    .cartContainer .icon {
+      width: 25px;
+      height: 25px; }
+    .cartContainer .itemSize select {
+      padding: 1px !important;
+      font-size: 12px !important;
+      max-width: 73px !important; }
+    .cartContainer .itemClarifications input {
+      padding: 1px !important;
+      font-size: 12px !important;
+      max-width: 80px !important; }
+    .cartContainer .itemPrice p {
+      font-size: 14px !important; }
+    .cartContainer .totalPrice {
+      right: 10px !important;
+      bottom: 10px !important; }
+  .deliveryContainer label {
+    font-size: 16px; }
+  .deliveryContainer fieldset div .largeLabel,
+  .deliveryContainer fieldset div input,
+  .deliveryContainer fieldset div select,
+  .deliveryContainer fieldset div div label {
+    font-size: 14px !important; }
+  .deliveryContainer fieldset div input,
+  .deliveryContainer fieldset div select {
+    padding: 5px; }
+  .takeawaySection .mapContainer {
+    padding: 10px 5px;
+    height: 580px; }
+    .takeawaySection .mapContainer iframe {
+      height: 90%; }
+  /* END ORDERS PAGE */ }

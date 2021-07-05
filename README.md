@@ -1,8 +1,9 @@
 ## Description
 
-This is a project for my web development course, based on a burger shop in my neighborhood. 
+This is a project for my full stack development carrer at CoderHouse, based on a burger shop in my neighborhood. 
+The carrer is composed of the next four courses, where I learned and implemented those technologies.
 
-At this moment, I'm finishing the first course about frontend. I learned and implemented:
+1) Web Development (FINISHED)
 
 - Wireframe designing
 - HTML and CSS
@@ -13,5 +14,10 @@ At this moment, I'm finishing the first course about frontend. I learned and imp
 - SASS
 - SEO and [Hosting](https://jack-and-jek.000webhostapp.com/)
 
-I also developed two scripts (one for the hero carousel, and another for the order form) with JavaScript, but we will learn that language soon with the second course.
+2) JavaScript (CURRENTLY STUDYING)
 
+- I developed two scripts, one for the hero carousel, and another for the order form. 
+
+3) React JS
+
+4) Backend Programming
