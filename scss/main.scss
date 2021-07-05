@@ -204,6 +204,7 @@ form {
         display: flex;
         width: 100%;
         z-index: 1;
+        transition: transform 0.6s ease-in-out;
 
         img {
             min-height: 450px;
