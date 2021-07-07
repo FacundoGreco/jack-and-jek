@@ -257,9 +257,11 @@ form {
     .chips__card {
         width: 95%;
         max-width: 510px;
-        height: 510px;
+        min-height: 500px;
+        max-height: 600px;
         border: solid black;
         box-shadow: 0 2px 30px black;
+        overflow: hidden;
 
         h2 {
             @include darkStyle();
@@ -273,8 +275,6 @@ form {
     .burgers__card__carousel,
     .chips__card__carousel {
         position: relative;
-        max-height: 470px;
-        overflow: hidden;
     }
 
     .burgerProduct,
@@ -282,11 +282,19 @@ form {
         position: relative;
         min-width: 300px;
         max-width: 510px;
+        min-height: 460px;
+        max-height: 560px;
 
         img {
-            display: block;
-            width: 100%;
-            height: 410px;
+            box-sizing: border-box;
+            min-height: 380px;
+            max-height: 400px;
+        }
+
+        .card-body {
+            box-sizing: border-box;
+            height: 80px;
+
         }
     }
 
@@ -522,7 +530,7 @@ form {
 /* END FUNCTIONALITY CLASSES */
 
 
-h4 {
+.cartSection h4 {
     font-size: 17px;
 }
 
@@ -996,13 +1004,13 @@ h4 {
 
         .burgers__card,
         .chips__card {
-            height: 480px;
+            // height: 480px;
         }
 
         .burgerProduct,
         .chipsProduct {
             img {
-                height: 378px;
+                // height: 378px;
             }
         }
     }

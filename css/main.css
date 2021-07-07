@@ -182,9 +182,11 @@ form {
   .productsSection .chips__card {
     width: 95%;
     max-width: 510px;
-    height: 510px;
+    min-height: 500px;
+    max-height: 600px;
     border: solid black;
-    box-shadow: 0 2px 30px black; }
+    box-shadow: 0 2px 30px black;
+    overflow: hidden; }
     .productsSection .burgers__card h2,
     .productsSection .chips__card h2 {
       background-color: black;
@@ -194,19 +196,23 @@ form {
       z-index: 2; }
   .productsSection .burgers__card__carousel,
   .productsSection .chips__card__carousel {
-    position: relative;
-    max-height: 470px;
-    overflow: hidden; }
+    position: relative; }
   .productsSection .burgerProduct,
   .productsSection .chipsProduct {
     position: relative;
     min-width: 300px;
-    max-width: 510px; }
+    max-width: 510px;
+    min-height: 460px;
+    max-height: 560px; }
     .productsSection .burgerProduct img,
     .productsSection .chipsProduct img {
-      display: block;
-      width: 100%;
-      height: 410px; }
+      box-sizing: border-box;
+      min-height: 380px;
+      max-height: 400px; }
+    .productsSection .burgerProduct .card-body,
+    .productsSection .chipsProduct .card-body {
+      box-sizing: border-box;
+      height: 80px; }
 
 /* END PRODUCTS SECTION */
 /* END INDEX PAGE */
@@ -436,7 +442,7 @@ form {
   left: 20px; }
 
 /* END FUNCTIONALITY CLASSES */
-h4 {
+.cartSection h4 {
   font-size: 17px; }
 
 .cartColumns {
@@ -761,13 +767,7 @@ h4 {
     .footer div h3 {
       font-size: 28px; }
     .footer div li {
-      font-size: 18px; }
-  .productsSection .burgers__card,
-  .productsSection .chips__card {
-    height: 480px; }
-  .productsSection .burgerProduct img,
-  .productsSection .chipsProduct img {
-    height: 378px; } }
+      font-size: 18px; } }
 
 @media only screen and (max-width: 500px) {
   /* START HEADER */
