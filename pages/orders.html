@@ -12,14 +12,15 @@
     <link rel="icon" href="https://i.ibb.co/m0M8z8y/logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <script defer src="../scripts/products.js"></script>
     <script defer src="../scripts/items.js"></script>
     <script defer src="../scripts/ordersFunctions.js"></script>
     <script defer src="../scripts/orders.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script defer src="../js/bootstrap.min.js"></script>
 </head>
@@ -179,13 +180,15 @@
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                                        value="delivery" onclick="setDeliveryDisabled(false)" onchange="saveDeliveryData()">
+                                        value="delivery" onclick="setDeliveryDisabled(false)"
+                                        onchange="saveDeliveryData()">
                                     <label class="custom-control-label" for="delivery">Envío</label>
                                 </div>
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                                        value="takeAway" onclick="setDeliveryDisabled(true)" onchange="saveDeliveryData()">
+                                        value="takeAway" onclick="setDeliveryDisabled(true)"
+                                        onchange="saveDeliveryData()">
                                     <label class="custom-control-label" for="takeAway">Take Away</label>
                                 </div>
                             </div>
@@ -207,7 +210,7 @@
                     </form>
                 </div>
                 <!-- END DELIVERY CONTAINER -->
-                
+
                 <!-- START PAYMENT CONTAINER -->
                 <div class="paymentContainer">
                     <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
