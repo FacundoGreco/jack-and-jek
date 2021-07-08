@@ -7,11 +7,6 @@
     font-family: $font;
 }
 
-html,
-body {
-    min-width: min-content;
-}
-
 li {
     list-style: none;
 }
@@ -713,7 +708,8 @@ form {
     margin: 30px 0;
 
     .contactForm {
-        width: 70%;
+        width: 90%;
+        max-width: 640px;
         background-color: $form-color;
     }
 }
@@ -724,6 +720,7 @@ form {
     .newsletterForm {
         @include secondaryStyle;
         width: 90%;
+        max-width: 750px;
         margin: 50px 0 0 0;
 
         h2 {
@@ -1197,4 +1194,34 @@ form {
 
     /* END ORDERS PAGE */
 
+    /* STARTS CONTACT PAGE */
+    .contactForm,
+    .newsletterForm {
+        fieldset {
+            padding: 5px 15px 20px 15px;
+        }
+
+        legend {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 21px !important;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input {
+            font-size: 15px;
+        }
+    }
+
+    .newsletterForm {
+        margin: 0 auto !important;
+    }
+
+
+    /* END CONTACT PAGE */
 }

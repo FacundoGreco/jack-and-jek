@@ -4,10 +4,6 @@
   padding: 0px;
   font-family: "Roboto Slab", serif; }
 
-html,
-body {
-  min-width: min-content; }
-
 li {
   list-style: none; }
 
@@ -579,7 +575,8 @@ form {
 .contactSection {
   margin: 30px 0; }
   .contactSection .contactForm {
-    width: 70%;
+    width: 90%;
+    max-width: 640px;
     background-color: #ffcb5c; }
 
 .newsletterSection {
@@ -588,6 +585,7 @@ form {
     background-color: #262626;
     color: white;
     width: 90%;
+    max-width: 750px;
     margin: 50px 0 0 0; }
     .newsletterSection .newsletterForm h2 {
       font-size: 21px;
@@ -864,4 +862,23 @@ form {
     height: 580px; }
     .takeawaySection .mapContainer iframe {
       height: 90%; }
-  /* END ORDERS PAGE */ }
+  /* END ORDERS PAGE */
+  /* STARTS CONTACT PAGE */
+  .contactForm fieldset,
+  .newsletterForm fieldset {
+    padding: 5px 15px 20px 15px; }
+  .contactForm legend,
+  .newsletterForm legend {
+    font-size: 20px; }
+  .contactForm h2,
+  .newsletterForm h2 {
+    font-size: 21px !important; }
+  .contactForm label,
+  .newsletterForm label {
+    font-size: 16px; }
+  .contactForm input,
+  .newsletterForm input {
+    font-size: 15px; }
+  .newsletterForm {
+    margin: 0 auto !important; }
+  /* END CONTACT PAGE */ }
