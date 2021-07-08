@@ -249,7 +249,7 @@ form {
     padding: 40px 0;
 
     .burgers__card,
-    .chips__card {
+    .guarnition__card {
         width: 95%;
         max-width: 510px;
         min-height: 500px;
@@ -268,12 +268,12 @@ form {
 
     /* START PRODUCTS Carousel */
     .burgers__card__carousel,
-    .chips__card__carousel {
+    .guarnition__card__carousel {
         position: relative;
     }
 
     .burgerProduct,
-    .chipsProduct {
+    .guarnitionProduct {
         position: relative;
         min-width: 300px;
         max-width: 510px;
@@ -306,7 +306,7 @@ form {
 /* START MENU PAGE */
 
 .burgersArticle,
-.chipsArticle {
+.guarnitionArticle {
     position: relative;
     margin-bottom: 30px;
 
@@ -315,7 +315,7 @@ form {
     }
 
     .burger__card,
-    .chips__card {
+    .guarnition__card {
         box-sizing: border-box;
         border: solid black;
         min-height: 500px;
@@ -997,20 +997,6 @@ form {
 
     }
 
-    .productsSection {
-
-        .burgers__card,
-        .chips__card {
-            // height: 480px;
-        }
-
-        .burgerProduct,
-        .chipsProduct {
-            img {
-                // height: 378px;
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 500px) {
