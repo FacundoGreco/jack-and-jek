@@ -1,13 +1,17 @@
 const notificationContainerNode = document.querySelector('.notificationContainer');
+const date = new Date();
+const dateInput = document.querySelector('.deliveryContainer #date');
+const timeOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
+
 /* GET TOTAL PRICE */
 function showNotification() {
 
     notificationContainerNode.classList = `notificationContainer notificationContainerOpened`;
-    
+
     setTimeout(() => {
 
         notificationContainerNode.classList = `notificationContainer notificationContainerClosed`;
-        
+
     }, 1000);
 }
 
@@ -61,10 +65,56 @@ function getDeliveryOption() {
 
 }
 
+/* GET TODAY */
+function getToday() {
+
+    const day = ('0' + date.getDate()).slice(-2);
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const today = `${date.getFullYear()}-${month}-${day}`
+
+    return today;
+}
+
 /* GET MAX DATE */
-function getMaxDate(date) {
-    let maxDate = date.slice(0, 5) + String(Number(date.slice(5, 7)) + 1) + date.slice(7);
-    maxDate = maxDate.length === 10 ? maxDate : maxDate.slice(0, 5) + '0' + maxDate.slice(5);
+function getMaxDate() {
+
+    let maxDate = new Date();
+    maxDate.setDate(maxDate.getDate() + 7);
+    maxDate = `${maxDate.getFullYear()}-${('0' + (maxDate.getMonth() + 1)).slice(-2)}-${('0' + maxDate.getDate()).slice(-2)}`;
 
     return maxDate;
+}
+
+/* GET TIME */
+function getTime() {
+
+    const hour = ('0' + date.getHours()).slice(-2);
+    const minutes = ('0' + date.getMinutes()).slice(-2);
+
+    return `${hour}${minutes}`;
+}
+
+/* SET DATE AND HOUR */
+function setDateAndHour() {
+
+    const today = getToday();
+    const time = getTime();
+
+    //Sets date available options
+    dateInput.min = today;
+    dateInput.value = today;
+    dateInput.max = getMaxDate();
+
+    //Sets time available options
+    for (let i = 0; i < timeOptions.length; i++) {
+
+        if (timeOptions[i] > time) {
+            deliveryContainerNode.querySelector(`#hour option[value="${timeOptions[i]}"]`).selected = true;
+            break;
+
+        } else {
+            deliveryContainerNode.querySelector(`#hour option[value="${timeOptions[i]}"]`).disabled = true;
+        }
+    };
+
 }

@@ -29,30 +29,6 @@ if (orderJSON != null) {
 cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
 
 /* FILLS DELIVERY DATA */
-const date = new Date();
-const day = date.toISOString().slice(0, -14);
-let hour = `${date.getHours()}${date.getMinutes()}`;
-const dateInput = deliveryContainerNode.querySelector('#date');
-const hourOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
-
-//Sets date available options
-dateInput.min = day;
-dateInput.value = day;
-dateInput.max = getMaxDate(day);
-
-//Sets hour available options
-for(let i = 0; i < hourOptions.length; i++) {
-
-    if (hourOptions[i] > hour) {
-        deliveryContainerNode.querySelector(`#hour option[value="${hourOptions[i]}"]`).selected = true;
-        break;
-
-    } else {
-        deliveryContainerNode.querySelector(`#hour option[value="${hourOptions[i]}"]`).disabled = true;
-    }
-};
-
-//Sets storaged data
 deliveryDataJSON = localStorage.getItem('deliveryData');
 if (deliveryDataJSON != null) {
 
@@ -64,7 +40,7 @@ if (deliveryDataJSON != null) {
         deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;
     }
     deliveryContainerNode.querySelector('#address').value = deliveryData[3];
-    
+
 }
 
 
@@ -80,6 +56,8 @@ function openCart() {
 function openDelivery() {
     cartContainerNode.classList = `cartContainer cartContainerClosed`;
     deliveryContainerNode.classList = `deliveryContainer deliveryContainerOpen`;
+
+    setDateAndHour();
 }
 
 /* CLOSE CART */
