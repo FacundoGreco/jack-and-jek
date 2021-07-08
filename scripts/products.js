@@ -74,5 +74,10 @@ let products = [
         ['Chicas', 100],
         ['Medias', 160],
         ['Grandes', 220]
+    ]),
+    new Products('guarnition', 'https://i.ibb.co/Fzbhvp9/onion-rings.jpg', 'Aros de Cebolla', [
+        ['Chicas', 120],
+        ['Medias', 180],
+        ['Grandes', 240]
     ])
 ];
