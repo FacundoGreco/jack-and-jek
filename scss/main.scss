@@ -819,7 +819,7 @@ form {
         .jobs__areas__jobRight {
             height: 280px;
             max-height: 280px;
-            width: 260px;
+            width: 80%;
             max-width: 260px;
             margin: 20px auto;
             display: flex;
@@ -869,7 +869,8 @@ form {
 
 .postulationForm {
     margin: 30px;
-    width: 60%;
+    width: 90%;
+    max-width: 600px;
     background-color: $form-color;
 }
 
@@ -1029,6 +1030,31 @@ form {
 
     /* END HEADER */
 
+    /* START GENERAL FORMS */
+    .contactForm,
+    .newsletterForm, .postulationForm {
+        fieldset {
+            padding: 5px 15px 20px 15px;
+        }
+        
+        legend {
+            font-size: 20px;
+        }
+        
+        h2 {
+            font-size: 21px !important;
+        }
+        
+        label {
+            font-size: 16px;
+        }
+        
+        input {
+            font-size: 15px;
+        }
+    }
+    /* END GENERAL FORMS */
+
     .formButtons {
         margin-top: 15px !important;
 
@@ -1181,33 +1207,33 @@ form {
     /* END ORDERS PAGE */
 
     /* STARTS CONTACT PAGE */
-    .contactForm,
-    .newsletterForm {
-        fieldset {
-            padding: 5px 15px 20px 15px;
-        }
-
-        legend {
-            font-size: 20px;
-        }
-
-        h2 {
-            font-size: 21px !important;
-        }
-
-        label {
-            font-size: 16px;
-        }
-
-        input {
-            font-size: 15px;
-        }
-    }
 
     .newsletterForm {
         margin: 0 auto !important;
     }
 
-
     /* END CONTACT PAGE */
+
+    /* STARTS JOBS PAGE */
+    .aboutUsSection{
+        background: linear-gradient(to bottom, white 32%, black 34%);
+
+        .aboutUs__title {
+            margin: 20px 0!important;
+    
+            h2 {
+                font-size: 50px!important;
+            }
+
+            .about {
+                transform: translate(-40%, 4px)!important;
+            }
+        }
+
+        .aboutUs__story {
+            margin: 10px 20px 5px 20px;
+        }
+    }
+
+    /* END JOBS PAGE */
 }
