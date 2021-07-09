@@ -61,7 +61,9 @@ main {
 form {
   text-align: left;
   border-radius: 2%;
-  box-shadow: 0 6px 25px black; }
+  box-shadow: 0 6px 25px black;
+  padding: 5px 30px 20px 30px;
+  box-sizing: border-box; }
   form h2 {
     text-align: center;
     font-size: 25px;
@@ -71,17 +73,15 @@ form {
   form h3 {
     font-size: 22px;
     margin-bottom: 5px; }
-  form fieldset {
-    padding: 5px 30px 20px 30px;
-    border: none; }
-    form fieldset legend {
-      text-align: center; }
-  form .formButtons {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center; }
-    form .formButtons button {
-      margin: 0 35px; }
+  form legend {
+    text-align: center; }
+
+.formButtons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; }
+  .formButtons button {
+    margin: 0 35px; }
 
 /* END GENERAL FORMS */
 /* START GENERAL CARD */
@@ -575,8 +575,8 @@ form {
 .contactSection {
   margin: 30px 0; }
   .contactSection .contactForm {
-    width: 90%;
-    max-width: 640px;
+    width: 95%;
+    max-width: 600px;
     background-color: #ffcb5c; }
 
 .newsletterSection {
@@ -584,7 +584,7 @@ form {
   .newsletterSection .newsletterForm {
     background-color: #262626;
     color: white;
-    width: 90%;
+    width: 95%;
     max-width: 750px;
     margin: 50px 0 0 0; }
     .newsletterSection .newsletterForm h2 {
@@ -786,21 +786,26 @@ form {
     height: 40px; }
   /* END HEADER */
   /* START GENERAL FORMS */
-  .contactForm fieldset,
-  .newsletterForm fieldset, .postulationForm fieldset {
+  .contactForm,
+  .newsletterForm,
+  .postulationForm {
     padding: 5px 15px 20px 15px; }
-  .contactForm legend,
-  .newsletterForm legend, .postulationForm legend {
-    font-size: 20px; }
-  .contactForm h2,
-  .newsletterForm h2, .postulationForm h2 {
-    font-size: 21px !important; }
-  .contactForm label,
-  .newsletterForm label, .postulationForm label {
-    font-size: 16px; }
-  .contactForm input,
-  .newsletterForm input, .postulationForm input {
-    font-size: 15px; }
+    .contactForm legend,
+    .newsletterForm legend,
+    .postulationForm legend {
+      font-size: 20px; }
+    .contactForm h2,
+    .newsletterForm h2,
+    .postulationForm h2 {
+      font-size: 21px !important; }
+    .contactForm label,
+    .newsletterForm label,
+    .postulationForm label {
+      font-size: 16px; }
+    .contactForm input,
+    .newsletterForm input,
+    .postulationForm input {
+      font-size: 15px; }
   /* END GENERAL FORMS */
   .formButtons {
     margin-top: 15px !important; }
