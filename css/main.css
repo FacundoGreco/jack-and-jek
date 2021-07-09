@@ -4,10 +4,6 @@
   padding: 0px;
   font-family: "Roboto Slab", serif; }
 
-html,
-body {
-  min-width: min-content; }
-
 li {
   list-style: none; }
 
@@ -179,7 +175,7 @@ form {
   /* START PRODUCTS Carousel */
   /* END PRODUCTS Carousel */ }
   .productsSection .burgers__card,
-  .productsSection .chips__card {
+  .productsSection .guarnition__card {
     width: 95%;
     max-width: 510px;
     min-height: 500px;
@@ -188,29 +184,29 @@ form {
     box-shadow: 0 2px 30px black;
     overflow: hidden; }
     .productsSection .burgers__card h2,
-    .productsSection .chips__card h2 {
+    .productsSection .guarnition__card h2 {
       background-color: black;
       color: white;
       height: 40px;
       font-size: 28px;
       z-index: 2; }
   .productsSection .burgers__card__carousel,
-  .productsSection .chips__card__carousel {
+  .productsSection .guarnition__card__carousel {
     position: relative; }
   .productsSection .burgerProduct,
-  .productsSection .chipsProduct {
+  .productsSection .guarnitionProduct {
     position: relative;
     min-width: 300px;
     max-width: 510px;
     min-height: 460px;
     max-height: 560px; }
     .productsSection .burgerProduct img,
-    .productsSection .chipsProduct img {
+    .productsSection .guarnitionProduct img {
       box-sizing: border-box;
       min-height: 380px;
       max-height: 400px; }
     .productsSection .burgerProduct .card-body,
-    .productsSection .chipsProduct .card-body {
+    .productsSection .guarnitionProduct .card-body {
       box-sizing: border-box;
       height: 80px; }
 
@@ -218,35 +214,35 @@ form {
 /* END INDEX PAGE */
 /* START MENU PAGE */
 .burgersArticle,
-.chipsArticle {
+.guarnitionArticle {
   position: relative;
   margin-bottom: 30px; }
   .burgersArticle h2,
-  .chipsArticle h2 {
+  .guarnitionArticle h2 {
     background-color: black;
     color: white;
     font-size: 30px;
     padding: 5px 0; }
   .burgersArticle .burger__card,
-  .burgersArticle .chips__card,
-  .chipsArticle .burger__card,
-  .chipsArticle .chips__card {
+  .burgersArticle .guarnition__card,
+  .guarnitionArticle .burger__card,
+  .guarnitionArticle .guarnition__card {
     box-sizing: border-box;
     border: solid black;
     min-height: 500px;
     max-height: 600px;
     overflow: hidden; }
     .burgersArticle .burger__card img,
-    .burgersArticle .chips__card img,
-    .chipsArticle .burger__card img,
-    .chipsArticle .chips__card img {
+    .burgersArticle .guarnition__card img,
+    .guarnitionArticle .burger__card img,
+    .guarnitionArticle .guarnition__card img {
       box-sizing: border-box;
       min-height: 420px;
       max-height: 90%; }
     .burgersArticle .burger__card .card-body,
-    .burgersArticle .chips__card .card-body,
-    .chipsArticle .burger__card .card-body,
-    .chipsArticle .chips__card .card-body {
+    .burgersArticle .guarnition__card .card-body,
+    .guarnitionArticle .burger__card .card-body,
+    .guarnitionArticle .guarnition__card .card-body {
       box-sizing: border-box;
       min-height: 73px;
       height: 80%;
@@ -579,7 +575,8 @@ form {
 .contactSection {
   margin: 30px 0; }
   .contactSection .contactForm {
-    width: 70%;
+    width: 90%;
+    max-width: 640px;
     background-color: #ffcb5c; }
 
 .newsletterSection {
@@ -588,6 +585,7 @@ form {
     background-color: #262626;
     color: white;
     width: 90%;
+    max-width: 750px;
     margin: 50px 0 0 0; }
     .newsletterSection .newsletterForm h2 {
       font-size: 21px;
@@ -658,7 +656,7 @@ form {
     .jobsSection .jobs__areas .jobs__areas__jobRight {
       height: 280px;
       max-height: 280px;
-      width: 260px;
+      width: 80%;
       max-width: 260px;
       margin: 20px auto;
       display: flex;
@@ -694,7 +692,8 @@ form {
 /* START POSTULATION SECTION */
 .postulationForm {
   margin: 30px;
-  width: 60%;
+  width: 90%;
+  max-width: 600px;
   background-color: #ffcb5c; }
 
 /* END POSTULATION SECTION */
@@ -786,6 +785,23 @@ form {
     width: 40px;
     height: 40px; }
   /* END HEADER */
+  /* START GENERAL FORMS */
+  .contactForm fieldset,
+  .newsletterForm fieldset, .postulationForm fieldset {
+    padding: 5px 15px 20px 15px; }
+  .contactForm legend,
+  .newsletterForm legend, .postulationForm legend {
+    font-size: 20px; }
+  .contactForm h2,
+  .newsletterForm h2, .postulationForm h2 {
+    font-size: 21px !important; }
+  .contactForm label,
+  .newsletterForm label, .postulationForm label {
+    font-size: 16px; }
+  .contactForm input,
+  .newsletterForm input, .postulationForm input {
+    font-size: 15px; }
+  /* END GENERAL FORMS */
   .formButtons {
     margin-top: 15px !important; }
     .formButtons button {
@@ -864,4 +880,20 @@ form {
     height: 580px; }
     .takeawaySection .mapContainer iframe {
       height: 90%; }
-  /* END ORDERS PAGE */ }
+  /* END ORDERS PAGE */
+  /* STARTS CONTACT PAGE */
+  .newsletterForm {
+    margin: 0 auto !important; }
+  /* END CONTACT PAGE */
+  /* STARTS JOBS PAGE */
+  .aboutUsSection {
+    background: linear-gradient(to bottom, white 32%, black 34%); }
+    .aboutUsSection .aboutUs__title {
+      margin: 20px 0 !important; }
+      .aboutUsSection .aboutUs__title h2 {
+        font-size: 50px !important; }
+      .aboutUsSection .aboutUs__title .about {
+        transform: translate(-40%, 4px) !important; }
+    .aboutUsSection .aboutUs__story {
+      margin: 10px 20px 5px 20px; }
+  /* END JOBS PAGE */ }
