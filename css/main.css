@@ -379,6 +379,7 @@ form {
 
 /* START CART SECTION */
 .cartSection {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -394,31 +395,13 @@ form {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.78); }
 
-.cartSectionClosed {
-  visibility: hidden; }
-
-.cartContainer,
-.deliveryContainer,
-.paymentContainer {
-  max-width: 620px;
-  max-height: 85%;
-  position: relative; }
-
 .cartContainerOpened,
 .deliveryContainerOpened,
 .paymentContainerOpened {
-  display: unset; }
+  display: unset !important; }
 
 .notificationContainerOpened {
-  opacity: 1; }
-
-.cartContainerClosed,
-.deliveryContainerClosed,
-.paymentContainerClosed {
-  display: none; }
-
-.notificationContainerClosed {
-  opacity: 0; }
+  opacity: 1 !important; }
 
 .cartCloseButton,
 .cartGoBackButton {
@@ -438,6 +421,14 @@ form {
   left: 20px; }
 
 /* END FUNCTIONALITY CLASSES */
+.cartContainer,
+.deliveryContainer,
+.paymentContainer {
+  display: none;
+  max-width: 620px;
+  max-height: 85%;
+  position: relative; }
+
 .cartSection h4 {
   font-size: 17px; }
 
@@ -465,7 +456,8 @@ form {
   width: 10%; }
 
 .cartForm {
-  box-shadow: none; }
+  box-shadow: none;
+  padding: 0; }
   .cartForm .cartItems {
     max-height: 320px;
     overflow-y: auto; }
@@ -507,7 +499,8 @@ form {
     text-align: center; }
 
 .deliveryForm {
-  box-shadow: none; }
+  box-shadow: none;
+  padding: 0; }
   .deliveryForm fieldset {
     padding: unset;
     margin-bottom: 40px;
@@ -525,6 +518,7 @@ form {
   padding: 40px 20px; }
 
 .notificationContainer {
+  opacity: 0;
   position: absolute;
   top: 8%;
   left: 50%;

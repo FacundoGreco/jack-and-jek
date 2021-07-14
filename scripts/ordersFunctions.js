@@ -6,11 +6,11 @@ const timeOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
 /* GET TOTAL PRICE */
 function showNotification() {
 
-    notificationContainerNode.classList = `notificationContainer notificationContainerOpened`;
+    notificationContainerNode.classList.toggle('notificationContainerOpened');
 
     setTimeout(() => {
 
-        notificationContainerNode.classList = `notificationContainer notificationContainerClosed`;
+        notificationContainerNode.classList.toggle('notificationContainerOpened');
 
     }, 1000);
 }

@@ -47,15 +47,14 @@ if (deliveryDataJSON != null) {
 /* OPEN CART */
 function openCart() {
     cartSectionNode.classList = `cartSection cartSectionOpened`;
-    cartContainerNode.classList = `cartContainer cartContainerOpened`;
-    deliveryContainerNode.classList = `deliveryContainer deliveryContainerClosed`;
-    paymentContainerNode.classList = `paymentContainer paymentContainerClosed`;
+    deliveryContainerNode.classList = `deliveryContainer`;
+    cartContainerNode.classList.toggle(`cartContainerOpened`);
 }
 
 /* OPEN DELIVERY */
 function openDelivery() {
-    cartContainerNode.classList = `cartContainer cartContainerClosed`;
-    deliveryContainerNode.classList = `deliveryContainer deliveryContainerOpen`;
+    cartContainerNode.classList.toggle(`cartContainerOpened`);
+    deliveryContainerNode.classList.toggle(`deliveryContainerOpened`);
 
     setDateAndHour();
 }
@@ -64,7 +63,10 @@ function openDelivery() {
 function closeCart(e) {
     if ((e.target == cartSectionNode) || (e.target.classList.value == 'cartCloseButton')) {
 
-        cartSectionNode.classList = `cartSection cartSectionClosed`;
+        cartSectionNode.classList = `cartSection`;
+        cartContainerNode.classList = `cartContainer`;
+        deliveryContainerNode.classList = `deliveryContainer`;
+        paymentContainerNode.classList = `paymentContainer`;
 
     }
 }
@@ -165,9 +167,9 @@ function setDeliveryDisabled(e) {
 function payOrder(e) {
     e.preventDefault();
 
-    cartContainerNode.classList = `cartContainer cartContainerClosed`;
-    deliveryContainerNode.classList = `deliveryContainer deliveryContainerClosed`;
-    paymentContainerNode.classList = `paymentContainer paymentContainerOpened`;
+    cartContainerNode.classList = `cartContainer`;
+    deliveryContainerNode.classList = `deliveryContainer`;
+    paymentContainerNode.classList.toggle(`paymentContainerOpened`);
 
     deleteOrder();
 }

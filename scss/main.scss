@@ -449,6 +449,7 @@ form {
 
 /* START CART SECTION */
 .cartSection {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,36 +467,14 @@ form {
     background-color: rgba($color: #000000, $alpha: 0.78);
 }
 
-.cartSectionClosed {
-    visibility: hidden;
-}
-
-.cartContainer,
-.deliveryContainer,
-.paymentContainer {
-    max-width: 620px;
-    max-height: 85%;
-    position: relative;
-}
-
 .cartContainerOpened,
 .deliveryContainerOpened,
 .paymentContainerOpened {
-    display: unset;
+    display: unset!important;
 }
 
 .notificationContainerOpened {
-    opacity: 1;
-}
-
-.cartContainerClosed,
-.deliveryContainerClosed,
-.paymentContainerClosed {
-    display: none;
-}
-
-.notificationContainerClosed {
-    opacity: 0;
+    opacity: 1!important;
 }
 
 .cartCloseButton,
@@ -521,6 +500,14 @@ form {
 
 /* END FUNCTIONALITY CLASSES */
 
+.cartContainer,
+.deliveryContainer,
+.paymentContainer {
+    display: none;
+    max-width: 620px;
+    max-height: 85%;
+    position: relative;
+}
 
 .cartSection h4 {
     font-size: 17px;
@@ -559,6 +546,7 @@ form {
 
 .cartForm {
     box-shadow: none;
+    padding: 0;
 
     .cartItems {
         max-height: 320px;
@@ -619,6 +607,7 @@ form {
 
 .deliveryForm {
     box-shadow: none;
+    padding: 0;
 
     fieldset {
         padding: unset;
@@ -644,6 +633,7 @@ form {
 }
 
 .notificationContainer {
+    opacity: 0;
     position: absolute;
     top: 8%;
     left: 50%;
