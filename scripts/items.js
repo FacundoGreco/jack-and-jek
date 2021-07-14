@@ -37,7 +37,7 @@ class Items {
             <p>${this.prices[this.size][1]}</p>
         </div>`;
         itemNode.querySelectorAll(`.itemSize select option`)[this.size].selected = true;
-        
+
         cartItemsNode.appendChild(itemNode);
     }
 }

@@ -128,7 +128,8 @@ function saveItem(e) {
 }
 
 /* DELETE ORDER */
-function deleteOrder() {
+function deleteOrder(e) {
+    e ? e.preventDefault() : null;
 
     cartItemsNode.innerHTML = '';
     cartContainerNode.querySelectorAll('.totalPrice h4')[1].innerHTML = '';
@@ -151,10 +152,12 @@ function saveDeliveryData() {
 }
 
 /* SET DELIVERY DISABLED */
-function setDeliveryDisabled(disabled) {
+function setDeliveryDisabled(e) {
+    const disabled = e.data.disabled;
 
     const addressInput = deliveryContainerNode.querySelector('#address');
-    address.disabled = disabled;
+    addressInput.disabled = disabled;
+    console.log(disabled);
 
 }
 

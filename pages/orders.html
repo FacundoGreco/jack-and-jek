@@ -9,16 +9,19 @@
     <meta name="description" content="Hacé tu pedido con Delivery o Take Away a nuestras sucursales.">
     <meta name="keywords"
         content="hamburguesas burger rosario pedidos orders delivery take-away jack jek jack&jek jack-and-jek">
+        
     <link rel="icon" href="https://i.ibb.co/m0M8z8y/logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Slab&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
+
     <script defer src="../scripts/products.js"></script>
     <script defer src="../scripts/items.js"></script>
     <script defer src="../scripts/ordersFunctions.js"></script>
     <script defer src="../scripts/orders.js"></script>
+    <script defer src="../scripts/listeners.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -65,7 +68,7 @@
         <section class="ordersSection container-fluid col-12">
             <h2>Añadir Productos</h2>
 
-            <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito" onclick="openCart()">
+            <img class="cartButton" src="https://i.ibb.co/vmrYNNp/cart.png" alt="Carrito">
 
             <!-- START NOTIFICATION CONTAINER-->
             <div class="notificationContainer notificationContainerClosed">
@@ -90,40 +93,40 @@
             </div>
 
             <!-- START CART SECTION -->
-            <section class="cartSection cartSectionClosed" onclick="closeCart(event)">
+            <section class="cartSection cartSectionClosed">
                 <!-- START CART CONTAINER -->
                 <div class="cartContainer">
                     <h3>Carrito</h3>
-                    <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
+                    <button class="cartCloseButton" type="button"">X</button>
                     <!-- START COLUMNS -->
-                    <div class="cartColumns">
+                    <div class=" cartColumns">
                         <h4 class="itemNameCol">Producto</h4>
                         <h4 class="itemSizeCol">Tamaño</h4>
                         <h4 class="itemClarificationsCol">Aclaraciones</h4>
                         <h4 class="itemPriceCol">Precio</h4>
+                </div>
+                <!-- END COLUMNS -->
+
+                <!-- START FORM -->
+                <form class="form cartForm" action="orders.html">
+
+                    <div class="cartItems">
+
                     </div>
-                    <!-- END COLUMNS -->
 
-                    <!-- START FORM -->
-                    <form class="form cartForm" action="orders.html">
+                    <!-- START BUTTONS -->
+                    <div class="formButtons">
+                        <button class="btn btn-light cleanButton" type="reset">LIMPIAR</button>
+                        <button class="btn btn-light continueButton" type="button">CONTINUAR</button>
+                    </div>
+                    <!-- END BUTTONS -->
 
-                        <div class="cartItems">
-
-                        </div>
-
-                        <!-- START BUTTONS -->
-                        <div class="formButtons">
-                            <button class="btn btn-light" type="reset" onclick="deleteOrder()">LIMPIAR</button>
-                            <button class="btn btn-light" type="button" onclick="openDelivery()">CONTINUAR</button>
-                        </div>
-                        <!-- END BUTTONS -->
-
-                        <div class="totalPrice">
-                            <h4>Total</h4>
-                            <h4></h4>
-                        </div>
-                    </form>
-                    <!-- END FORM -->
+                    <div class="totalPrice">
+                        <h4>Total</h4>
+                        <h4></h4>
+                    </div>
+                </form>
+                <!-- END FORM -->
                 </div>
                 <!-- END CART CONTAINER -->
 
@@ -131,8 +134,8 @@
                 <!-- START DELIVERY CONTAINER -->
                 <div class="deliveryContainer">
                     <h3>Entrega</h3>
-                    <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
-                    <button class="cartGoBackButton" type="button" onclick="openCart()">←</button>
+                    <button class="cartCloseButton" type="button">X</button>
+                    <button class="cartGoBackButton" type="button">←</button>
 
                     <form class="form deliveryForm" action="orders.html">
                         <!-- START DATE AND HOUR FIELDSET -->
@@ -161,14 +164,13 @@
                         <fieldset>
                             <div>
                                 <label for="name">Nombre</label>
-                                <input class="form-control" type="text" id="name" name="name" placeholder="Pepe"
-                                    onchange="saveDeliveryData()">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Pepe">
                             </div>
 
                             <div>
                                 <label for="phone">Teléfono</label>
                                 <input class="form-control" type="number" id="phone" name="phone"
-                                    placeholder="3416555555" onchange="saveDeliveryData()">
+                                    placeholder="3416555555">
                             </div>
                         </fieldset>
                         <!-- END NAME AND PHONE FIELDSET -->
@@ -180,15 +182,13 @@
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="delivery" name="delyOrTakeAway"
-                                        value="delivery" onclick="setDeliveryDisabled(false)"
-                                        onchange="saveDeliveryData()">
+                                        value="delivery">
                                     <label class="custom-control-label" for="delivery">Envío</label>
                                 </div>
 
                                 <div class="custom-control custom-radio">
                                     <input class="custom-control-input" type="radio" id="takeAway" name="delyOrTakeAway"
-                                        value="takeAway" onclick="setDeliveryDisabled(true)"
-                                        onchange="saveDeliveryData()">
+                                        value="takeAway">
                                     <label class="custom-control-label" for="takeAway">Take Away</label>
                                 </div>
                             </div>
@@ -196,14 +196,14 @@
                             <div class="form-group">
                                 <label for="address">Dirección</label>
                                 <input class="form-control" type="text" id="address" name="address"
-                                    placeholder="Calle 9999" onchange="saveDeliveryData()">
+                                    placeholder="Calle 9999">
                             </div>
                         </fieldset>
                         <!-- END DELIVERY OR TAKE AWAY FIELDSET -->
 
                         <!-- START BUTTON -->
                         <div class="formButtons">
-                            <button class="btn btn-light" type="submit" onclick="payOrder(event)">PAGAR</button>
+                            <button class="btn btn-light payButton" type="button">PAGAR</button>
                         </div>
                         <!-- END BUTTON -->
 
@@ -213,7 +213,7 @@
 
                 <!-- START PAYMENT CONTAINER -->
                 <div class="paymentContainer">
-                    <button class="cartCloseButton" type="button" onclick="closeCart(event)">X</button>
+                    <button class="cartCloseButton" type="button">X</button>
                     <h4>Su orden ha sido realizada con éxito, ¡muchas gracias!</h4>
                 </div>
                 <!-- END PAYMENT CONTAINER -->

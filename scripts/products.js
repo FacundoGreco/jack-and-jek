@@ -21,15 +21,15 @@ class Products {
         <h4>${this.name}</h4>
         </div>
         <ul class="itemOptions">
-            <li onclick="addItem(event)">
+            <li>
                 <p>${this.prices[0][0]}</p>
                 <p>$${this.prices[0][1]}</p>
             </li>
-            <li onclick="addItem(event)">
+            <li>
                 <p>${this.prices[1][0]}</p>
                 <p>$${this.prices[1][1]}</p>
             </li>
-            <li onclick="addItem(event)">
+            <li>
                 <p>${this.prices[2][0]}</p>
                 <p>$${this.prices[2][1]}</p>
             </li>
