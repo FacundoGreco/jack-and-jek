@@ -3,7 +3,9 @@
 /* ORDERS PAGE */
 
 //Add item
-$('.itemOptions').click('li', addItem);
+function setAddItemListener() {
+    $('.itemOptions').click('li', addItem);
+}
 
 //Open cart
 $('.cartButton').click(openCart);

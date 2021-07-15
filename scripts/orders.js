@@ -10,10 +10,7 @@ let deliveryData = [];
 
 
 /* FILLS MENU WITH PRODUCTS  */
-products.forEach(product => {
-    product.appendProduct();
-});
-
+loadProducts();
 
 /* FILLS CART WITH ITEMS */
 orderJSON = localStorage.getItem('order');
