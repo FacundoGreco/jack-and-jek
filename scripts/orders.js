@@ -1,5 +1,6 @@
 /* GLOBAL VARIABLES  */
 const cartSectionNode = document.querySelector('.cartSection');
+const menuContainerNode = $('.menuContainer');
 const cartContainerNode = cartSectionNode.querySelector('.cartContainer');
 const deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer');
 const paymentContainerNode = cartSectionNode.querySelector('.paymentContainer');
@@ -10,6 +11,7 @@ let deliveryData = [];
 
 
 /* FILLS MENU WITH PRODUCTS  */
+menuContainerNode.slideUp(0);
 loadProducts();
 
 /* FILLS CART WITH ITEMS */
@@ -46,14 +48,18 @@ function openCart() {
     cartSectionNode.classList = `cartSection cartSectionOpened`;
     deliveryContainerNode.classList = `deliveryContainer`;
     cartContainerNode.classList.toggle(`cartContainerOpened`);
+    $('.cartContainer').slideUp(0);
+    $('.cartContainer').slideDown(300);
 }
 
 /* OPEN DELIVERY */
 function openDelivery() {
     cartContainerNode.classList.toggle(`cartContainerOpened`);
     deliveryContainerNode.classList.toggle(`deliveryContainerOpened`);
-
     setDateAndHour();
+
+    $('.deliveryContainer').slideUp(0);
+    $('.deliveryContainer').slideDown(300);
 }
 
 /* CLOSE CART */
@@ -64,6 +70,10 @@ function closeCart(e) {
         cartContainerNode.classList = `cartContainer`;
         deliveryContainerNode.classList = `deliveryContainer`;
         paymentContainerNode.classList = `paymentContainer`;
+
+        $('.paymentContainer').animate({
+            left: -5000
+        }, 0);
 
     }
 }
@@ -169,4 +179,8 @@ function payOrder(e) {
     paymentContainerNode.classList.toggle(`paymentContainerOpened`);
 
     deleteOrder();
+
+    $('.paymentContainer').animate({
+        left: 0
+    }, 300);
 }

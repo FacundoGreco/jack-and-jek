@@ -1,18 +1,21 @@
-const notificationContainerNode = document.querySelector('.notificationContainer');
+const notificationContainerNode = $('.notificationContainer');
 const date = new Date();
 const dateInput = document.querySelector('.deliveryContainer #date');
 const timeOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
 
-/* GET TOTAL PRICE */
+/* SHOW NOTIFICATION */
+notificationContainerNode.fadeOut(0);
+
 function showNotification() {
 
-    notificationContainerNode.classList.toggle('notificationContainerOpened');
+    notificationContainerNode.fadeIn(300);
 
     setTimeout(() => {
 
-        notificationContainerNode.classList.toggle('notificationContainerOpened');
+        notificationContainerNode.fadeOut(500);
 
     }, 1000);
+
 }
 
 

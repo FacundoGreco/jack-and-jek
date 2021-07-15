@@ -54,6 +54,8 @@ function loadProducts() {
             });
 
             setAddItemListener(); //Add Item listener
+            menuContainerNode.slideDown(700); //Slides down menu
+
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log('Error al cargar productos: ', errorThrown);
