@@ -92,6 +92,8 @@ main {
 /* START GENERAL FORMS */
 form {
     @include modernContainer();
+    padding: 5px 30px 20px 30px;
+    box-sizing: border-box;
 
     h2 {
         text-align: center;
@@ -106,23 +108,18 @@ form {
         margin-bottom: 5px;
     }
 
-    fieldset {
-        padding: 5px 30px 20px 30px;
-        border: none;
-
-        legend {
-            text-align: center;
-        }
+    legend {
+        text-align: center;
     }
+}
 
-    .formButtons {
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
+.formButtons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
 
-        button {
-            margin: 0 35px;
-        }
+    button {
+        margin: 0 35px;
     }
 }
 
@@ -452,6 +449,7 @@ form {
 
 /* START CART SECTION */
 .cartSection {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,36 +467,14 @@ form {
     background-color: rgba($color: #000000, $alpha: 0.78);
 }
 
-.cartSectionClosed {
-    visibility: hidden;
-}
-
-.cartContainer,
-.deliveryContainer,
-.paymentContainer {
-    max-width: 620px;
-    max-height: 85%;
-    position: relative;
-}
-
 .cartContainerOpened,
 .deliveryContainerOpened,
 .paymentContainerOpened {
-    display: unset;
+    display: unset !important;
 }
 
 .notificationContainerOpened {
-    opacity: 1;
-}
-
-.cartContainerClosed,
-.deliveryContainerClosed,
-.paymentContainerClosed {
-    display: none;
-}
-
-.notificationContainerClosed {
-    opacity: 0;
+    opacity: 1 !important;
 }
 
 .cartCloseButton,
@@ -524,6 +500,14 @@ form {
 
 /* END FUNCTIONALITY CLASSES */
 
+.cartContainer,
+.deliveryContainer,
+.paymentContainer {
+    display: none;
+    max-width: 620px;
+    max-height: 85%;
+    position: relative;
+}
 
 .cartSection h4 {
     font-size: 17px;
@@ -562,6 +546,7 @@ form {
 
 .cartForm {
     box-shadow: none;
+    padding: 0;
 
     .cartItems {
         max-height: 320px;
@@ -622,6 +607,7 @@ form {
 
 .deliveryForm {
     box-shadow: none;
+    padding: 0;
 
     fieldset {
         padding: unset;
@@ -644,6 +630,7 @@ form {
 .paymentContainer {
     width: 95%;
     padding: 40px 20px;
+    left: -5000px;
 }
 
 .notificationContainer {
@@ -653,7 +640,6 @@ form {
     transform: translate(-50%, 0);
     max-width: fit-content;
     padding: 5px 10px;
-    transition: opacity 0.3s ease-in-out;
 }
 
 /* END CART SECTION */
@@ -708,8 +694,8 @@ form {
     margin: 30px 0;
 
     .contactForm {
-        width: 90%;
-        max-width: 640px;
+        width: 95%;
+        max-width: 600px;
         background-color: $form-color;
     }
 }
@@ -719,7 +705,7 @@ form {
 
     .newsletterForm {
         @include secondaryStyle;
-        width: 90%;
+        width: 95%;
         max-width: 750px;
         margin: 50px 0 0 0;
 
@@ -1032,27 +1018,27 @@ form {
 
     /* START GENERAL FORMS */
     .contactForm,
-    .newsletterForm, .postulationForm {
-        fieldset {
-            padding: 5px 15px 20px 15px;
-        }
-        
+    .newsletterForm,
+    .postulationForm {
+        padding: 5px 15px 20px 15px;
+
         legend {
             font-size: 20px;
         }
-        
+
         h2 {
             font-size: 21px !important;
         }
-        
+
         label {
             font-size: 16px;
         }
-        
+
         input {
             font-size: 15px;
         }
     }
+
     /* END GENERAL FORMS */
 
     .formButtons {
@@ -1215,18 +1201,18 @@ form {
     /* END CONTACT PAGE */
 
     /* STARTS JOBS PAGE */
-    .aboutUsSection{
+    .aboutUsSection {
         background: linear-gradient(to bottom, white 32%, black 34%);
 
         .aboutUs__title {
-            margin: 20px 0!important;
-    
+            margin: 20px 0 !important;
+
             h2 {
-                font-size: 50px!important;
+                font-size: 50px !important;
             }
 
             .about {
-                transform: translate(-40%, 4px)!important;
+                transform: translate(-40%, 4px) !important;
             }
         }
 
