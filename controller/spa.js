@@ -37,7 +37,7 @@ async function storePages() {
     try {
 
         routes = [{
-                path: '/',
+                path: '/index',
                 title: "Jack & Jek",
                 classes: "mainIndex container-fluid",
                 mainHTML: await getMainHTML('index.html', "<!-- START HERO SECTION -->").then((mainString) => {
@@ -106,7 +106,11 @@ async function router() {
         const userPath = parseLocation();
         const pageObject = findMainMatch(userPath);
 
-        console.log(pageObject);
+        document.title = pageObject.title;
+        mainNode.innerHTML = pageObject.mainHTML;
+        mainNode.classList = pageObject.classes;
+
+        console.log('routeado',pageObject.path);
 
     } catch (error) {
         console.log('Error en Main: ', error);
