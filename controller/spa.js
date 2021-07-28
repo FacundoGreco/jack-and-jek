@@ -169,6 +169,7 @@ async function router() {
         const userPath = parseLocation();
         const pageObject = findMainMatch(userPath);
 
+        window.scrollTo(0,0);
         setNavLinkActive(pageObject.path);
         document.title = pageObject.title;
         mainNode.innerHTML = pageObject.mainHTML;
