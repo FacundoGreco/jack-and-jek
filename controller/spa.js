@@ -84,6 +84,15 @@ async function storePages() {
                     return mainString
                 }),
                 scripts: []
+            },
+            {
+                path: '/404',
+                title: "Jack & Jek | Error 404",
+                classes: "mainNotFound",
+                mainHTML: `
+                <h2>Error 404</h2>
+                <h3>Página no encontrada.</h3>`,
+                scripts: []
             }
         ]
 
@@ -99,13 +108,20 @@ async function storePages() {
 /* PARSES USER LOCATION */
 function parseLocation() {
 
-    return location.hash.slice(1) || '/';
+    const userPath = location.hash.slice(1) || location.pathname;
+
+    if (userPath === '/')
+        return '/index';
+
+    else
+        return userPath;
+
 }
 
 /* FIND PAGE THAT MATCHES LOCATION */
 function findMainMatch(userPath) {
 
-    return routes.find(route => route.path === userPath) || routes[0];
+    return routes.find(route => route.path === userPath) || routes[routes.length - 1];
 }
 
 /* SET NAV ITEM ACTIVE */
