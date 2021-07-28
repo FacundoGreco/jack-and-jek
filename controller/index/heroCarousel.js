@@ -1,6 +1,9 @@
-const carousel = document.querySelector('#heroCarousel');
-let heroTranslationX = 0;
-let heroCounter = 0;
+/* GLOBAL VARIABLES */
+let carousel;
+let heroTranslationX;
+let heroCounter;
+
+
 
 function translate(side, translationX, carousel, imgWidth) {
 
@@ -43,3 +46,23 @@ function carouselSwipe(side) {
     }
 
 }
+
+
+/* ON PAGE OPENED */
+function indexMain() {
+
+    carousel = document.querySelector('#heroCarousel');
+    heroTranslationX = 0;
+    heroCounter = 0;
+
+}
+indexMain();
+
+/* ON HASH CHANGE */
+window.addEventListener('hashchange', () => {
+
+    const userPath = parseLocation();
+
+    if (userPath === '/index' || userPath === '/') indexMain();
+
+});

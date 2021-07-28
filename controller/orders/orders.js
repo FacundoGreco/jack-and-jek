@@ -1,44 +1,58 @@
 /* GLOBAL VARIABLES  */
-const cartSectionNode = document.querySelector('.cartSection');
-const menuContainerNode = $('.menuContainer');
-const cartContainerNode = cartSectionNode.querySelector('.cartContainer');
-const deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer');
-const paymentContainerNode = cartSectionNode.querySelector('.paymentContainer');
-const cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
+let cartSectionNode;
+let menuContainerNode;
+let cartContainerNode;
+let deliveryContainerNode;
+let paymentContainerNode;
+let cartTotalPrice;
 
-let order = [];
-let deliveryData = [];
+let order;
+let deliveryData;
+
+
 
 
 /* FILLS MENU WITH PRODUCTS  */
-menuContainerNode.slideUp(0);
-loadProducts();
+function fillMenu() {
 
-/* FILLS CART WITH ITEMS */
-orderJSON = localStorage.getItem('order');
-if (orderJSON != null) {
-
-    order = JSON.parse(orderJSON);
-    order.forEach(item => {
-        item = new Items(item.type, item.name, item.size, item.prices, item.clarifications);
-        item.appendItem();
-    });
+    menuContainerNode.slideUp(0);
+    loadProducts();
 
 }
-cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
+
+/* FILLS CART WITH ITEMS */
+function fillCart() {
+
+    const orderJSON = localStorage.getItem('order');
+    if (orderJSON != null) {
+
+        order = JSON.parse(orderJSON);
+        order.forEach(item => {
+            item = new Items(item.type, item.name, item.size, item.prices, item.clarifications);
+            item.appendItem();
+        });
+
+    }
+    cartTotalPrice.innerHTML = getTotalPrice(); //Refresh total price
+
+}
 
 /* FILLS DELIVERY DATA */
-deliveryDataJSON = localStorage.getItem('deliveryData');
-if (deliveryDataJSON != null) {
+function fillDeliveryData() {
 
-    deliveryData = JSON.parse(deliveryDataJSON);
+    const deliveryDataJSON = localStorage.getItem('deliveryData');
+    if (deliveryDataJSON != null) {
 
-    deliveryContainerNode.querySelector('#name').value = deliveryData[0];
-    deliveryContainerNode.querySelector('#phone').value = deliveryData[1];
-    if (deliveryData[2] != null) {
-        deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;
+        deliveryData = JSON.parse(deliveryDataJSON);
+
+        deliveryContainerNode.querySelector('#name').value = deliveryData[0];
+        deliveryContainerNode.querySelector('#phone').value = deliveryData[1];
+        if (deliveryData[2] != null) {
+            deliveryContainerNode.querySelector(`#${deliveryData[2]}`).checked = true;
+        }
+        deliveryContainerNode.querySelector('#address').value = deliveryData[3];
+
     }
-    deliveryContainerNode.querySelector('#address').value = deliveryData[3];
 
 }
 
@@ -166,7 +180,6 @@ function setDeliveryDisabled(e) {
 
     const addressInput = deliveryContainerNode.querySelector('#address');
     addressInput.disabled = disabled;
-    console.log(disabled);
 
 }
 
@@ -184,3 +197,55 @@ function payOrder(e) {
         left: 0
     }, 300);
 }
+
+
+
+/* ON PAGE OPENED */
+function ordersMain() {
+
+    //Inicializes products variables
+    burgersSectionNode = document.querySelector('.burgersSection');
+    guarnitionSectionNode = document.querySelector('.guarnitionSection');
+    products = [];
+
+    //Inicializes items variables
+    cartItemsNode = document.querySelector('.cartItems');
+
+    //Inicializes ordersFunctions variables
+    notificationContainerNode = $('.notificationContainer');
+    date = new Date();
+    dateInput = document.querySelector('.deliveryContainer #date');
+    timeOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
+
+    notificationContainerNode.fadeOut(0);
+
+    //Inicializes listeners
+
+    //Inicializes variables
+    cartSectionNode = document.querySelector('.cartSection');
+    menuContainerNode = $('.menuContainer');
+    cartContainerNode = cartSectionNode.querySelector('.cartContainer');
+    deliveryContainerNode = cartSectionNode.querySelector('.deliveryContainer');
+    paymentContainerNode = cartSectionNode.querySelector('.paymentContainer');
+    cartTotalPrice = cartSectionNode.querySelectorAll('.totalPrice h4')[1];
+
+    order = [];
+    deliveryData = [];
+
+    //Run functions
+    fillMenu();
+    fillCart();
+    fillDeliveryData();
+    startListeners();
+
+}
+ordersMain();
+
+/* ON HASH CHANGE */
+window.addEventListener('hashchange', () => {
+
+    const userPath = parseLocation();
+
+    if (userPath === '/orders') ordersMain();
+
+});

@@ -1,6 +1,6 @@
-const burgersSectionNode = document.querySelector('.burgersSection');
-const guarnitionSectionNode = document.querySelector('.guarnitionSection');
-let products = [];
+let burgersSectionNode;
+let guarnitionSectionNode;
+let products;
 
 class Products {
 

@@ -1,4 +1,4 @@
-const cartItemsNode = document.querySelector('.cartItems');
+let cartItemsNode;
 
 class Items {
 

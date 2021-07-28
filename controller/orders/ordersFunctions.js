@@ -1,11 +1,12 @@
-const notificationContainerNode = $('.notificationContainer');
-const date = new Date();
-const dateInput = document.querySelector('.deliveryContainer #date');
-const timeOptions = [2000, 2030, 2100, 2130, 2200, 2230, 2300];
+/* GLOBAL VARIABLES */
+let notificationContainerNode;
+let date;
+let dateInput;
+let timeOptions;
+
+
 
 /* SHOW NOTIFICATION */
-notificationContainerNode.fadeOut(0);
-
 function showNotification() {
 
     notificationContainerNode.fadeIn(300);
