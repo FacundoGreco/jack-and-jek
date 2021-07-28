@@ -108,6 +108,24 @@ function findMainMatch(userPath) {
     return routes.find(route => route.path === userPath) || routes[0];
 }
 
+/* SET NAV ITEM ACTIVE */
+function setNavLinkActive(pagePath) {
+
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+
+    navLinks.forEach(navLink => {
+        const href = navLink.getAttribute('href').slice(2);
+
+        if (href === pagePath)
+            navLink.classList = 'nav-link active';
+
+        else
+            navLink.classList = 'nav-link';
+
+    });
+
+}
+
 /* RUN SCRIPTS OF PAGE */
 function runScripts(scripts) {
 
@@ -135,10 +153,11 @@ async function router() {
         const userPath = parseLocation();
         const pageObject = findMainMatch(userPath);
 
-        runScripts(pageObject.scripts);
+        setNavLinkActive(pageObject.path);
         document.title = pageObject.title;
         mainNode.innerHTML = pageObject.mainHTML;
         mainNode.classList = pageObject.classes;
+        runScripts(pageObject.scripts);
 
         console.log('Routed to:', pageObject.path);
 
