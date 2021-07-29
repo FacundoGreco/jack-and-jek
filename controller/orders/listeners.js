@@ -1,40 +1,40 @@
 //Add item
 function setAddItemListener() {
-    $('.itemOptions').click('li', addItem);
+    $('.itemOptions').on('click', 'li', addItem);
 }
 
 function startListeners() {
 
     //Open cart
-    $('.cartButton').click(openCart);
-    $('.cartGoBackButton').click(openCart);
+    $('.cartButton').on('click', openCart);
+    $('.cartGoBackButton').on('click', openCart);
     //Close cart
-    $('.cartSection').click(closeCart);
-    $('.cartCloseButton').click(closeCart);
+    $('.cartSection').on('click', closeCart);
+    $('.cartCloseButton').on('click', closeCart);
 
     //Clean order
-    $('.cleanButton').click(deleteOrder);
+    $('.cleanButton').on('click', deleteOrder);
     //Open delivery menu
-    $('.continueButton').click(openDelivery);
+    $('.continueButton').on('click', openDelivery);
 
     //Name input
-    $('#name').change(saveDeliveryData);
+    $('#name').on('change', saveDeliveryData);
     //Phone input
-    $('#phone').change(saveDeliveryData);
+    $('#phone').on('change', saveDeliveryData);
     //Delivery input
-    $('#delivery').click({
+    $('#delivery').on('click', {
         disabled: false
     }, setDeliveryDisabled);
-    $('#delivery').change(saveDeliveryData);
+    $('#delivery').on('change', saveDeliveryData);
     //Takeaway input
-    $('#takeAway').click({
+    $('#takeAway').on('click', {
         disabled: true
     }, setDeliveryDisabled);
-    $('#takeAway').change(saveDeliveryData);
+    $('#takeAway').on('change', saveDeliveryData);
     //Address input
-    $('#address').change(saveDeliveryData);
+    $('#address').on('change', saveDeliveryData);
 
     //Pay order
-    $('.payButton').click(payOrder);
+    $('.payButton').on('click', payOrder);
 
 }
