@@ -43,7 +43,7 @@ class Products {
 function loadProducts() {
     $.ajax({
         type: "GET",
-        url: "/scripts/products.json",
+        url: "/model/products.json",
         dataType: "JSON",
         success: function (response) {
             products = response;

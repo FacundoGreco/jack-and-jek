@@ -191,6 +191,14 @@ function payOrder(e) {
     deliveryContainerNode.classList = `deliveryContainer`;
     paymentContainerNode.classList.toggle(`paymentContainerOpened`);
 
+    $.post("/api/orders", JSON.stringify(order),
+        function (data, textStatus, jqXHR) {
+            
+            console.log('Orden enviada.');
+        },
+        "JSON"
+    );
+
     deleteOrder();
 
     $('.paymentContainer').animate({

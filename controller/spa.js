@@ -41,7 +41,7 @@ async function storePages() {
                 path: '/index',
                 title: "Jack & Jek",
                 classes: "mainIndex container-fluid",
-                mainHTML: await getMainHTML('index.html', "<!-- START HERO SECTION -->").then((mainString) => {
+                mainHTML: await getMainHTML('/', "<!-- START HERO SECTION -->").then((mainString) => {
                     return mainString
                 }),
                 scripts: ["controller/index/heroCarousel.js"]
