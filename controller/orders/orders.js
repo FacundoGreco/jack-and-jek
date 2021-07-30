@@ -219,7 +219,6 @@ function ordersMain() {
 
     notificationContainerNode.fadeOut(0);
 
-    //Inicializes listeners
 
     //Inicializes variables
     cartSectionNode = document.querySelector('.cartSection');

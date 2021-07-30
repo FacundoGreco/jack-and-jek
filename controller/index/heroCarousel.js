@@ -19,8 +19,9 @@ function translate(side, translationX, carousel, imgWidth) {
     return translationX;
 }
 
-function carouselSwipe(side) {
+function carouselSwipe(e) {
 
+    const side = e.target.classList.value.slice(6);
     const img = document.querySelector('#heroCarousel img');
     const imgWidth = img.offsetWidth;
 
@@ -51,9 +52,14 @@ function carouselSwipe(side) {
 /* ON PAGE OPENED */
 function indexMain() {
 
+    //Inicializes variables
     carousel = document.querySelector('#heroCarousel');
     heroTranslationX = 0;
     heroCounter = 0;
+
+    //Starts listeners
+    $('.swipe-left').on('click', carouselSwipe);
+    $('.swipe-right').on('click', carouselSwipe); //ARREGLAR LISTENER
 
 }
 indexMain();
