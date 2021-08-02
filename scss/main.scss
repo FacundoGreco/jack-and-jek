@@ -89,6 +89,11 @@ main {
     text-align: center;
 }
 
+.mainNotFound {
+    min-height: 64.7vh;
+    padding-top: 40px;
+}
+
 /* START GENERAL FORMS */
 form {
     @include modernContainer();

@@ -19,7 +19,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script defer src="js/bootstrap.min.js"></script>
-    <script defer src="scripts/heroCarousel.js"></script>
+    <script defer src="controller/spa.js"></script>
 </head>
 
 <body class="body">
@@ -30,7 +30,7 @@
 
             <!-- START NAV BRAND-->
             <div class="nav__brand col-10 col-lg-4">
-                <a class="nav__logo" href="../index.html"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
+                <a class="nav__logo" href="/#/index"><img src="https://i.ibb.co/m0M8z8y/logo.jpg" alt="LOGO"></a>
                 <h1 class="nav__title ">JACK & JEK</h1>
             </div>
             <!-- END NAV BRAND -->
@@ -42,11 +42,11 @@
             <div class="nav__menu m-auto col-lg-8">
                 <ul class="navbar-nav my-auto mx-lg-4 mx-xl-5 collapse navbar-collapse" id="collapse_target">
                     <!-- NAVIGATION -->
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/menu.html">Menú</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/orders.html">Pedidos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/jobs.html">Empleos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/#/index">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#/menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#/orders">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#/contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#/jobs">Empleos</a></li>
                 </ul>
             </div>
             <!-- END NAV MENU -->
@@ -62,12 +62,11 @@
         <section class="heroSection">
 
             <div class="heroSection__button">
-                <a href="pages/orders.html"><button>¡PEDIR AHORA!</button></a>
+                <a href="/#/orders"><button>¡PEDIR AHORA!</button></a>
             </div>
 
             <div class="heroSection__carousel">
-                <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png" alt="swipe-left"
-                    onclick="carouselSwipe('left')">
+                <img class="swipe-left" src="https://i.ibb.co/Mc0hCDL/swipe-left.png" alt="swipe-left">
                 <div id="heroCarousel" class="heroSection__carousel__images">
                     <img src="https://i.ibb.co/Z2F1tjN/jack-smoke.jpg" alt="Jack Smoke">
                     <img src="https://i.ibb.co/DtF67kX/jack-cuarto.jpg" alt="Jack Cuarto">
@@ -77,8 +76,7 @@
                     <img src="https://i.ibb.co/0B5zmDg/jack-crispy.jpg" alt="Jack Crispy">
                     <img src="https://i.ibb.co/YdWNbFH/jack-cheese2.jpg" alt="Jack Cheese">
                 </div>
-                <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png" alt="swipe-right"
-                    onclick="carouselSwipe('right')">
+                <img class="swipe-right" src="https://i.ibb.co/DDwhpzs/swipe-right.png" alt="swipe-right">
             </div>
         </section>
         <!-- END HERO SECTION -->
@@ -239,7 +237,7 @@
             <ul>
                 <li>Términos y Condiciones</li>
                 <li>Políticas de Privacidad</li>
-                <li><a href="pages/contact.html">Contacto</a></li>
+                <li><a href="/#/contact">Contacto</a></li>
             </ul>
         </div>
         <!-- END FOOTER MAP -->
@@ -291,7 +289,7 @@
 
         <!-- START FOOTER JOBS -->
         <div class="footer__jobs col-12 col-sm-6 col-md-2">
-            <h3><a href="pages/jobs.html">Empleos</a></h3>
+            <h3><a href="/#/jobs">Empleos</a></h3>
             <ul>
                 <li>Repartos</li>
                 <li>Cocina</li>

@@ -19,13 +19,19 @@ The carrer is composed of the next four courses, where I learned and implemented
 I developed theese functionalities:
 - Script for the hero carousel, which controls swiping right and left.
 - Orders page cart frontend functionality. 
+- SPA script which routes the pages and run the corresponding scripts.
+- API to handle the orders POST request to a JSON, simulating a DB.
 
 I learned and implemented:
-- Basic sitax (variables, functions, objects, arrays, etc)
+- Basic sintax (variables, functions, objects, arrays, etc)
 - Storage and JSON
 - DOM
 - Events
-- JQuery and selectors
+- Selectors
+- JQuery selectors, effects and animations.
+- AJAX with JQuery
+- API with Express
+- SPA
 
 3) React JS
 

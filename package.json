@@ -4,6 +4,7 @@
   "description": "This is a project for my web development course, based on Jack & Jek, a burger shop in Rosario, Santa Fe, Argentina.",
   "main": "index.js",
   "scripts": {
+    "start": "node \"model\\api.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
@@ -19,7 +20,7 @@
   },
   "homepage": "https://github.com/FacundoGreco/jack-and-jek#readme",
   "devDependencies": {
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.7"
   },
   "dependencies": {
