@@ -14,7 +14,7 @@ The carrer is composed of the next four courses, where I learned and implemented
 - SASS
 - SEO and [Hosting](https://jack-and-jek.000webhostapp.com/)
 
-2) JavaScript (CURRENTLY STUDYING)
+2) JavaScript (FINISHED)
 
 I developed theese functionalities:
 - Script for the hero carousel, which controls swiping right and left.
@@ -33,6 +33,6 @@ I learned and implemented:
 - API with Express
 - SPA
 
-3) React JS
+3) React JS (CURRENTLY STUDYING)
 
 4) Backend Programming
