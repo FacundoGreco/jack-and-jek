@@ -41,7 +41,7 @@ I'm working on a books eCommerce for this course and I'm trying to build a chat 
 For this project (Jack and Jek), when I finish this course, I'm going to implement all I will have learned and transform this web to a react App.
 
 Repositories:
-- react-books-eCommerce: https://github.com/FacundoGreco/bibliotech
+- bibliotech: https://github.com/FacundoGreco/bibliotech
 - react-chat: https://github.com/FacundoGreco/react-chat
 
 ## 4) Backend Programming
